@@ -1,105 +1,138 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import logoFull from '@/assets/logo-full.png';
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
+const navStyles = `
+  .ds-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(253, 252, 250, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(30, 43, 58, 0.08);
+    font-family: 'DM Sans', sans-serif;
+  }
+  .ds-nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.85rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ds-nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    color: #1E2B3A;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+  .ds-nav-logo span { color: #0C7C8A; }
+  .ds-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .ds-nav-link {
+    font-size: 0.92rem;
+    color: #3A3A3A;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+  }
+  .ds-nav-link:hover { color: #1E2B3A; }
+  .ds-nav-link.active { color: #0C7C8A; }
+  .ds-nav-cta {
+    background: #0C7C8A;
+    color: #fff;
+    padding: 0.55rem 1.3rem;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .ds-nav-cta:hover { background: #0E96A6; transform: translateY(-1px); }
+  .ds-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1E2B3A;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0;
+  }
+  .ds-nav-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 0.5rem 2rem 1.5rem;
+  }
+  @media (max-width: 760px) {
+    .ds-nav-links { display: none; }
+    .ds-nav-toggle { display: block; }
+    .ds-nav-mobile.open { display: flex; }
+  }
+`;
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
-  };
-
-  const navItems = [
-    { label: 'The Framework', id: 'framework' },
-    { label: 'Results', id: 'results' },
-    { label: 'The Assessment', id: 'assessment' },
-    { label: 'About', id: 'about' },
-  ];
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
+    "ds-nav-link" + (isActive ? " active" : "");
 
   return (
-    <nav
-      className={cn(
-        'fixed w-full z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-sm py-4'
-          : 'bg-transparent py-6'
-      )}
-    >
-      <div className="container-width flex justify-between items-center">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center gap-2 group"
-        >
-          <img 
-            src={logoFull} 
-            alt="Dreamscope" 
-            className="h-8 object-contain"
-          />
-        </button>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="nav-link"
-            >
-              {item.label}
-            </button>
-          ))}
+    <>
+      <style>{navStyles}</style>
+      <nav className="ds-nav">
+        <div className="ds-nav-inner">
+          <Link to="/" className="ds-nav-logo" onClick={close}>
+            Dreamscope<span>.</span>
+          </Link>
+          <div className="ds-nav-links">
+            <NavLink to="/culture-engine" className={linkClass}>
+              Culture Engine
+            </NavLink>
+            <NavLink to="/ai-maestro" className={linkClass}>
+              AI Maestro
+            </NavLink>
+            <Link to="/#about" className="ds-nav-link">
+              About
+            </Link>
+            <Link to="/#contact" className="ds-nav-cta">
+              Let's Talk
+            </Link>
+          </div>
           <button
-            onClick={() => scrollToSection('contact')}
-            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-all hover:scale-105"
+            className="ds-nav-toggle"
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
           >
-            Let's Talk
+            {open ? "✕" : "☰"}
           </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-background border-t border-border shadow-lg py-6 px-6 flex flex-col gap-4 md:hidden animate-fade-in">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="text-left text-muted-foreground font-medium py-2 hover:text-foreground transition-colors"
-            >
-              {item.label}
-            </button>
-          ))}
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="bg-primary text-primary-foreground px-5 py-3 rounded-lg text-center font-semibold mt-2"
+        <div className={"ds-nav-mobile" + (open ? " open" : "")}>
+          <NavLink to="/culture-engine" className={linkClass} onClick={close}>
+            Culture Engine
+          </NavLink>
+          <NavLink to="/ai-maestro" className={linkClass} onClick={close}>
+            AI Maestro
+          </NavLink>
+          <Link to="/#about" className="ds-nav-link" onClick={close}>
+            About
+          </Link>
+          <Link
+            to="/#contact"
+            className="ds-nav-cta"
+            onClick={close}
+            style={{ alignSelf: "flex-start" }}
           >
             Let's Talk
-          </button>
+          </Link>
         </div>
-      )}
-    </nav>
+      </nav>
+    </>
   );
 };
 

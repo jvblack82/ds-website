@@ -809,8 +809,11 @@ const CultureEngine = () => {
           30 minutes. No pitch. Just understanding what you're dealing with, and
           whether this can help.
         </p>
-        <a href="https://discovery.dreamscope.win/culture" className="cta-btn">
-          Start with a quick discovery →
+        <a
+          href="mailto:joe@dreamscope.win?subject=Culture%20Engine%20-%20Let's%20talk"
+          className="cta-btn"
+        >
+          Email me to start →
         </a>
       </section>
 

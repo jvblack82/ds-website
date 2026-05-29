@@ -99,7 +99,7 @@ const css = `
   .cp-logos { background: var(--cream); padding: 2.5rem 0 3rem; border-bottom: 1px solid var(--sand); }
   .cp-logos-eyebrow { text-align: center; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 1.8rem; }
   .cp-logos-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2.4rem 2.8rem; }
-  .cp-logo { height: 30px; width: auto; filter: grayscale(100%); opacity: 0.55; transition: filter 0.3s, opacity 0.3s; }
+  .cp-logo { height: 32px; width: auto; max-width: 140px; object-fit: contain; filter: grayscale(100%); opacity: 0.55; transition: filter 0.3s, opacity 0.3s; }
   .cp-logo:hover { filter: grayscale(0%); opacity: 1; }
   .cp-logos-note { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 1.8rem; }
 

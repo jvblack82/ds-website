@@ -113,7 +113,7 @@ const css = `
   .land-logos { background: var(--cream); padding: 0 0 3rem; border-bottom: 1px solid var(--sand); }
   .land-logos-eyebrow { text-align: center; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 1.8rem; }
   .land-logos-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2.2rem 2.6rem; }
-  .land-logo { height: 28px; width: auto; filter: grayscale(100%); opacity: 0.5; transition: filter 0.3s, opacity 0.3s; }
+  .land-logo { height: 30px; width: auto; max-width: 135px; object-fit: contain; filter: grayscale(100%); opacity: 0.5; transition: filter 0.3s, opacity 0.3s; }
   .land-logo:hover { filter: grayscale(0%); opacity: 1; }
 
   /* TWO PRACTICES */

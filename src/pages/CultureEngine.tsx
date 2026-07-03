@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import beachCalm from "@/assets/ce-beach-calm.jpg";
+import stageTalk from "@/assets/ce-stage-culture-talk.jpg";
 
 const css = `
   :root {
@@ -162,11 +164,31 @@ const css = `
   }
 
   .approach { background: var(--cream); }
-  .approach-steps {
+  .approach-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.05fr 0.95fr;
     gap: 2rem;
     margin-top: 2rem;
+    align-items: stretch;
+  }
+  .approach-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    align-content: start;
+  }
+  .approach-media {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px -22px rgba(30,43,58,0.35);
+    aspect-ratio: 3 / 2;
+  }
+  .approach-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 85% 50%;
+    display: block;
   }
   .approach-step {
     background: white;
@@ -239,6 +261,15 @@ const css = `
     max-width: 620px;
     margin: 0 auto;
     font-style: italic;
+  }
+
+  .ce-band { line-height: 0; }
+  .ce-band img {
+    width: 100%;
+    height: clamp(260px, 36vw, 440px);
+    object-fit: cover;
+    object-position: 62% 12%;
+    display: block;
   }
 
   .deliverables { background: var(--warm-white); }
@@ -385,7 +416,7 @@ const css = `
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .results-grid { grid-template-columns: repeat(2, 1fr); }
     .problem-grid { grid-template-columns: 1fr; }
-    .approach-steps { grid-template-columns: 1fr; }
+    .approach-grid { grid-template-columns: 1fr; }
     .deliverables-grid { grid-template-columns: 1fr; }
     .phases { grid-template-columns: 1fr; }
   }
@@ -528,33 +559,43 @@ const CultureEngine = () => {
             Instead of telling you what's broken, we find who's already winning,
             and make their methods everyone's methods.
           </p>
-          <div className="approach-steps">
-            <div className="approach-step">
-              <span className="step-num">01</span>
-              <h3>Find who's already winning</h3>
-              <p>
-                Every leader scored 1–6 against documented behavioral criteria.
-                10 Rockstar signals, 9 Red Flag signals, full evidence chains
-                from their own words. Not a vibe check. A defensible assessment.
-              </p>
+          <div className="approach-grid">
+            <div className="approach-steps">
+              <div className="approach-step">
+                <span className="step-num">01</span>
+                <h3>Find who's already winning</h3>
+                <p>
+                  Every leader scored 1–6 against documented behavioral criteria.
+                  10 Rockstar signals, 9 Red Flag signals, full evidence chains
+                  from their own words. Not a vibe check. A defensible assessment.
+                </p>
+              </div>
+              <div className="approach-step">
+                <span className="step-num">02</span>
+                <h3>Document what they do</h3>
+                <p>
+                  Extract the replicable practices from your top performers. Rate
+                  signal strength. Map each practice to your company's own
+                  strategic goals, KPIs, and values.
+                </p>
+              </div>
+              <div className="approach-step">
+                <span className="step-num">03</span>
+                <h3>Deploy across the network</h3>
+                <p>
+                  Named owners, 90-day targets, quarterly measurement. Not a
+                  report. A living operational playbook. Then we lead the
+                  implementation alongside your team.
+                </p>
+              </div>
             </div>
-            <div className="approach-step">
-              <span className="step-num">02</span>
-              <h3>Document what they do</h3>
-              <p>
-                Extract the replicable practices from your top performers. Rate
-                signal strength. Map each practice to your company's own
-                strategic goals, KPIs, and values.
-              </p>
-            </div>
-            <div className="approach-step">
-              <span className="step-num">03</span>
-              <h3>Deploy across the network</h3>
-              <p>
-                Named owners, 90-day targets, quarterly measurement. Not a
-                report. A living operational playbook. Then we lead the
-                implementation alongside your team.
-              </p>
+            <div className="approach-media">
+              <img
+                src={stageTalk}
+                alt="Joe Black on stage, speaking under a slide asking why culture matters"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
           <p className="approach-note">
@@ -605,6 +646,16 @@ const CultureEngine = () => {
           </p>
         </div>
       </section>
+
+      {/* PHOTO BAND */}
+      <div className="ce-band">
+        <img
+          src={beachCalm}
+          alt="Joe Black leading a quiet breathing exercise by the sea at a company retreat"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
 
       {/* DELIVERABLES */}
       <section className="deliverables ds-section" id="deliverables">

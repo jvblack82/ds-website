@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import operatorPhoto from "@/assets/aim-operator-title.jpg";
 
 const css = `
   :root {
@@ -196,6 +197,19 @@ const css = `
   .aim-keep strong { color: #fff; font-weight: 600; }
 
   /* SECTION 05 credentials */
+  .aim-operator-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+  .aim-operator-photo {
+    margin: 1.8rem 0 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 24px 50px -28px rgba(30,43,58,0.4);
+  }
+  .aim-operator-photo img { width: 100%; height: auto; display: block; }
   .aim-creds { list-style: none; margin: 1.8rem 0 0; padding: 0; }
   .aim-cred {
     display: grid;
@@ -208,6 +222,7 @@ const css = `
   .aim-cred .aim-cred-role { font-weight: 600; color: var(--aim-dark); font-size: 0.98rem; }
   .aim-cred .aim-cred-role span { display: block; color: var(--aim-caramel); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.2rem; }
   .aim-cred p { font-size: 0.98rem; color: var(--aim-body); }
+  .aim-operator-grid .aim-cred { grid-template-columns: 190px 1fr; gap: 1.2rem; }
 
   /* CTA */
   .aim-cta-band { background: var(--aim-dark); color: #fff; padding: 5rem 0; text-align: center; }
@@ -240,7 +255,8 @@ const css = `
 
   @media (max-width: 820px) {
     .aim-why-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .aim-cred { grid-template-columns: 1fr; gap: 0.4rem; }
+    .aim-operator-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .aim-cred, .aim-operator-grid .aim-cred { grid-template-columns: 1fr; gap: 0.4rem; }
     .aim-section { padding: 4rem 0; }
   }
 `;
@@ -481,56 +497,66 @@ const AIMaestro = () => {
             building the systems that let companies scale without losing what
             made them good.
           </p>
-          <ul className="aim-creds">
-            <li className="aim-cred">
-              <div className="aim-cred-role">
-                Pizza 4P's<span>Culture &amp; Ops Excellence Director</span>
-              </div>
-              <p>
-                Built Culture and L&amp;D from zero across 40+ locations, 5
-                countries, 3,700 employees. 260+ SOPs into one backbone. eNPS up
-                20 points, happiness up 18-20%.
-              </p>
-            </li>
-            <li className="aim-cred">
-              <div className="aim-cred-role">
-                Seller Candy<span>Interim COO</span>
-              </div>
-              <p>
-                Built the operational foundation through 7-to-70 headcount and 6x
-                revenue. KPI structure, full SOP suite, HR, Finance, Training and
-                Ops from scratch.
-              </p>
-            </li>
-            <li className="aim-cred">
-              <div className="aim-cred-role">
-                Dreamplex<span>Director of Central Operations</span>
-              </div>
-              <p>
-                Full operations stack and BPM automation across all locations.
-                Roughly 4,056 hours a year taken out of the work.
-              </p>
-            </li>
-            <li className="aim-cred">
-              <div className="aim-cred-role">
-                Christina's Vietnam<span>Operations Team Leader</span>
-              </div>
-              <p>
-                Led operations through scaling from 3 to 8 cities and 50 to 500+
-                employees. Built the manual and SOP suite from scratch.
-              </p>
-            </li>
-            <li className="aim-cred">
-              <div className="aim-cred-role">
-                Dreamscope<span>The Culture Engine</span>
-              </div>
-              <p>
-                The most recent build and the most demonstrable. An operator
-                trained AI to do expert work that used to take months. Now the AI
-                does it in days.
-              </p>
-            </li>
-          </ul>
+          <div className="aim-operator-grid">
+            <ul className="aim-creds">
+              <li className="aim-cred">
+                <div className="aim-cred-role">
+                  Pizza 4P's<span>Culture &amp; Ops Excellence Director</span>
+                </div>
+                <p>
+                  Built Culture and L&amp;D from zero across 40+ locations, 5
+                  countries, 3,700 employees. 260+ SOPs into one backbone. eNPS
+                  up 20 points, happiness up 18-20%.
+                </p>
+              </li>
+              <li className="aim-cred">
+                <div className="aim-cred-role">
+                  Seller Candy<span>Interim COO</span>
+                </div>
+                <p>
+                  Built the operational foundation through 7-to-70 headcount and
+                  6x revenue. KPI structure, full SOP suite, HR, Finance,
+                  Training and Ops from scratch.
+                </p>
+              </li>
+              <li className="aim-cred">
+                <div className="aim-cred-role">
+                  Dreamplex<span>Director of Central Operations</span>
+                </div>
+                <p>
+                  Full operations stack and BPM automation across all locations.
+                  Roughly 4,056 hours a year taken out of the work.
+                </p>
+              </li>
+              <li className="aim-cred">
+                <div className="aim-cred-role">
+                  Christina's Vietnam<span>Operations Team Leader</span>
+                </div>
+                <p>
+                  Led operations through scaling from 3 to 8 cities and 50 to
+                  500+ employees. Built the manual and SOP suite from scratch.
+                </p>
+              </li>
+              <li className="aim-cred">
+                <div className="aim-cred-role">
+                  Dreamscope<span>The Culture Engine</span>
+                </div>
+                <p>
+                  The most recent build and the most demonstrable. An operator
+                  trained AI to do expert work that used to take months. Now the
+                  AI does it in days.
+                </p>
+              </li>
+            </ul>
+            <figure className="aim-operator-photo">
+              <img
+                src={operatorPhoto}
+                alt="Joe Black presenting to a leadership team"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
         </div>
       </section>
 

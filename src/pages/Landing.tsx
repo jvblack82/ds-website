@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import joeBlackPhoto from "@/assets/joe-black.jpg";
+import beachCircle from "@/assets/landing-beach-circle.jpg";
 import { COMPANY_LOGOS } from "@/data/companyLogos";
 
 const css = `
@@ -146,6 +147,16 @@ const css = `
   .land-practice .lp-more { font-weight: 600; font-size: 0.95rem; }
   .land-practice.ce .lp-more { color: var(--teal); }
   .land-practice.aim .lp-more { color: var(--caramel); }
+
+  /* PHOTO BAND */
+  .land-band { line-height: 0; }
+  .land-band img {
+    width: 100%;
+    height: clamp(240px, 34vw, 440px);
+    object-fit: cover;
+    object-position: 50% 72%;
+    display: block;
+  }
 
   /* ABOUT */
   .land-about { background: var(--cream); padding: 5.5rem 0; }
@@ -304,6 +315,16 @@ const Landing = () => {
           </div>
         </div>
       </section>
+
+      {/* PHOTO BAND */}
+      <div className="land-band">
+        <img
+          src={beachCircle}
+          alt="A team seated in a circle on the beach for a morning culture session at a company retreat"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
 
       {/* ABOUT */}
       <section className="land-about" id="about">

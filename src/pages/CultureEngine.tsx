@@ -768,15 +768,15 @@ const CultureEngine = () => {
           </h2>
           <div className="fit-tags">
             <span className="fit-tag">200–10,000+ employees</span>
-            <span className="fit-tag">Multi-location or single-site</span>
-            <span className="fit-tag">Retail &amp; Hospitality</span>
-            <span className="fit-tag">F&amp;B</span>
-            <span className="fit-tag">Services</span>
-            <span className="fit-tag">Corporate</span>
             <span className="fit-tag">Scaling fast</span>
+            <span className="fit-tag">Multi-location or single-site</span>
             <span className="fit-tag">
               Tried interventions that didn't stick
             </span>
+            <span className="fit-tag">Services</span>
+            <span className="fit-tag">Retail &amp; Hospitality</span>
+            <span className="fit-tag">F&amp;B</span>
+            <span className="fit-tag">Corporate</span>
           </div>
         </div>
       </section>
@@ -796,12 +796,13 @@ const CultureEngine = () => {
               lineHeight: 1.7,
             }}
           >
-            Built on the{" "}
-            <strong style={{ color: "var(--dark)" }}>19-driver model</strong>{" "}
-            validated by Utrecht University &amp; 2DaysMood across 300+
-            companies. AI-powered classification across surveys, interviews, and
-            focus groups. Every finding is evidence-backed and traceable to
-            source data.
+            Built on a framework of{" "}
+            <strong style={{ color: "var(--dark)" }}>
+              19 research-validated drivers
+            </strong>{" "}
+            of workplace happiness. AI-powered classification across surveys,
+            interviews, and focus groups. Every finding is evidence-backed and
+            traceable to source data.
           </p>
         </div>
       </section>

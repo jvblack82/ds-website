@@ -557,7 +557,16 @@ const AIMaestro = () => {
       {/* FOOTER */}
       <footer className="aim-footer">
         <p>
-          Dreamscope · <a href="mailto:joe@dreamscope.win">joe@dreamscope.win</a> · © 2026
+          Dreamscope Consulting ·{" "}
+          <a href="mailto:joe@dreamscope.win">joe@dreamscope.win</a> ·{" "}
+          <a
+            href="https://www.linkedin.com/in/joevblack"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>{" "}
+          · © 2026
         </p>
       </footer>
     </div>

@@ -45,36 +45,6 @@ const css = `
     position: relative;
     z-index: 1;
   }
-  .hero-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
-  .hero-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.25rem;
-    color: white;
-    letter-spacing: 0.5px;
-  }
-  .hero-logo span { color: var(--teal-light); }
-  .hero-cta-nav a {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-left: 2rem;
-    transition: color 0.2s;
-  }
-  .hero-cta-nav a:hover { color: white; }
-  .hero-cta-nav a.btn-nav {
-    background: var(--teal);
-    color: white;
-    padding: 0.6rem 1.4rem;
-    border-radius: 6px;
-    font-weight: 500;
-  }
-  .hero-cta-nav a.btn-nav:hover { background: var(--teal-light); }
-
   .hero h1 {
     font-family: 'DM Serif Display', serif;
     font-size: clamp(2.4rem, 5vw, 3.6rem);
@@ -418,7 +388,6 @@ const css = `
     .approach-steps { grid-template-columns: 1fr; }
     .deliverables-grid { grid-template-columns: 1fr; }
     .phases { grid-template-columns: 1fr; }
-    .hero-cta-nav { display: none; }
   }
   @media (max-width: 600px) {
     .stats-grid { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -442,26 +411,17 @@ const CultureEngine = () => {
       {/* HERO */}
       <div className="hero">
         <div className="hero-inner">
-          <nav className="hero-nav">
-            <div className="hero-logo">
-              Dreamscope<span>.</span>
-            </div>
-            <div className="hero-cta-nav">
-              <a href="#approach">How It Works</a>
-              <a href="#deliverables">What You Get</a>
-              <a href="#contact" className="btn-nav">
-                Let's Talk
-              </a>
-            </div>
-          </nav>
           <h1>You're scaling. But performance isn't scaling with you.</h1>
           <p className="subtitle">
             The Culture Engine is an AI-powered diagnostic system that finds the
             root cause of underperformance in scaling companies, then surfaces
             the fix that already exists inside your organization.
           </p>
-          <a href="#contact" className="hero-btn">
-            Book a 30-Minute Conversation
+          <a
+            href="https://discovery.dreamscope.win/culture"
+            className="hero-btn"
+          >
+            Take the culture discovery →
           </a>
         </div>
       </div>
@@ -829,8 +789,15 @@ const CultureEngine = () => {
       <footer className="ds-footer">
         <p>
           Dreamscope Consulting &middot;{" "}
-          <a href="mailto:joe@dreamscope.win">joe@dreamscope.win</a> &middot;
-          &copy; 2026
+          <a href="mailto:joe@dreamscope.win">joe@dreamscope.win</a> &middot;{" "}
+          <a
+            href="https://www.linkedin.com/in/joevblack"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>{" "}
+          &middot; &copy; 2026
         </p>
       </footer>
     </div>

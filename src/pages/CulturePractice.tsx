@@ -85,8 +85,7 @@ const css = `
     position: relative; border-radius: 14px; overflow: hidden;
     box-shadow: 0 24px 60px -28px rgba(0,0,0,0.6); aspect-ratio: 4 / 3;
   }
-  .cp-hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(100%) brightness(1.06); }
-  .cp-hero-photo::after { content: ''; position: absolute; inset: 0; background: var(--teal); mix-blend-mode: color; opacity: 0.52; }
+  .cp-hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .cp-hero-photo::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(140deg, rgba(30,43,58,0) 40%, rgba(30,43,58,0.55) 100%); }
 
   /* CREDIBILITY STRIP */

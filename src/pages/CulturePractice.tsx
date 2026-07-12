@@ -760,6 +760,9 @@ const CulturePractice = () => {
               Take the culture discovery →
             </a>
           </div>
+          <Link to="/check/culture" className="cp-chip-link">
+            Take the 2-minute culture check →
+          </Link>
           <div className="cp-cta-email">
             Or email directly: <a href="mailto:joe@dreamscope.win?subject=Dreamscope%20Culture%20-%20Let's%20talk">joe@dreamscope.win</a>
           </div>

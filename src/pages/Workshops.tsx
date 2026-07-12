@@ -237,6 +237,18 @@ const css = `
     font-weight: 700;
   }
   .ws-t-spacer { flex: 1; }
+  .ws-t-prep {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 0.9rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--ws-caramel-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ws-caramel);
+    padding-bottom: 1px;
+  }
+  .ws-t-prep:hover { color: var(--ws-caramel); }
   .ws-t-outcome {
     background: var(--ws-cream);
     border-radius: 8px;
@@ -618,6 +630,9 @@ const Workshops = () => {
                 </strong>
                 , because yours already did something.
               </div>
+              <Link className="ws-t-prep" to="/workshops/prep">
+                Start your pre-work →
+              </Link>
             </article>
 
             <article className="ws-tier featured">
@@ -653,6 +668,9 @@ const Workshops = () => {
                 <strong>Something is now set to run.</strong> Monday starts
                 different.
               </div>
+              <Link className="ws-t-prep" to="/workshops/prep">
+                Start your pre-work →
+              </Link>
             </article>
 
             <article className="ws-tier">
@@ -686,6 +704,9 @@ const Workshops = () => {
                 <strong>Not a taste. A finished build</strong> you drive
                 yourself.
               </div>
+              <Link className="ws-t-prep" to="/workshops/prep">
+                Start your pre-work →
+              </Link>
             </article>
 
             <article className="ws-tier">
@@ -756,6 +777,9 @@ const Workshops = () => {
                     we think fits the window. Nobody arrives blind, and nothing
                     gets promised that can't ship.
                   </p>
+                  <Link className="ws-t-prep" to="/workshops/prep">
+                    Start your pre-work →
+                  </Link>
                 </div>
               </div>
               <div className="ws-promise">

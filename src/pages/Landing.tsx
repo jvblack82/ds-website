@@ -388,6 +388,9 @@ const Landing = () => {
             </a>
           </div>
           <div className="land-cta-email">
+            <Link to="/check/culture">The 2-minute culture check →</Link>
+          </div>
+          <div className="land-cta-email">
             Or email directly: <a href="mailto:joe@dreamscope.win">joe@dreamscope.win</a>
           </div>
         </div>

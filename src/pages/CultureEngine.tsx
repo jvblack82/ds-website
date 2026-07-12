@@ -356,6 +356,22 @@ const css = `
     color: var(--dark);
     font-weight: 500;
   }
+  .fit-chip-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.8rem;
+    background: white;
+    border: 1px solid var(--sand);
+    color: var(--teal);
+    border-radius: 50px;
+    padding: 0.7rem 1.4rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .fit-chip-link:hover { transform: translateY(-1px); box-shadow: 0 8px 20px -12px rgba(30,43,58,0.35); }
 
   .cta {
     background: var(--dark);
@@ -799,6 +815,9 @@ const CultureEngine = () => {
             <span className="fit-tag">F&amp;B</span>
             <span className="fit-tag">Corporate</span>
           </div>
+          <Link to="/check/culture" className="fit-chip-link">
+            Take the 2-minute culture check →
+          </Link>
         </div>
       </section>
 

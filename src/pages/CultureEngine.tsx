@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import beachCalm from "@/assets/ce-beach-calm.jpg";
 import stageTalk from "@/assets/ce-stage-culture-talk.jpg";
 
@@ -850,7 +851,7 @@ const CultureEngine = () => {
           >
             LinkedIn
           </a>{" "}
-          &middot; &copy; 2026
+          &middot; <Link to="/#about">About</Link> &middot; &copy; 2026
         </p>
       </footer>
     </div>

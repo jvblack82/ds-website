@@ -10,6 +10,8 @@ import Landing from "./pages/Landing";
 const CulturePractice = lazy(() => import("./pages/CulturePractice"));
 const CultureEngine = lazy(() => import("./pages/CultureEngine"));
 const AIMaestro = lazy(() => import("./pages/AIMaestro"));
+const Workshops = lazy(() => import("./pages/Workshops"));
+const WebsiteRebuild = lazy(() => import("./pages/WebsiteRebuild"));
 const Brief = lazy(() => import("./pages/Brief"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -28,6 +30,8 @@ const App = () => (
               <Route path="/culture" element={<CulturePractice />} />
               <Route path="/culture-engine" element={<CultureEngine />} />
               <Route path="/ai-maestro" element={<AIMaestro />} />
+              <Route path="/workshops" element={<Workshops />} />
+              <Route path="/website" element={<WebsiteRebuild />} />
               <Route path="/brief" element={<Brief />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

@@ -93,15 +93,12 @@ const Navbar = () => {
             <NavLink to="/culture" className={linkClass}>
               Culture
             </NavLink>
-            <NavLink to="/culture-engine" className={linkClass}>
-              Culture Engine
-            </NavLink>
             <NavLink to="/ai-maestro" className={linkClass}>
               AI Maestro
             </NavLink>
-            <Link to="/#about" className="ds-nav-link">
-              About
-            </Link>
+            <NavLink to="/workshops" className={linkClass}>
+              Workshops
+            </NavLink>
             <Link to="/#contact" className="ds-nav-cta">
               Let's Talk
             </Link>
@@ -118,15 +115,12 @@ const Navbar = () => {
           <NavLink to="/culture" className={linkClass} onClick={close}>
             Culture
           </NavLink>
-          <NavLink to="/culture-engine" className={linkClass} onClick={close}>
-            Culture Engine
-          </NavLink>
           <NavLink to="/ai-maestro" className={linkClass} onClick={close}>
             AI Maestro
           </NavLink>
-          <Link to="/#about" className="ds-nav-link" onClick={close}>
-            About
-          </Link>
+          <NavLink to="/workshops" className={linkClass} onClick={close}>
+            Workshops
+          </NavLink>
           <Link
             to="/#contact"
             className="ds-nav-cta"

@@ -778,7 +778,7 @@ const CulturePractice = () => {
           <a href="https://www.linkedin.com/in/joevblack" target="_blank" rel="noreferrer">
             LinkedIn
           </a>{" "}
-          · © 2026
+          · <Link to="/#about">About</Link> · © 2026
         </p>
       </footer>
     </div>

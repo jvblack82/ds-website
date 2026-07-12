@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const css = `
   :root {
@@ -311,7 +312,8 @@ const Brief = () => {
       {/* FOOTER */}
       <footer className="brf-footer">
         <p>
-          Dreamscope · <a href="mailto:joe@dreamscope.win">joe@dreamscope.win</a> · © 2026
+          Dreamscope · <a href="mailto:joe@dreamscope.win">joe@dreamscope.win</a> ·{" "}
+          <Link to="/#about">About</Link> · © 2026
         </p>
       </footer>
     </div>

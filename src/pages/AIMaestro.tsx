@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import operatorPhoto from "@/assets/aim-operator-title.jpg";
 
 const css = `
@@ -249,11 +250,67 @@ const css = `
   .aim-cta-email { margin-top: 1.4rem; font-size: 0.92rem; color: rgba(255,255,255,0.55); }
   .aim-cta-email a { color: var(--aim-caramel); text-decoration: none; }
 
+  /* SECTION 06 more ways in */
+  .aim-doors { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; margin-top: 1.6rem; }
+  .aim-door {
+    display: block;
+    background: var(--aim-white);
+    border: 1px solid var(--aim-line);
+    border-top: 3px solid var(--aim-caramel);
+    border-radius: 10px;
+    padding: 1.6rem 1.7rem 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 14px 34px -24px rgba(30,43,58,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .aim-door:hover { transform: translateY(-2px); box-shadow: 0 24px 50px -28px rgba(30,43,58,0.4); }
+  .aim-door .dk {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--aim-caramel-deep);
+  }
+  .aim-door h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: var(--aim-dark);
+    margin: 0.4rem 0 0.5rem;
+  }
+  .aim-door p { font-size: 0.95rem; line-height: 1.55; color: var(--aim-body); margin: 0 0 0.9rem; }
+  .aim-door .go { font-size: 0.92rem; font-weight: 600; color: var(--aim-caramel-deep); }
+
+  .aim-quote {
+    margin-top: 3rem;
+    max-width: 720px;
+    border-left: 3px solid var(--aim-caramel);
+    padding: 0.3rem 0 0.3rem 1.6rem;
+  }
+  .aim-quote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--aim-dark);
+    margin: 0;
+  }
+  .aim-quote figcaption { margin-top: 0.9rem; font-size: 0.9rem; color: var(--aim-muted); }
+  .aim-quote figcaption a {
+    color: var(--aim-caramel-deep);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--aim-caramel);
+  }
+  .aim-quote figcaption a:hover { color: var(--aim-caramel); }
+
   .aim-footer { background: var(--aim-dark); padding: 2rem; text-align: center; }
   .aim-footer p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
   .aim-footer a { color: var(--aim-caramel); text-decoration: none; }
 
   @media (max-width: 820px) {
+    .aim-doors { grid-template-columns: 1fr; }
     .aim-why-grid { grid-template-columns: 1fr; gap: 2rem; }
     .aim-operator-grid { grid-template-columns: 1fr; gap: 2rem; }
     .aim-cred, .aim-operator-grid .aim-cred { grid-template-columns: 1fr; gap: 0.4rem; }
@@ -561,6 +618,55 @@ const AIMaestro = () => {
         </div>
       </section>
 
+      {/* 06 MORE WAYS IN */}
+      <section className="aim-section on-white">
+        <div className="aim-wrap">
+          <div className="aim-snum">06 / More ways in</div>
+          <h2 className="aim-h2">Two more doors into the same work.</h2>
+          <p className="aim-lead">
+            AI Maestro compresses a whole process end to end. If you want to
+            learn the move yourself, or start with a single build, start here.
+          </p>
+          <div className="aim-doors">
+            <Link className="aim-door" to="/workshops">
+              <span className="dk">Learn it yourself</span>
+              <h3>AI Workshops</h3>
+              <p>
+                Hands-on sessions where you hand Claude real work and it comes
+                back done. In your accounts, on your machine, bespoke to you.
+              </p>
+              <span className="go">See the workshops →</span>
+            </Link>
+            <Link className="aim-door" to="/website">
+              <span className="dk">A build, done for you</span>
+              <h3>The Self-Updating Website</h3>
+              <p>
+                Off WordPress and onto a fast site you own, SEO intact. From
+                then on you update it by talking to Claude.
+              </p>
+              <span className="go">See how it works →</span>
+            </Link>
+          </div>
+          <figure className="aim-quote">
+            <blockquote>
+              Our goal was to update my website automatically and keep it
+              updated on a continuous basis, and that's exactly what we built.
+              I'd wholeheartedly recommend the AI Maestro program!
+            </blockquote>
+            <figcaption>
+              <a
+                href="https://www.linkedin.com/in/thijsv1/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Thijs Van Loon MSc.
+              </a>
+              , Skills Development Facilitator, Betterworks Asia
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="aim-cta-band">
         <div className="aim-wrap">
@@ -593,7 +699,7 @@ const AIMaestro = () => {
           >
             LinkedIn
           </a>{" "}
-          · © 2026
+          · <Link to="/#about">About</Link> · © 2026
         </p>
       </footer>
     </div>

@@ -545,8 +545,8 @@ const AIMaestro = () => {
           <p className="aim-lead">
             The first thing I do is listen. With AI Maestro the hunt is for the
             biggest wins, the things eating the most time, or slowing down your
-            decisions and growth. This isn't a blanket solution like software you
-            bend your work around. It's built around what matters to you and how
+            decisions and growth. This isn't off-the-shelf software you bend
+            your work around. It's built around what matters to you and how
             you actually operate.
           </p>
         </div>

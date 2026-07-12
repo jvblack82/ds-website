@@ -212,7 +212,7 @@ const Brief = () => {
           <div className="brf-snum">03 / Proof</div>
           <h2 className="brf-h2">Proven on real data, not a slide.</h2>
           <p className="brf-lead">
-            I've done this work by hand at company after company for 20 years,
+            I've done this work by hand at company after company for 20+ years,
             and built parts of the AI version at another. The Culture Engine is
             the whole system, end to end. I ran it on a 450-person company: a
             year of data, 40 leadership interviews, 290 survey responses. The

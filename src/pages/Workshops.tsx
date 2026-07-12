@@ -1015,6 +1015,10 @@ const Workshops = () => {
               </div>
             </div>
           </div>
+          <p className="ws-note">
+            Prefer one-on-one? That's{" "}
+            <Link to="/coaching">AI Coaching →</Link>
+          </p>
         </div>
       </section>
 

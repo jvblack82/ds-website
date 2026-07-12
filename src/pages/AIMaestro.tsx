@@ -252,7 +252,7 @@ const css = `
   .aim-cta-email a { color: var(--aim-caramel); text-decoration: none; }
 
   /* SECTION 06 more ways in */
-  .aim-doors { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; margin-top: 1.6rem; }
+  .aim-doors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; margin-top: 1.6rem; }
   .aim-door {
     display: block;
     background: var(--aim-white);
@@ -629,27 +629,37 @@ const AIMaestro = () => {
       <section className="aim-section on-white">
         <div className="aim-wrap">
           <div className="aim-snum">06 / More ways in</div>
-          <h2 className="aim-h2">Two more doors into the same work.</h2>
+          <h2 className="aim-h2">Three more doors into the same work.</h2>
           <p className="aim-lead">
             AI Maestro compresses a whole process end to end. If you want to
-            learn the move yourself, or start with a single build, start here.
+            learn the move yourself, in a room or one-on-one, or start with a
+            single build, start here.
           </p>
           <div className="aim-doors">
             <Link className="aim-door" to="/workshops">
-              <span className="dk">Learn it yourself</span>
+              <span className="dk">Learn it in a room</span>
               <h3>AI Workshops</h3>
               <p>
-                Hands-on sessions where you hand Claude real work and it comes
-                back done. In your accounts, on your machine, bespoke to you.
+                Hands-on sessions where you hand Claude real work and leave
+                with it running.
               </p>
               <span className="go">See the workshops →</span>
+            </Link>
+            <Link className="aim-door" to="/coaching">
+              <span className="dk">Learn it one-on-one</span>
+              <h3>AI Coaching</h3>
+              <p>
+                You hand Claude real work and learn to run the whole system
+                yourself.
+              </p>
+              <span className="go">See the coaching →</span>
             </Link>
             <Link className="aim-door" to="/website">
               <span className="dk">A build, done for you</span>
               <h3>The Self-Updating Website</h3>
               <p>
-                Off WordPress and onto a fast site you own, SEO intact. From
-                then on you update it by talking to Claude.
+                Off WordPress and onto a fast site you own, updated by talking
+                to Claude.
               </p>
               <span className="go">See how it works →</span>
             </Link>

@@ -35,6 +35,29 @@ const css = `
     color: var(--wr-caramel);
   }
 
+  /* TOP BAND */
+  .wr-topband {
+    background: #F6EBDD;
+    border-bottom: 1px solid rgba(156,113,68,0.25);
+    padding: 0.7rem 0;
+  }
+  .wr-topband p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--wr-body);
+    margin: 0;
+    text-align: center;
+  }
+  .wr-topband a {
+    color: var(--wr-caramel-deep);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--wr-caramel);
+    padding-bottom: 1px;
+    white-space: nowrap;
+  }
+  .wr-topband a:hover { color: var(--wr-caramel); }
+
   /* HERO */
   .wr-hero {
     background: var(--wr-dark);
@@ -302,6 +325,16 @@ const WebsiteRebuild = () => {
 
   return (
     <div className="wr-page">
+      {/* TOP BAND */}
+      <div className="wr-topband">
+        <div className="wr-wrap">
+          <p>
+            This whole page is one coaching engagement, end to end.{" "}
+            <Link to="/coaching">About AI Coaching →</Link>
+          </p>
+        </div>
+      </div>
+
       {/* HERO */}
       <header className="wr-hero">
         <div className="wr-wrap">
@@ -453,13 +486,10 @@ const WebsiteRebuild = () => {
           </p>
           <figure className="wr-quote">
             <blockquote>
-              Joe set a very clear goal for what we were going to do with AI,
-              in my case, with Claude. That made a huge difference! Our goal
-              was to update my website automatically and keep it updated on a
-              continuous basis, and that's exactly what we built. What makes it
-              so useful is that you end up with something you can actually keep
-              using going forward. I'd wholeheartedly recommend the AI Maestro
-              program!
+              Our goal was to update my website automatically and keep it
+              updated on a continuous basis, and that's exactly what we built.
+              What makes it so useful is that you end up with something you
+              can actually keep using going forward.
             </blockquote>
             <figcaption>
               <a

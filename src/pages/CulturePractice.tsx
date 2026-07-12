@@ -181,6 +181,7 @@ const css = `
   .cp-chain-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
   .cp-callout { margin-top: 2.6rem; background: var(--dark); color: #fff; border-radius: 14px; padding: 1.8rem 2rem; font-family: 'DM Serif Display', serif; font-size: 1.2rem; line-height: 1.5; }
   .cp-callout span { color: var(--teal-light); }
+  .cp-callout-body { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.72); margin: 0.9rem 0 0; }
 
   /* Implement Live + Sustain */
   .cp-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; }
@@ -470,8 +471,9 @@ const CulturePractice = () => {
             Most companies don't lack data. They lack the means to turn it into
             something they can act on. The Discover phase pulls the truth out of
             three layers, employees, leaders, and frontline teams, and converges
-            it. The Culture Engine is the tool that does this layer. It's why we
-            built it.
+            them, so what leadership believes and what the floor lives can be
+            compared directly. The Culture Engine is the tool that does this
+            layer. It's why we built it.
           </p>
           <div className="cp-converge">
             <div className="cp-converge-sources">
@@ -482,7 +484,7 @@ const CulturePractice = () => {
             <div className="cp-converge-arrow">→</div>
             <div className="cp-converge-target">
               <span className="cp-tg-num">19</span>
-              <span className="cp-tg-label">One driver framework. Every layer classified against the same model.</span>
+              <span className="cp-tg-label">research-validated drivers of workplace happiness. Every layer classified against the same framework.</span>
             </div>
           </div>
           <div className="cp-deliv">
@@ -496,8 +498,10 @@ const CulturePractice = () => {
             </ul>
           </div>
           <p className="cp-phase-pullout">
-            Three independent sources. One framework. Convergent analysis. The
-            diagnostic that makes the next phase actually work.
+            Three independent sources. One framework. Where they agree,
+            confidence is high. Where they diverge, the divergence is itself the
+            finding, and what gets built next is decided by data, not
+            assumption.
           </p>
           <Link to="/culture-engine" className="cp-chip-link">
             The Culture Engine is the deep dive on this phase →
@@ -521,8 +525,11 @@ const CulturePractice = () => {
                 Some companies have nothing yet. Some have things that don't fit
                 how they actually operate, values copied from another company,
                 definitions that were never made concrete, a North Star that
-                doesn't survive contact with a customer. Build or Refresh walks
-                the foundation back to first principles and rebuilds what needs
+                doesn't survive contact with a customer. And some have values
+                that are genuinely lived but were never made operational. The
+                Discover evidence says which job it is, and you make the call
+                with that evidence on the table. Then Build or Refresh walks the
+                foundation back to first principles and rebuilds only what needs
                 rebuilding.
               </p>
             </div>
@@ -545,33 +552,40 @@ const CulturePractice = () => {
           <div className="cp-chain-grid">
             <div className="cp-chain-item">
               <h4>Vision</h4>
-              <p>Where the company is going, painted with enough specificity that a person can see themselves in it.</p>
+              <p>Why the company exists long term. Written for the team, and daring enough that someone could disagree.</p>
             </div>
             <div className="cp-chain-item">
               <h4>Mission</h4>
-              <p>How it gets there. The lever that converts vision into work.</p>
+              <p>Present tense: what you deliver and what makes you different. The lever that converts vision into work.</p>
             </div>
             <div className="cp-chain-item">
               <h4>Values</h4>
-              <p>The two or three things that define how people treat each other and how they treat the customer.</p>
+              <p>Behaviors, not word-picking. The whole company feeds the draft, then comes the cut: five values, seven at the ceiling, because focus on too many things is focus on nothing.</p>
             </div>
             <div className="cp-chain-item">
               <h4>Value Definitions</h4>
-              <p>What each value actually means at this company. Generic values mean nothing. Defined values are the playbook.</p>
+              <p>What each value actually means here, built from the teams' own stories so the definitions carry the company's fingerprints. Generic values mean nothing.</p>
             </div>
             <div className="cp-chain-item">
               <h4>Value Actions</h4>
-              <p>Concrete behaviors that bring the value to life, written so a new hire can see themselves embodying it and form an emotional connection to it.</p>
+              <p>Two to five observable behaviors per value, written per division, because a value looks different on a factory line than in an office.</p>
             </div>
             <div className="cp-chain-item">
               <h4>North Star</h4>
-              <p>The one line everyone carries into a customer interaction, simple enough to use under pressure. It works internally too. The internal customer of HR is the rest of the company.</p>
+              <p>The one line each team carries into a customer interaction, simple enough to use under pressure. It works internally too. The internal customer of HR is the rest of the company.</p>
             </div>
           </div>
 
           <div className="cp-callout">
             The output is the <span>Culture Playbook</span>. The field guide that
             turns the foundation into daily practice.
+            <p className="cp-callout-body">
+              Inside: the values with their definitions, each division's North
+              Star, and the teams' own values-in-action stories. More than half
+              of it is application, culture in hiring, onboarding, feedback,
+              recognition, and meetings. Two versions ship, a workshop takeaway
+              and a sendable edition for everyone who wasn't in the room.
+            </p>
           </div>
         </div>
       </section>
@@ -585,8 +599,11 @@ const CulturePractice = () => {
               <h3>Live it. Then sustain it.</h3>
               <p className="cp-phase-lead">
                 The culture moves off the page and into how Monday morning
-                actually feels. Then the systems keep it growing. If you're not
-                growing, you're dying. Culture is no different.
+                actually feels. Then the systems keep it growing. The rollout
+                runs on quick wins: easiest first, so visible wins land from day
+                one while the bigger systems build, in an order derived from
+                your data and your goal, not a template. If you're not growing,
+                you're dying. Culture is no different.
               </p>
             </div>
             <div className="cp-split-media">
@@ -600,10 +617,11 @@ const CulturePractice = () => {
               <h4>Live</h4>
               <p className="cp-duo-lead">Day-to-day implementation. The first roll, where culture moves from a binder into the work.</p>
               <ul>
-                <li>Reward and recognition as an on-the-spot habit: the connect, the shout-out, the meeting opener</li>
-                <li>Programmatic recognition: monthly, quarterly, annual</li>
-                <li>Empowering middle managers as the lead carriers of culture</li>
+                <li>Recognition as an on-the-spot habit: in the moment, value named, story attached. Designed for the story, not the prize</li>
+                <li>Recognition as a program: nomination-by-story monthly awards feeding quarterly and annual</li>
+                <li>Middle managers as the lead carriers of culture: each gets their own team's culture data and a simple protocol for acting on it</li>
                 <li>Rockstar identification and utilization: find who's already winning, make their methods the standard</li>
+                <li>Culture-led meetings and town halls: connection opportunities, not calendar debris</li>
                 <li>Culture-led training</li>
               </ul>
             </div>
@@ -611,9 +629,11 @@ const CulturePractice = () => {
               <h4>Sustain</h4>
               <p className="cp-duo-lead">The ongoing systems that keep culture growing instead of decaying.</p>
               <ul>
-                <li>Ongoing assessments and pulse measurement with Culture Engine Quarterly</li>
+                <li>Culture Engine Quarterly: eNPS each quarter, about 30 seconds per employee, plus the few deep-dive questions the last round earned</li>
+                <li>Every initiative scored by the next round: KPIs tell you whether it's working, your people tell you why</li>
                 <li>L&amp;D and SOPs built around the why, not just the how</li>
-                <li>Performance reviews and promotion weighted toward living the values</li>
+                <li>Values in performance reviews, weighted heavily enough to move promotions, raises, and improvement plans</li>
+                <li>Values-based hiring and onboarding, so culture is screened in at the door</li>
                 <li>KPI and metric design that treats culture as an input, not a separate column</li>
                 <li>Strategic goal-setting at every level, with culture as a strategic input</li>
               </ul>
@@ -621,7 +641,8 @@ const CulturePractice = () => {
           </div>
           <p className="cp-phase-pullout">
             Culture is strategic. Treated as a system, it compounds. Treated as a
-            poster, it fades. Sustain is the work of compounding.
+            poster, it fades. A diagnosis tells you where you are. The quarterly
+            loop tells you whether you're moving.
           </p>
         </div>
       </section>

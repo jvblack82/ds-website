@@ -461,9 +461,10 @@ const CultureEngine = () => {
       <div className="stats-bar">
         <div className="stats-grid">
           <div className="stat-item">
-            <span className="stat-number">5 of 7</span>
+            <span className="stat-number">5 for 5</span>
             <span className="stat-label">
-              Leadership departures predicted before they happened
+              Flight-risk flags validated in a blind retrospective, all 5 among
+              the 7 real departures
             </span>
           </div>
           <div className="stat-item">
@@ -473,9 +474,10 @@ const CultureEngine = () => {
             </span>
           </div>
           <div className="stat-item">
-            <span className="stat-number">50</span>
+            <span className="stat-number">161 → 50</span>
             <span className="stat-label">
-              Proven practices surfaced from the company's own top performers
+              Operational practices from top performers, focused to the 50
+              aligned with strategy
             </span>
           </div>
           <div className="stat-item">
@@ -530,7 +532,7 @@ const CultureEngine = () => {
                   Companies collect the data, then it stalls. Either they can't
                   tell what it's really saying, or turning it into something they
                   can act on takes so long the moment has passed. We classify
-                  every response against 19 validated drivers and synthesize it
+                  every response against 19 research-validated drivers and synthesize it
                   fast, so you can act while it still matters.
                 </div>
               </div>
@@ -630,12 +632,12 @@ const CultureEngine = () => {
               </span>
             </div>
             <div className="result-stat">
-              <span className="rs-num">18 pts</span>
+              <span className="rs-num">20 pts</span>
               <span className="rs-label">eNPS rise</span>
               <span className="rs-desc">A measurably better place to work.</span>
             </div>
             <div className="result-stat">
-              <span className="rs-num">25 → 37</span>
+              <span className="rs-num">27 → 37</span>
               <span className="rs-label">Locations, 5 countries</span>
               <span className="rs-desc">Growth the culture could sustain.</span>
             </div>
@@ -748,7 +750,7 @@ const CultureEngine = () => {
               <div className="phase-label">Phase 2</div>
               <h3>Analysis</h3>
               <p>
-                AI-powered classification against 19 validated drivers. Leader
+                AI-powered classification against 19 research-validated drivers. Leader
                 scoring with evidence chains. Convergent analysis across all
                 three data sources. Full report delivery and action plan
                 workshop.

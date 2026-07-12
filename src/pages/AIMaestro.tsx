@@ -386,8 +386,9 @@ const AIMaestro = () => {
                 <p className="aim-proof">
                   The Culture Engine is the built proof. Three data sources, 19
                   drivers, AI-classified and queryable. On a 450-person company
-                  it flagged 5 of 7 leadership departures before they happened,
-                  and a -87% sentiment crisis that 40 leaders missed.
+                  it flagged 5 flight risks in a blind retrospective, all 5
+                  among the 7 real departures, and caught a -87% sentiment
+                  crisis that 40 leaders missed.
                 </p>
               </div>
             </div>

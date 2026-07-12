@@ -215,8 +215,8 @@ const Brief = () => {
           </p>
           <div className="brf-stats">
             <div className="brf-stat">
-              <span className="n">5 of 7</span>
-              <span className="l">leadership departures flagged before they happened</span>
+              <span className="n">5 for 5</span>
+              <span className="l">flight-risk flags validated in a blind retrospective, all 5 among the 7 real departures</span>
             </div>
             <div className="brf-stat">
               <span className="n">-87%</span>

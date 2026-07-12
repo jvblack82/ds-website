@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import handsOnPhoto from "@/assets/workshops-hands-on.jpg";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const css = `
   :root {
@@ -477,6 +478,12 @@ const css = `
 `;
 
 const Workshops = () => {
+  usePageMeta({
+    title: "AI Workshops · Walk Out With It Running",
+    description:
+      "First Win, Build Day, The Cohort, The Loop. Hands-on Claude workshops where you hand AI real work and leave with it running.",
+  });
+
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = css;
@@ -488,13 +495,9 @@ const Workshops = () => {
       "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap";
     document.head.appendChild(link);
 
-    const prevTitle = document.title;
-    document.title = "AI Workshops · Dreamscope";
-
     return () => {
       document.head.removeChild(style);
       document.head.removeChild(link);
-      document.title = prevTitle;
     };
   }, []);
 
@@ -1066,7 +1069,8 @@ const Workshops = () => {
           >
             LinkedIn
           </a>{" "}
-          · <Link to="/#about">About</Link> · © 2026
+          · <Link to="/#about">About</Link> ·{" "}
+          <Link to="/insights">Insights</Link> · © 2026
         </p>
       </footer>
     </div>

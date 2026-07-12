@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import operatorPhoto from "@/assets/aim-operator-title.jpg";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const css = `
   :root {
@@ -319,6 +320,12 @@ const css = `
 `;
 
 const AIMaestro = () => {
+  usePageMeta({
+    title: "AI Maestro · Expert Work, Trained Into AI",
+    description:
+      "An operator takes your expert work, breaks it down, and trains AI to do it. Months of work becomes days.",
+  });
+
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = css;
@@ -699,7 +706,8 @@ const AIMaestro = () => {
           >
             LinkedIn
           </a>{" "}
-          · <Link to="/#about">About</Link> · © 2026
+          · <Link to="/#about">About</Link> ·{" "}
+          <Link to="/insights">Insights</Link> · © 2026
         </p>
       </footer>
     </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import joeBlackPhoto from "@/assets/joe-black.jpg";
 import beachCircle from "@/assets/landing-beach-circle.jpg";
 import { COMPANY_LOGOS } from "@/data/companyLogos";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const css = `
   :root {
@@ -194,6 +195,12 @@ const css = `
 `;
 
 const Landing = () => {
+  usePageMeta({
+    title: "Dreamscope Consulting · Culture and AI, Run by an Operator",
+    description:
+      "An end-to-end culture practice and AI Maestro, where expert work gets trained into AI. 20+ years operating, based in Ho Chi Minh City, working anywhere.",
+  });
+
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = css;
@@ -393,7 +400,8 @@ const Landing = () => {
           <a href="https://www.linkedin.com/in/joevblack" target="_blank" rel="noreferrer">
             LinkedIn
           </a>{" "}
-          · <Link to="/#about">About</Link> · © 2026
+          · <Link to="/#about">About</Link> ·{" "}
+          <Link to="/insights">Insights</Link> · © 2026
         </p>
       </footer>
     </div>

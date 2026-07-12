@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import beachCalm from "@/assets/ce-beach-calm.jpg";
 import stageTalk from "@/assets/ce-stage-culture-talk.jpg";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const css = `
   :root {
@@ -429,6 +430,12 @@ const css = `
 `;
 
 const CultureEngine = () => {
+  usePageMeta({
+    title: "The Culture Engine · AI-Powered Culture Diagnostics",
+    description:
+      "Three data layers, 19 research-validated drivers of workplace happiness, one convergent diagnosis. What leaders miss, the system catches.",
+  });
+
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = css;
@@ -851,7 +858,8 @@ const CultureEngine = () => {
           >
             LinkedIn
           </a>{" "}
-          &middot; <Link to="/#about">About</Link> &middot; &copy; 2026
+          &middot; <Link to="/#about">About</Link> &middot;{" "}
+          <Link to="/insights">Insights</Link> &middot; &copy; 2026
         </p>
       </footer>
     </div>

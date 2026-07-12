@@ -6,6 +6,7 @@ import inspirePhoto from "@/assets/culture-inspire.jpg";
 import buildPhoto from "@/assets/culture-build.jpg";
 import implementPhoto from "@/assets/culture-implement.jpg";
 import { COMPANY_LOGOS } from "@/data/companyLogos";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const DISCOVERY = "https://discovery.dreamscope.win/culture";
 
@@ -259,24 +260,19 @@ const css = `
 `;
 
 const CulturePractice = () => {
+  usePageMeta({
+    title: "Culture Consulting · The Four-Phase Dreamscope Practice",
+    description:
+      "Inspire, Discover, Build, Implement. An end-to-end culture practice for companies scaling fast, run by an operator with 20+ years, 9 of them across Asia.",
+  });
+
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = css;
     document.head.appendChild(style);
 
-    const prevTitle = document.title;
-    document.title = "Culture Consulting · Dreamscope · Joe Black";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    const prevDesc = metaDesc?.getAttribute("content") ?? null;
-    metaDesc?.setAttribute(
-      "content",
-      "An end-to-end culture practice for companies scaling fast. Inspire, Discover, Build, Implement. The four-phase Dreamscope framework, run by an operator with 20+ years building the systems that scale companies."
-    );
-
     return () => {
       document.head.removeChild(style);
-      document.title = prevTitle;
-      if (prevDesc !== null) metaDesc?.setAttribute("content", prevDesc);
     };
   }, []);
 
@@ -778,7 +774,8 @@ const CulturePractice = () => {
           <a href="https://www.linkedin.com/in/joevblack" target="_blank" rel="noreferrer">
             LinkedIn
           </a>{" "}
-          · <Link to="/#about">About</Link> · © 2026
+          · <Link to="/#about">About</Link> ·{" "}
+          <Link to="/insights">Insights</Link> · © 2026
         </p>
       </footer>
     </div>

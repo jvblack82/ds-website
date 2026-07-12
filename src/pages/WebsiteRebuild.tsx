@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const css = `
   :root {
@@ -276,6 +277,12 @@ const css = `
 `;
 
 const WebsiteRebuild = () => {
+  usePageMeta({
+    title: "The Self-Updating Website · Off WordPress, SEO Intact",
+    description:
+      "We rebuild your site into something you own and update by talking to Claude. Your Google ranking carried across, live in about two weeks. Start with a free teardown.",
+  });
+
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = css;
@@ -287,13 +294,9 @@ const WebsiteRebuild = () => {
       "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap";
     document.head.appendChild(link);
 
-    const prevTitle = document.title;
-    document.title = "The Self-Updating Website · Dreamscope";
-
     return () => {
       document.head.removeChild(style);
       document.head.removeChild(link);
-      document.title = prevTitle;
     };
   }, []);
 
@@ -508,7 +511,8 @@ const WebsiteRebuild = () => {
           >
             LinkedIn
           </a>{" "}
-          · <Link to="/#about">About</Link> · © 2026
+          · <Link to="/#about">About</Link> ·{" "}
+          <Link to="/insights">Insights</Link> · © 2026
         </p>
       </footer>
     </div>

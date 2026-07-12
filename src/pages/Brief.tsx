@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const css = `
   :root {
@@ -100,17 +101,20 @@ const css = `
 `;
 
 const Brief = () => {
+  usePageMeta({
+    title: "The Dreamscope Brief",
+    description:
+      "An end-to-end culture practice and AI Maestro, where expert work gets trained into AI. 20+ years operating, based in Ho Chi Minh City, working anywhere.",
+    noindex: true,
+  });
+
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = css;
     document.head.appendChild(style);
 
-    const prevTitle = document.title;
-    document.title = "The Brief · Dreamscope";
-
     return () => {
       document.head.removeChild(style);
-      document.title = prevTitle;
     };
   }, []);
 

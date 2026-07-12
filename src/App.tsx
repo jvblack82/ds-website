@@ -13,6 +13,8 @@ const AIMaestro = lazy(() => import("./pages/AIMaestro"));
 const Workshops = lazy(() => import("./pages/Workshops"));
 const WebsiteRebuild = lazy(() => import("./pages/WebsiteRebuild"));
 const Brief = lazy(() => import("./pages/Brief"));
+const Insights = lazy(() => import("./pages/Insights"));
+const Insight = lazy(() => import("./pages/Insight"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -33,6 +35,8 @@ const App = () => (
               <Route path="/workshops" element={<Workshops />} />
               <Route path="/website" element={<WebsiteRebuild />} />
               <Route path="/brief" element={<Brief />} />
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:slug" element={<Insight />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Route>

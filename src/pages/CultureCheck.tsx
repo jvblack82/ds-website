@@ -189,18 +189,18 @@ const BANDS: Record<BandId, { label: string; paragraphs: string[]; closing: stri
   strong: {
     label: "Built on purpose",
     paragraphs: [
-      "Bad news reaches leaders. Recognition happens without being prompted. Behavior decides promotions. That is a culture built on purpose, showing up in observable behavior, which is the only place culture exists.",
-      "Two warnings. First, these signals decay with scale. Habits that hold at 20 people strain at 50 and break past 150 unless somebody rebuilds them deliberately. What carried you here will not automatically survive your next doubling.",
+      "Bad news reaches leaders. Recognition happens without being prompted. Behavior decides promotions. That is a culture built on purpose, showing up in behavior you can see, which is the only place culture exists.",
+      "Two warnings. First, these signals weaken as the company grows. Habits that hold at 20 people struggle at 50 and break past 150 unless somebody rebuilds them deliberately. What carried you here will not automatically survive your next doubling.",
       "Second, you answered for the company, and your frontline might answer differently. The gap between those two answers is where problems hide, and measuring it is exactly where the culture discovery starts.",
     ],
-    closing: "Want the question-by-question read too? Drop your email below.",
+    closing: "Want the question-by-question read too? Leave your email below.",
   },
   mixed: {
     label: "Holding on goodwill",
     paragraphs: [
       "Some of these behaviors are alive in your company. Others are running on individual goodwill instead of systems you built, and goodwill does not scale or survive turnover.",
-      "This is the most common band and the riskiest place to sit while growing, because the strong signals mask the weak ones until a key resignation or a bad quarter pulls the cover off. What you need now is precision: which of the eight behaviors are carrying you, and which are decorative.",
-      "Drop your email and we will send the per-question read, what each answer signals, and one practical move for every gap. Nothing generic.",
+      "This is the most common band and the riskiest place to sit while growing, because the strong signals mask the weak ones until a key resignation or a bad quarter exposes them. What you need now is precision: which of the eight behaviors are carrying you, and which are decorative.",
+      "Leave your email and we will send the per-question read, what each answer signals, and one practical move for every gap. Nothing generic.",
     ],
     closing: "Prefer to put real data behind it first? Take the culture discovery.",
   },
@@ -208,7 +208,7 @@ const BANDS: Record<BandId, { label: string; paragraphs: string[]; closing: stri
     label: "Growing by accident",
     paragraphs: [
       "Your company has a culture. Every company does. Yours is growing by accident, which means how people treat each other and your customers is being set by whoever has the most influence on each team. Not by you.",
-      "At a couple hundred employees that shows up as locations underperforming for reasons nobody can name, strong people leaving out of nowhere, and feedback rounds that change nothing. Posters and team builders will not fix it. Culture is behavior, and behavior gets managed, not decorated.",
+      "At 200 or 300 employees, that shows up as locations underperforming for reasons nobody can name, strong people leaving with no warning, and feedback rounds that change nothing. Posters and team builders will not fix it. Culture is behavior, and behavior gets managed, not decorated.",
       "Start with the per-question breakdown: what each gap is costing you and one concrete move per question, straight to your email.",
     ],
     closing: "Ready for the bigger conversation? Take the culture discovery.",
@@ -303,7 +303,7 @@ const CultureCheck = () => {
       <div className="cc-gate">
         <p className="cc-success">
           <strong>Breakdown on its way.</strong> If you reply to that email it
-          reaches me, not a funnel.
+          comes to me, not to a machine.
         </p>
       </div>
     ) : (

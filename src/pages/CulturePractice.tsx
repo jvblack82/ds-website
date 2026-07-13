@@ -116,9 +116,12 @@ const css = `
   /* FRAMEWORK */
   .cp-framework-intro { background: var(--cream); padding-bottom: 3rem; }
   .cp-stepper { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
-  .cp-step { display: flex; align-items: baseline; gap: 0.5rem; background: #fff; border: 1px solid var(--sand); border-radius: 50px; padding: 0.5rem 1.2rem; }
-  .cp-step-num { font-family: 'DM Serif Display', serif; color: var(--teal); font-size: 0.95rem; }
-  .cp-step-name { font-size: 0.9rem; font-weight: 600; color: var(--dark); }
+  .cp-step { display: flex; align-items: baseline; gap: 0.5rem; background: #fff; border: 1px solid var(--sand); border-radius: 50px; padding: 0.5rem 1.2rem; text-decoration: none; cursor: pointer; transition: background 0.25s, border-color 0.25s, transform 0.2s; }
+  .cp-step:hover { background: var(--dark); border-color: var(--dark); transform: translateY(-1px); }
+  .cp-step-num { font-family: 'DM Serif Display', serif; color: var(--teal); font-size: 0.95rem; transition: color 0.25s; }
+  .cp-step-name { font-size: 0.9rem; font-weight: 600; color: var(--dark); transition: color 0.25s; }
+  .cp-step:hover .cp-step-num { color: var(--teal-light); }
+  .cp-step:hover .cp-step-name { color: #fff; }
 
   .cp-phase { padding: 4.5rem 0; }
   .cp-phase.light { background: var(--warm-white); }
@@ -402,16 +405,16 @@ const CulturePractice = () => {
             and make it live.
           </p>
           <div className="cp-stepper">
-            <div className="cp-step"><span className="cp-step-num">01</span><span className="cp-step-name">Inspire</span></div>
-            <div className="cp-step"><span className="cp-step-num">02</span><span className="cp-step-name">Discover</span></div>
-            <div className="cp-step"><span className="cp-step-num">03</span><span className="cp-step-name">Build or Refresh</span></div>
-            <div className="cp-step"><span className="cp-step-num">04</span><span className="cp-step-name">Implement</span></div>
+            <a className="cp-step" href="#phase-inspire"><span className="cp-step-num">01</span><span className="cp-step-name">Inspire</span></a>
+            <a className="cp-step" href="#phase-discover"><span className="cp-step-num">02</span><span className="cp-step-name">Discover</span></a>
+            <a className="cp-step" href="#phase-build"><span className="cp-step-num">03</span><span className="cp-step-name">Build or Refresh</span></a>
+            <a className="cp-step" href="#phase-implement"><span className="cp-step-num">04</span><span className="cp-step-name">Implement</span></a>
           </div>
         </div>
       </section>
 
       {/* Phase 1 - Inspire */}
-      <section className="cp-phase light">
+      <section className="cp-phase light" id="phase-inspire">
         <div className="cp-wrap">
           <div className="cp-split">
             <div>
@@ -459,7 +462,7 @@ const CulturePractice = () => {
       </section>
 
       {/* Phase 2 - Discover */}
-      <section className="cp-phase dark">
+      <section className="cp-phase dark" id="phase-discover">
         <div className="cp-wrap">
           <div className="cp-phase-eyebrow">Phase 02 · Discover</div>
           <h3>Find the truth that's already in the building.</h3>
@@ -506,7 +509,7 @@ const CulturePractice = () => {
       </section>
 
       {/* Phase 3 - Build / Refresh */}
-      <section className="cp-phase cream">
+      <section className="cp-phase cream" id="phase-build">
         <div className="cp-wrap">
           <div className="cp-split rev">
             <div className="cp-split-media">
@@ -587,7 +590,7 @@ const CulturePractice = () => {
       </section>
 
       {/* Phase 4 - Implement */}
-      <section className="cp-phase light">
+      <section className="cp-phase light" id="phase-implement">
         <div className="cp-wrap">
           <div className="cp-split">
             <div>

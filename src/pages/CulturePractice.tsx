@@ -559,7 +559,7 @@ const CulturePractice = () => {
             </div>
             <div className="cp-chain-item">
               <h4>Values</h4>
-              <p>Behaviors, not word-picking. The whole company feeds the draft, then comes the cut: five values, seven at the ceiling, because focus on too many things is focus on nothing.</p>
+              <p>Behaviors, not word-picking. The whole company feeds the draft, then comes the cut: four to five values, seven max, because focus on too many things is focus on nothing.</p>
             </div>
             <div className="cp-chain-item">
               <h4>Value Definitions</h4>
@@ -567,7 +567,7 @@ const CulturePractice = () => {
             </div>
             <div className="cp-chain-item">
               <h4>Value Actions</h4>
-              <p>Two to five observable behaviors per value, written per division, because a value looks different on a factory line than in an office.</p>
+              <p>Two to five observable behaviors per value. A definition stays an idea; a behavior seen in action makes the value real and felt, and shows people in seconds what living it looks like.</p>
             </div>
             <div className="cp-chain-item">
               <h4>North Star</h4>

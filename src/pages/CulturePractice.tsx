@@ -187,14 +187,45 @@ const css = `
   .cp-callout span { color: var(--teal-light); }
   .cp-callout-body { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.72); margin: 0.9rem 0 0; }
 
-  /* Implement Live + Sustain */
-  .cp-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; }
-  .cp-duo-col h4 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; }
-  .cp-duo-col .cp-duo-lead { font-size: 0.98rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.1rem; }
-  .cp-duo-col ul { list-style: none; padding: 0; margin: 0; }
-  .cp-duo-col li { font-size: 0.95rem; line-height: 1.5; padding: 0.45rem 0 0.45rem 1.4rem; position: relative; border-top: 1px solid var(--sand); }
-  .cp-duo-col li:first-child { border-top: none; }
-  .cp-duo-col li::before { content: '·'; position: absolute; left: 0.4rem; color: var(--teal); font-weight: 700; }
+  /* Implement cadence spine (where culture lives) */
+  .cp-cadence { margin-top: 1.5rem; }
+  .cp-cadence-intro { font-size: 1.02rem; line-height: 1.7; max-width: 640px; margin: 0 0 1.8rem; }
+  .cp-cad-beats {
+    --cad-gap: 0.9rem;
+    list-style: none; margin: 0; padding: 3.4rem 0 0;
+    display: grid; grid-template-columns: repeat(6, 1fr); column-gap: var(--cad-gap);
+  }
+  .cp-cad-beat { --cad-accent: var(--teal); position: relative; min-width: 0; }
+  .cp-cad-beat.sustain { --cad-accent: var(--dark); }
+  .cp-cad-group {
+    position: absolute; bottom: calc(100% + 0.7rem); left: 0;
+    width: calc(300% + 2 * var(--cad-gap));
+    margin: 0; border-top: 2px solid var(--cad-accent); padding-top: 0.5rem;
+    font-size: 0.8rem; line-height: 1.4; color: #575E66;
+  }
+  .cp-cad-group strong { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--cad-accent); margin-right: 0.55rem; }
+  .cp-cad-node { display: block; position: relative; height: 14px; margin-bottom: 0.9rem; }
+  .cp-cad-node::before {
+    content: ''; position: absolute; top: 50%; transform: translateY(-50%);
+    left: calc(-1 * var(--cad-gap)); right: calc(-1 * var(--cad-gap));
+    height: 2px; border-radius: 2px; background: var(--teal);
+  }
+  .cp-cad-beat:first-child .cp-cad-node::before { left: 50%; }
+  .cp-cad-beat:last-child .cp-cad-node::before { right: 50%; }
+  .cp-cad-node::after {
+    content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 13px; height: 13px; border-radius: 50%;
+    background: var(--cad-accent); border: 2px solid var(--warm-white);
+    box-shadow: 0 0 0 2px var(--cad-accent);
+  }
+  .cp-cad-when {
+    font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--cad-accent); text-align: center; margin: 0 0 0.9rem;
+  }
+  .cp-cad-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+  .cp-cad-items li { background: var(--cream); border-top: 3px solid var(--cad-accent); border-radius: 10px; padding: 0.7rem 0.8rem 0.8rem; }
+  .cp-cad-items li strong { display: block; font-size: 0.85rem; line-height: 1.35; color: var(--dark); margin-bottom: 0.3rem; }
+  .cp-cad-items li span { display: block; font-size: 0.78rem; line-height: 1.5; color: #575E66; }
 
   /* PLAYBOOK */
   .cp-playbook { background: var(--accent-bg); }
@@ -248,11 +279,27 @@ const css = `
     .cp-hero-inner { grid-template-columns: 1fr; }
     .cp-hero-photo { display: none; }
     .cp-cred-grid { grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
-    .cp-premise-grid, .cp-why-grid, .cp-split, .cp-duo { grid-template-columns: 1fr; gap: 2rem; }
+    .cp-premise-grid, .cp-why-grid, .cp-split { grid-template-columns: 1fr; gap: 2rem; }
     .cp-split.rev .cp-split-media { order: 0; }
     .cp-pillars, .cp-chain-grid, .cp-playbook-cards, .cp-engage-cards { grid-template-columns: 1fr; }
     .cp-deliv-list { grid-template-columns: 1fr; }
     .cp-why-photo { margin-bottom: 1.5rem; }
+
+    /* Cadence spine goes vertical: rail on the left, beats stacked */
+    .cp-cad-beats { display: block; padding-top: 0.5rem; }
+    .cp-cad-beat { padding: 0 0 1.7rem 2rem; }
+    .cp-cad-beat:last-child { padding-bottom: 0; }
+    .cp-cad-beat::before { content: ''; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; border-radius: 2px; background: var(--teal); }
+    .cp-cad-beat:last-child::before { bottom: auto; height: 0.6rem; }
+    .cp-cad-node { display: none; }
+    .cp-cad-group { position: static; width: auto; margin-bottom: 1.2rem; }
+    .cp-cad-when { position: relative; text-align: left; }
+    .cp-cad-when::before {
+      content: ''; position: absolute; left: -32px; top: 50%; transform: translateY(-50%);
+      width: 13px; height: 13px; border-radius: 50%;
+      background: var(--cad-accent); border: 2px solid var(--warm-white);
+      box-shadow: 0 0 0 2px var(--cad-accent);
+    }
   }
   @media (max-width: 560px) {
     .cp-cred-grid { grid-template-columns: 1fr; }
@@ -470,8 +517,8 @@ const CulturePractice = () => {
             Most companies don't lack data. They lack the means to turn it into
             something they can act on. The Discover phase pulls the truth out of
             three layers, employees, leaders, and frontline teams, and converges
-            them, so what leadership believes and what the floor lives can be
-            compared directly. The Culture Engine is the tool that does this
+            them, so what leadership believes and what the frontline lives can
+            be compared directly. The Culture Engine is the tool that does this
             layer. It's why we built it.
           </p>
           <div className="cp-converge">
@@ -611,32 +658,64 @@ const CulturePractice = () => {
               </div>
             </div>
           </div>
-          <div className="cp-duo">
-            <div className="cp-duo-col">
-              <h4>Live</h4>
-              <p className="cp-duo-lead">Day-to-day implementation. The first roll, where culture moves from a binder into the work.</p>
-              <ul>
-                <li>Recognition as an on-the-spot habit: in the moment, value named, story attached. Designed for the story, not the prize</li>
-                <li>Recognition as a program: nomination-by-story monthly awards feeding quarterly and annual</li>
-                <li>Middle managers as the lead carriers of culture: each gets their own team's culture data and a simple protocol for acting on it</li>
-                <li>Rockstar identification and utilization: find who's already winning, make their methods the standard</li>
-                <li>Culture-led meetings and town halls: connection opportunities, not calendar debris</li>
-                <li>Culture-led training</li>
-              </ul>
-            </div>
-            <div className="cp-duo-col">
-              <h4>Sustain</h4>
-              <p className="cp-duo-lead">The ongoing systems that keep culture growing instead of decaying.</p>
-              <ul>
-                <li>Culture Engine Quarterly: eNPS each quarter, about 30 seconds per employee, plus the few deep-dive questions the last round earned</li>
-                <li>Every initiative scored by the next round: KPIs tell you whether it's working, your people tell you why</li>
-                <li>L&amp;D and SOPs built around the why, not just the how</li>
-                <li>Values in performance reviews, weighted heavily enough to move promotions, raises, and improvement plans</li>
-                <li>Values-based hiring and onboarding, so culture is screened in at the door</li>
-                <li>KPI and metric design that treats culture as an input, not a separate column</li>
-                <li>Strategic goal-setting at every level, with culture as a strategic input</li>
-              </ul>
-            </div>
+          <div className="cp-cadence">
+            <p className="cp-cadence-intro">
+              Culture is not a separate program. It lives in specific places,
+              on a rhythm. These are the places.
+            </p>
+            <ol className="cp-cad-beats">
+              <li className="cp-cad-beat live">
+                <p className="cp-cad-group"><strong>Live</strong> Culture moves from a binder into the work</p>
+                <span className="cp-cad-node" aria-hidden="true"></span>
+                <h4 className="cp-cad-when">Every day</h4>
+                <ul className="cp-cad-items">
+                  <li><strong>Recognition in the moment</strong><span>Value named, story attached. Designed for the story, not the prize.</span></li>
+                  <li><strong>How meetings open</strong><span>Culture-led meetings and town halls. Connection, not calendar debris.</span></li>
+                </ul>
+              </li>
+              <li className="cp-cad-beat live">
+                <span className="cp-cad-node" aria-hidden="true"></span>
+                <h4 className="cp-cad-when">Every week</h4>
+                <ul className="cp-cad-items">
+                  <li><strong>Middle managers as lead carriers</strong><span>Each gets their own team's culture data and a simple protocol for acting on it.</span></li>
+                  <li><strong>Culture-led training</strong><span>Skills training with the culture built in.</span></li>
+                </ul>
+              </li>
+              <li className="cp-cad-beat live">
+                <span className="cp-cad-node" aria-hidden="true"></span>
+                <h4 className="cp-cad-when">Every month</h4>
+                <ul className="cp-cad-items">
+                  <li><strong>Recognition as a program</strong><span>Nomination-by-story awards, feeding the quarterly and annual.</span></li>
+                </ul>
+              </li>
+              <li className="cp-cad-beat sustain">
+                <p className="cp-cad-group"><strong>Sustain</strong> The systems that keep it growing instead of decaying</p>
+                <span className="cp-cad-node" aria-hidden="true"></span>
+                <h4 className="cp-cad-when">Every quarter</h4>
+                <ul className="cp-cad-items">
+                  <li><strong>Culture Engine Quarterly</strong><span>eNPS, about 30 seconds per employee, plus the few deep-dive questions the last round earned.</span></li>
+                  <li><strong>Every initiative scored</strong><span>By the next round. KPIs say whether it works, your people say why.</span></li>
+                </ul>
+              </li>
+              <li className="cp-cad-beat sustain">
+                <span className="cp-cad-node" aria-hidden="true"></span>
+                <h4 className="cp-cad-when">Career moments</h4>
+                <ul className="cp-cad-items">
+                  <li><strong>Values in performance reviews</strong><span>Weighted enough to move promotions and raises.</span></li>
+                  <li><strong>Values-based hiring and onboarding</strong><span>Culture screened in at the door.</span></li>
+                </ul>
+              </li>
+              <li className="cp-cad-beat sustain">
+                <span className="cp-cad-node" aria-hidden="true"></span>
+                <h4 className="cp-cad-when">The backbone</h4>
+                <ul className="cp-cad-items">
+                  <li><strong>L&amp;D and SOPs</strong><span>Built around the why, not just the how.</span></li>
+                  <li><strong>KPI and metric design</strong><span>Culture as an input, not a separate column.</span></li>
+                  <li><strong>Strategic goal-setting</strong><span>At every level, with culture as an input.</span></li>
+                  <li><strong>Rockstars</strong><span>Find who is already winning. Make their methods the standard.</span></li>
+                </ul>
+              </li>
+            </ol>
           </div>
           <p className="cp-phase-pullout">
             Culture is strategic. Treated as a system, it compounds. Treated as a

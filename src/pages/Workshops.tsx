@@ -877,10 +877,9 @@ const Workshops = () => {
           <p className="ws-lead">
             A 20-seat room works because the day is guided together rather
             than one-on-one: everyone follows the build on their own machine,
-            with less hand-holding by design. Mixed rooms are welcome too,
-            with a minimum of 5 people from one company, and in a mixed room
-            each group brings its own outcome. Two groups of up to 10, three
-            of up to 7, or four groups of 5, keeping the room around 20.
+            with less hand-holding by design. Mixed rooms are welcome too:
+            groups of 5 from different companies, each group bringing its own
+            outcome, up to around 20 in the room.
           </p>
 
           <div className="ws-tiers ws-tiers-pair">

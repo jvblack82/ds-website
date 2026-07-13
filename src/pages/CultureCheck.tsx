@@ -89,9 +89,17 @@ const css = `
     display: block; font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
     letter-spacing: 2.5px; color: var(--cc-teal-light); margin-bottom: 1rem;
   }
-  .cc-band { font-family: 'DM Serif Display', serif; font-size: clamp(1.9rem, 5.5vw, 2.7rem); font-weight: 400; line-height: 1.15; margin-bottom: 0.5rem; }
-  .cc-score { font-size: 1.1rem; color: var(--cc-teal-light); font-weight: 600; margin-bottom: 1.4rem; }
-  .cc-band-copy { font-size: 1.02rem; line-height: 1.8; color: rgba(255,255,255,0.85); max-width: 620px; margin-bottom: 2.2rem; }
+  .cc-band { font-family: 'DM Serif Display', serif; font-size: clamp(2.2rem, 7vw, 3.3rem); font-weight: 400; line-height: 1.1; margin-bottom: 1.1rem; }
+  .cc-score-chip {
+    display: inline-block; font-size: 0.95rem; font-weight: 600; color: var(--cc-teal-light);
+    background: rgba(14,150,166,0.12); border: 1px solid rgba(14,150,166,0.45);
+    border-radius: 50px; padding: 0.4rem 1.1rem; margin-bottom: 2rem;
+  }
+  .cc-band-copy { max-width: 62ch; margin-bottom: 2rem; }
+  .cc-band-copy p { font-size: 1.02rem; line-height: 1.75; color: rgba(255,255,255,0.85); margin: 0 0 1.2rem; }
+  .cc-band-copy p:last-child { margin-bottom: 0; }
+  .cc-band-closing { font-size: 1.1rem; font-weight: 500; color: #fff; line-height: 1.6; max-width: 62ch; margin-bottom: 1.8rem; }
+  .cc-cta-row { display: flex; flex-wrap: wrap; gap: 1rem; }
   .cc-ctas { display: flex; flex-direction: column; gap: 1.5rem; }
   .cc-btn {
     display: inline-block; text-align: center; text-decoration: none;
@@ -177,18 +185,33 @@ const OPTIONS: { label: string; value: number }[] = [
 
 type BandId = "strong" | "mixed" | "at_risk";
 
-const BANDS: Record<BandId, { label: string; copy: string }> = {
+const BANDS: Record<BandId, { label: string; paragraphs: string[]; closing: string }> = {
   strong: {
     label: "Built on purpose",
-    copy: "Bad news reaches leaders. Recognition happens without being prompted. Behavior decides promotions. That is a culture built on purpose, showing up in observable behavior, which is the only place culture exists. Two warnings. First, these signals decay with scale. Habits that hold at 20 people strain at 50 and break past 150 unless somebody rebuilds them deliberately. What carried you here will not automatically survive your next doubling. Second, you answered for the company, and your frontline might answer differently. The gap between those two answers is where problems hide, and measuring it is exactly where the culture discovery starts. Want the question-by-question read too? Drop your email below.",
+    paragraphs: [
+      "Bad news reaches leaders. Recognition happens without being prompted. Behavior decides promotions. That is a culture built on purpose, showing up in observable behavior, which is the only place culture exists.",
+      "Two warnings. First, these signals decay with scale. Habits that hold at 20 people strain at 50 and break past 150 unless somebody rebuilds them deliberately. What carried you here will not automatically survive your next doubling.",
+      "Second, you answered for the company, and your frontline might answer differently. The gap between those two answers is where problems hide, and measuring it is exactly where the culture discovery starts.",
+    ],
+    closing: "Want the question-by-question read too? Drop your email below.",
   },
   mixed: {
     label: "Holding on goodwill",
-    copy: "Some of these behaviors are alive in your company. Others are running on individual goodwill instead of systems you built, and goodwill does not scale or survive turnover. This is the most common band and the riskiest place to sit while growing, because the strong signals mask the weak ones until a key resignation or a bad quarter pulls the cover off. What you need now is precision: which of the eight behaviors are carrying you, and which are decorative. Drop your email and we will send the per-question read, what each answer signals, and one practical move for every gap. Nothing generic. Prefer to put real data behind it first? Take the culture discovery.",
+    paragraphs: [
+      "Some of these behaviors are alive in your company. Others are running on individual goodwill instead of systems you built, and goodwill does not scale or survive turnover.",
+      "This is the most common band and the riskiest place to sit while growing, because the strong signals mask the weak ones until a key resignation or a bad quarter pulls the cover off. What you need now is precision: which of the eight behaviors are carrying you, and which are decorative.",
+      "Drop your email and we will send the per-question read, what each answer signals, and one practical move for every gap. Nothing generic.",
+    ],
+    closing: "Prefer to put real data behind it first? Take the culture discovery.",
   },
   at_risk: {
     label: "Growing by accident",
-    copy: "Your company has a culture. Every company does. Yours is growing by accident, which means how people treat each other and your customers is being set by whoever has the most influence on each team. Not by you. At a couple hundred employees that shows up as locations underperforming for reasons nobody can name, strong people leaving out of nowhere, and feedback rounds that change nothing. Posters and team builders will not fix it. Culture is behavior, and behavior gets managed, not decorated. Start with the per-question breakdown: what each gap is costing you and one concrete move per question, straight to your email. Ready for the bigger conversation? Take the culture discovery.",
+    paragraphs: [
+      "Your company has a culture. Every company does. Yours is growing by accident, which means how people treat each other and your customers is being set by whoever has the most influence on each team. Not by you.",
+      "At a couple hundred employees that shows up as locations underperforming for reasons nobody can name, strong people leaving out of nowhere, and feedback rounds that change nothing. Posters and team builders will not fix it. Culture is behavior, and behavior gets managed, not decorated.",
+      "Start with the per-question breakdown: what each gap is costing you and one concrete move per question, straight to your email.",
+    ],
+    closing: "Ready for the bigger conversation? Take the culture discovery.",
   },
 };
 
@@ -406,21 +429,30 @@ const CultureCheck = () => {
           <div className="cc-wrap">
             <span className="cc-result-kicker">Your result</span>
             <h2 className="cc-band">{BANDS[result.band].label}</h2>
-            <div className="cc-score">{result.score} of 16</div>
-            <p className="cc-band-copy">{BANDS[result.band].copy}</p>
+            <div className="cc-score-chip">{result.score} of 16</div>
+            <div className="cc-band-copy">
+              {BANDS[result.band].paragraphs.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+            <p className="cc-band-closing">{BANDS[result.band].closing}</p>
             {result.band === "strong" ? (
               <div className="cc-ctas">
-                <a className="cc-btn primary" href={DISCOVERY}>
-                  Take the culture discovery →
-                </a>
+                <div className="cc-cta-row">
+                  <a className="cc-btn primary" href={DISCOVERY}>
+                    Take the culture discovery →
+                  </a>
+                </div>
                 {gate}
               </div>
             ) : (
               <div className="cc-ctas">
                 {gate}
-                <a className="cc-btn ghost" href={DISCOVERY}>
-                  Take the culture discovery →
-                </a>
+                <div className="cc-cta-row">
+                  <a className="cc-btn ghost" href={DISCOVERY}>
+                    Take the culture discovery →
+                  </a>
+                </div>
               </div>
             )}
           </div>

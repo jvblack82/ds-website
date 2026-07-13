@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import joeBlackPhoto from "@/assets/joe-black.jpg";
-import beachCircle from "@/assets/landing-beach-circle.jpg";
+import heroJoe from "@/assets/landing-hero-joe.webp";
+import teamEnergy from "@/assets/landing-team-energy.jpg";
 import { COMPANY_LOGOS } from "@/data/companyLogos";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
@@ -47,7 +48,12 @@ const css = `
     background: radial-gradient(circle, rgba(12,124,138,0.18) 0%, transparent 70%);
     border-radius: 50%;
   }
-  .land-hero-inner { position: relative; z-index: 1; }
+  .land-hero-inner {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 3rem; align-items: center;
+  }
+  .land-hero-media { align-self: end; margin-bottom: -5.5rem; }
+  .land-hero-media img { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 auto; }
   .land-kicker {
     display: block;
     font-size: 0.78rem;
@@ -153,9 +159,9 @@ const css = `
   .land-band { line-height: 0; }
   .land-band img {
     width: 100%;
-    height: clamp(240px, 34vw, 440px);
+    height: clamp(240px, 30vw, 580px);
     object-fit: cover;
-    object-position: 50% 72%;
+    object-position: 50% 3%;
     display: block;
   }
 
@@ -186,6 +192,8 @@ const css = `
   .land-footer a { color: var(--teal-light); text-decoration: none; }
 
   @media (max-width: 860px) {
+    .land-hero-inner { grid-template-columns: 1fr; }
+    .land-hero-media { display: none; }
     .land-cred-grid { grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
     .land-practices-grid { grid-template-columns: 1fr; }
   }
@@ -215,20 +223,30 @@ const Landing = () => {
       {/* HERO */}
       <header className="land-hero">
         <div className="land-wrap land-hero-inner">
-          <span className="land-kicker">Dreamscope Consulting</span>
-          <h1>Two practices. One operator mindset.</h1>
-          <p className="land-sub">
-            Two parent practices. One operator who's spent 20+ years building the
-            systems that let companies scale. Culture, end to end. AI Maestro,
-            for any process bottlenecked on one person's expert judgment.
-          </p>
-          <div className="land-hero-btns">
-            <Link className="land-btn teal" to="/culture">
-              Explore the Culture Practice →
-            </Link>
-            <Link className="land-btn caramel" to="/ai-maestro">
-              Explore AI Maestro →
-            </Link>
+          <div>
+            <span className="land-kicker">Dreamscope Consulting</span>
+            <h1>Two practices. One operator mindset.</h1>
+            <p className="land-sub">
+              Two parent practices. One operator who's spent 20+ years building the
+              systems that let companies scale. Culture, end to end. AI Maestro,
+              for any process bottlenecked on one person's expert judgment.
+            </p>
+            <div className="land-hero-btns">
+              <Link className="land-btn teal" to="/culture">
+                Explore the Culture Practice →
+              </Link>
+              <Link className="land-btn caramel" to="/ai-maestro">
+                Explore AI Maestro →
+              </Link>
+            </div>
+          </div>
+          <div className="land-hero-media">
+            <img
+              src={heroJoe}
+              alt="Joe Black, founder of Dreamscope Consulting"
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
       </header>
@@ -326,8 +344,8 @@ const Landing = () => {
       {/* PHOTO BAND */}
       <div className="land-band">
         <img
-          src={beachCircle}
-          alt="A team seated in a circle on the beach for a morning culture session at a company retreat"
+          src={teamEnergy}
+          alt="A team laughing and pointing at the camera around the bamboo bridge they built together at an outdoor culture day"
           loading="lazy"
           decoding="async"
         />

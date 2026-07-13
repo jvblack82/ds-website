@@ -800,8 +800,8 @@ const CultureEngine = () => {
         <div className="section-inner">
           <div className="section-label">Is This For You?</div>
           <h2 className="section-title">
-            Companies growing fast enough that leadership can't feel the floor
-            anymore.
+            Companies growing fast enough that leadership can no longer see
+            the frontline.
           </h2>
           <div className="fit-tags">
             <span className="fit-tag">200–10,000+ employees</span>

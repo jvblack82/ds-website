@@ -193,7 +193,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "The companies that get ahead of this are the ones that read every voice in one system, so that what leadership believes and what the floor lives can be compared directly. That comparison is where the truth was.",
+        x: "The companies that get ahead of this are the ones that read every voice in one system, so that what leadership believes and what the frontline lives can be compared directly. That comparison is where the truth was.",
       },
     ],
     band: {

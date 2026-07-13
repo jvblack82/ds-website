@@ -162,7 +162,15 @@ const READ_OPTIONS: { label: string; value: string }[] = [
   { label: "No", value: "no" },
 ];
 
-const PROGRAMS = ["First Win", "Build Day", "The Cohort", "Done For You", "Not sure yet"];
+const PROGRAMS = [
+  "First Win",
+  "Build Day",
+  "The Cohort",
+  "Team Win",
+  "Team Build",
+  "Done For You",
+  "Not sure yet",
+];
 
 interface Candidate {
   key: number;

@@ -260,6 +260,16 @@ const css = `
   }
   .ws-t-outcome strong { color: var(--ws-dark); }
 
+  /* LEADERSHIP BENCH BAND */
+  .ws-bench .ws-kicker { display: block; margin-bottom: 1.2rem; }
+  .ws-bench .ws-h2 { color: #fff; }
+  .ws-bench .ws-note { color: rgba(255,255,255,0.55); }
+  .ws-bench .ws-note strong { color: rgba(255,255,255,0.9); }
+  .ws-tiers.ws-tiers-pair { grid-template-columns: repeat(2, 1fr); max-width: 920px; }
+  @media (max-width: 640px) {
+    .ws-tiers.ws-tiers-pair { grid-template-columns: 1fr; }
+  }
+
   /* HOW EVERY SESSION RUNS */
   .ws-run-grid {
     display: grid;
@@ -493,7 +503,7 @@ const Workshops = () => {
   usePageMeta({
     title: "AI Workshops · Walk Out With It Running",
     description:
-      "First Win, Build Day, The Cohort, The Loop. Hands-on Claude workshops where you hand AI real work and leave with it running.",
+      "First Win, Build Day, The Cohort, The Loop, plus Team Win and Team Build for your bench. Hands-on Claude workshops where you hand AI real work and leave with it running.",
   });
 
   useEffect(() => {
@@ -537,7 +547,7 @@ const Workshops = () => {
               Book a First Win →
             </a>
             <a className="ws-link" href="#ladder">
-              See the four ways in ↓
+              See the ways in ↓
             </a>
           </div>
           <div className="ws-proof">
@@ -567,11 +577,12 @@ const Workshops = () => {
       <section className="ws-section on-white" id="ladder">
         <div className="ws-wrap">
           <div className="ws-snum">01 / The ladder</div>
-          <h2 className="ws-h2">Four ways in. One system.</h2>
+          <h2 className="ws-h2">Four ways in for leaders. One system.</h2>
           <p className="ws-lead">
             Win once. Build the system. Make it stick. Keep it sharp. Every
             rung is bespoke: you leave with something built for you, and the
-            higher you climb, the more hands-on we go.
+            higher you climb, the more hands-on we go. Bringing your whole
+            bench? Two classroom formats are below.
           </p>
 
           <div className="ws-stepline" aria-hidden="true">
@@ -848,6 +859,107 @@ const Workshops = () => {
               Claude gets real work done.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* FOR YOUR LEADERSHIP BENCH */}
+      <section className="ws-section on-dark ws-bench" id="bench">
+        <div className="ws-wrap">
+          <span className="ws-kicker">For your leadership bench</span>
+          <h2 className="ws-h2">The same shift, sized for a room.</h2>
+          <p className="ws-lead">
+            First Win and Build Day run on individual outcomes with heavy
+            hands-on attention. These two run the same shift for middle
+            management: a classroom of up to 20 seats, working toward one
+            outcome the room picks ahead of the day, still customized to your
+            company or group.
+          </p>
+          <p className="ws-lead">
+            A 20-seat room works because the day is guided together rather
+            than one-on-one: everyone follows the build on their own machine,
+            with less hand-holding by design. Mixed rooms are welcome too. A
+            minimum of 5 people from one company, so two companies of 5 or
+            more can share a room, with customization inside the room for
+            each group.
+          </p>
+
+          <div className="ws-tiers ws-tiers-pair">
+            <article className="ws-tier">
+              <div className="ws-t-spine">Win as a room</div>
+              <h3 className="ws-t-name">Team Win</h3>
+              <div className="ws-t-meta">
+                <span>half day</span>
+                <span>up to 20 seats</span>
+                <span>one shared outcome</span>
+              </div>
+              <p className="ws-t-desc">
+                The First Win shift, for a class of your middle managers:{" "}
+                <strong>the advisor-to-worker reframe</strong>, live demos on
+                real work, and the room's chosen outcome built along together
+                during the session.
+              </p>
+              <div className="ws-t-wlab">You walk out with</div>
+              <ul className="ws-t-walk">
+                <li>The advisor-to-worker shift, made concrete on real work</li>
+                <li>
+                  The room's outcome running on the host account, with
+                  everyone's replication steps
+                </li>
+                <li>The field guide to finish yours solo</li>
+              </ul>
+              <div className="ws-t-spacer" />
+              <div className="ws-t-outcome">
+                <strong>
+                  Your bench now knows the difference between chat and a
+                  coworker
+                </strong>
+                , because the room just built one outcome together.
+              </div>
+              <Link className="ws-t-prep" to="/workshops/prep">
+                Start your pre-work →
+              </Link>
+            </article>
+
+            <article className="ws-tier">
+              <div className="ws-t-spine">Build as a room</div>
+              <h3 className="ws-t-name">Team Build</h3>
+              <div className="ws-t-meta">
+                <span>full day</span>
+                <span>up to 20 seats</span>
+                <span>one shared outcome</span>
+              </div>
+              <p className="ws-t-desc">
+                The Build Day arc, for a class: setup verified in pre-work
+                before the day, then{" "}
+                <strong>
+                  the morning teaches the core routine on the room's real
+                  work, and the afternoon ships the room's chosen outcome
+                </strong>
+                , step by step, everyone building along on their own accounts.
+              </p>
+              <div className="ws-t-wlab">You walk out with</div>
+              <ul className="ws-t-walk">
+                <li>The shared outcome, built along on your own machine</li>
+                <li>The replication kit for the room's build</li>
+                <li>A ranked list of what the room should build next</li>
+              </ul>
+              <div className="ws-t-spacer" />
+              <div className="ws-t-outcome">
+                <strong>One outcome, shipped on every machine in the room.</strong>{" "}
+                Monday starts different for the whole bench.
+              </div>
+              <Link className="ws-t-prep" to="/workshops/prep">
+                Start your pre-work →
+              </Link>
+            </article>
+          </div>
+
+          <p className="ws-note">
+            <strong>The room's outcome comes from pre-work:</strong> everyone
+            submits their candidates, and the submissions pick the shared
+            target ahead of the day. Account prerequisites are confirmed in
+            pre-work before the day.
+          </p>
         </div>
       </section>
 

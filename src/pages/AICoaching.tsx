@@ -431,9 +431,9 @@ const AICoaching = () => {
               <div className="aco-way-spine">In a group</div>
               <h3>The workshops</h3>
               <p>
-                Same outcomes, a room at a time. Four formats, from a half-day
-                first win to a monthly alumni loop, every seat working on its
-                own real job.
+                Same outcomes, a room at a time. Four formats for leaders,
+                every seat on its own real job, plus two classroom formats
+                for your bench that build one outcome as a room.
               </p>
               <div className="aco-way-spacer" />
               <Link className="aco-way-go" to="/workshops">

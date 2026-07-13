@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import beachCalm from "@/assets/ce-beach-calm.jpg";
+import workshopLive from "@/assets/ce-workshop-live.jpg";
 import stageTalk from "@/assets/ce-stage-culture-talk.jpg";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
@@ -270,7 +270,7 @@ const css = `
     width: 100%;
     height: clamp(260px, 36vw, 440px);
     object-fit: cover;
-    object-position: 62% 12%;
+    object-position: 50% 55%;
     display: block;
   }
 
@@ -676,8 +676,8 @@ const CultureEngine = () => {
       {/* PHOTO BAND */}
       <div className="ce-band">
         <img
-          src={beachCalm}
-          alt="Joe Black leading a quiet breathing exercise by the sea at a company retreat"
+          src={workshopLive}
+          alt="Small groups working through a facilitated culture discussion at round tables"
           loading="lazy"
           decoding="async"
         />

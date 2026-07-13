@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import joeBlackPhoto from "@/assets/joe-black.jpg";
-import heroJoe from "@/assets/landing-hero-joe.webp";
+import heroWork from "@/assets/landing-hero-work.jpg";
 import teamEnergy from "@/assets/landing-team-energy.jpg";
 import { COMPANY_LOGOS } from "@/data/companyLogos";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -50,10 +50,14 @@ const css = `
   }
   .land-hero-inner {
     position: relative; z-index: 1;
-    display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 3rem; align-items: center;
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; align-items: center;
   }
-  .land-hero-media { align-self: end; margin-bottom: -5.5rem; }
-  .land-hero-media img { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 auto; }
+  .land-hero-photo {
+    position: relative; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 24px 60px -28px rgba(0,0,0,0.6); aspect-ratio: 4 / 3;
+  }
+  .land-hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .land-hero-photo::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(140deg, rgba(30,43,58,0) 40%, rgba(30,43,58,0.55) 100%); }
   .land-kicker {
     display: block;
     font-size: 0.78rem;
@@ -193,7 +197,7 @@ const css = `
 
   @media (max-width: 860px) {
     .land-hero-inner { grid-template-columns: 1fr; }
-    .land-hero-media { display: none; }
+    .land-hero-photo { display: none; }
     .land-cred-grid { grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
     .land-practices-grid { grid-template-columns: 1fr; }
   }
@@ -240,10 +244,10 @@ const Landing = () => {
               </Link>
             </div>
           </div>
-          <div className="land-hero-media">
+          <div className="land-hero-photo">
             <img
-              src={heroJoe}
-              alt="Joe Black, founder of Dreamscope Consulting"
+              src={heroWork}
+              alt="Joe Black working through an exercise with a table of workshop participants"
               loading="eager"
               decoding="async"
             />

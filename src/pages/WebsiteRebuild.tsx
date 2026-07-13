@@ -147,6 +147,9 @@ const css = `
   .wr-body-p strong { color: var(--wr-dark); font-weight: 600; }
   .on-dark .wr-body-p strong { color: #fff; }
   .wr-aside { font-size: 0.92rem; font-style: italic; color: var(--wr-muted); max-width: 660px; margin-top: 1.4rem; }
+  .wr-live { margin-top: 1.5rem; font-size: 1.05rem; }
+  .wr-live a { color: var(--wr-caramel-deep); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--wr-caramel); padding-bottom: 2px; }
+  .wr-live a:hover { color: var(--wr-caramel); }
 
   .wr-pullout {
     font-family: 'Cormorant Garamond', serif;
@@ -480,6 +483,15 @@ const WebsiteRebuild = () => {
             We just took Betterworks Asia off WordPress and onto a site the
             owner now updates by talking to Claude, with the SEO carried across
             intact.
+          </p>
+          <p className="wr-live">
+            <a
+              href="https://betterworks.asia"
+              target="_blank"
+              rel="noreferrer"
+            >
+              See it live at betterworks.asia →
+            </a>
           </p>
           <p className="wr-aside">
             (And yes, I rebuilt my own site the same way while I played padel.)

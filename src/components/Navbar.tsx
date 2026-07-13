@@ -36,7 +36,6 @@ const groups: NavGroupDef[] = [
       { label: "AI Maestro", to: "/ai-maestro" },
       { label: "AI Coaching", to: "/coaching" },
       { label: "The Self-Updating Website", to: "/website" },
-      { label: "Workshop pre-work", to: "/workshops/prep" },
     ],
   },
 ];

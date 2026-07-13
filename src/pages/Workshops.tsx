@@ -641,9 +641,6 @@ const Workshops = () => {
                 </strong>
                 , because yours already did something.
               </div>
-              <Link className="ws-t-prep" to="/workshops/prep">
-                Start your pre-work →
-              </Link>
             </article>
 
             <article className="ws-tier featured">
@@ -679,9 +676,6 @@ const Workshops = () => {
                 <strong>Something is now set to run.</strong> Monday starts
                 different.
               </div>
-              <Link className="ws-t-prep" to="/workshops/prep">
-                Start your pre-work →
-              </Link>
             </article>
 
             <article className="ws-tier">
@@ -715,9 +709,6 @@ const Workshops = () => {
                 <strong>Not a taste. A finished build</strong> you drive
                 yourself.
               </div>
-              <Link className="ws-t-prep" to="/workshops/prep">
-                Start your pre-work →
-              </Link>
             </article>
 
             <article className="ws-tier">
@@ -788,9 +779,6 @@ const Workshops = () => {
                     we think fits the window. Nobody arrives blind, and nothing
                     gets promised that can't ship.
                   </p>
-                  <Link className="ws-t-prep" to="/workshops/prep">
-                    Start your pre-work →
-                  </Link>
                 </div>
               </div>
               <div className="ws-promise">
@@ -914,9 +902,6 @@ const Workshops = () => {
                 </strong>
                 , because the room just built one outcome together.
               </div>
-              <Link className="ws-t-prep" to="/workshops/prep">
-                Start your pre-work →
-              </Link>
             </article>
 
             <article className="ws-tier">
@@ -947,9 +932,6 @@ const Workshops = () => {
                 <strong>One outcome, shipped on every machine in the room.</strong>{" "}
                 Monday starts different for the whole bench.
               </div>
-              <Link className="ws-t-prep" to="/workshops/prep">
-                Start your pre-work →
-              </Link>
             </article>
           </div>
 

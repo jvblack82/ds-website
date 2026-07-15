@@ -226,6 +226,32 @@ const css = `
   .aim-cred p { font-size: 0.98rem; color: var(--aim-body); }
   .aim-operator-grid .aim-cred { grid-template-columns: 190px 1fr; gap: 1.2rem; }
 
+  /* STALLED PILOT diagram */
+  .aim-pilot { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin: 2.4rem 0 0; }
+  .aim-pilot-card { border-radius: 12px; padding: 1.6rem 1.7rem; border: 1px solid rgba(255,255,255,0.12); }
+  .aim-pilot-card.died { background: rgba(255,255,255,0.03); }
+  .aim-pilot-card.sticks { background: rgba(181,137,90,0.10); border-color: rgba(181,137,90,0.45); }
+  .aim-pilot-head { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; margin-bottom: 1rem; }
+  .aim-pilot-card.died .aim-pilot-head { color: rgba(255,255,255,0.5); }
+  .aim-pilot-card.sticks .aim-pilot-head { color: var(--aim-caramel); }
+  .aim-pilot-list { list-style: none; margin: 0; padding: 0; }
+  .aim-pilot-list li { display: grid; grid-template-columns: 1.1rem 1fr; gap: 0.7rem; padding: 0.55rem 0; font-size: 0.98rem; line-height: 1.5; }
+  .aim-pilot-card.died li { color: rgba(255,255,255,0.55); }
+  .aim-pilot-card.sticks li { color: rgba(255,255,255,0.9); }
+  .aim-pilot-mark { font-weight: 700; text-align: center; }
+  .aim-pilot-card.died .aim-pilot-mark { color: rgba(255,255,255,0.35); }
+  .aim-pilot-card.sticks .aim-pilot-mark { color: var(--aim-caramel); }
+  .aim-pilot-money { margin-top: 2rem; font-size: 1.05rem; color: rgba(255,255,255,0.82); max-width: 760px; }
+  .aim-pilot-money strong { color: #fff; }
+  @media (max-width: 820px) { .aim-pilot { grid-template-columns: 1fr; } }
+
+  /* FAQ */
+  .aim-faq { max-width: 760px; margin-top: 1.8rem; }
+  .aim-faq-item { padding: 1.4rem 0; border-top: 1px solid var(--aim-line); }
+  .aim-faq-item:last-child { border-bottom: 1px solid var(--aim-line); }
+  .aim-faq-q { font-weight: 600; color: var(--aim-dark); font-size: 1.06rem; margin: 0 0 0.5rem; }
+  .aim-faq-a { font-size: 1rem; color: var(--aim-body); margin: 0; }
+
   /* CTA */
   .aim-cta-band { background: var(--aim-dark); color: #fff; padding: 5rem 0; text-align: center; }
   .aim-cta-band h2 {
@@ -356,7 +382,7 @@ const AIMaestro = () => {
           </p>
           <div className="aim-cta-row">
             <a className="aim-btn" href="https://discovery.dreamscope.win/ai_maestro">
-              Take the 15-minute discovery →
+              Get your free read (15 min) →
             </a>
             <a className="aim-link" href="#plays">
               See where it plays ↓
@@ -401,6 +427,46 @@ const AIMaestro = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* STALLED PILOT - unnumbered punch band */}
+      <section className="aim-section on-dark">
+        <div className="aim-wrap">
+          <h2 className="aim-h2">You bought the tools. The pilot died.</h2>
+          <p className="aim-lead" style={{ color: "rgba(255,255,255,0.78)" }}>
+            You ran a pilot, maybe a few. A tool that demoed like magic, a team
+            that got excited, a deck that promised the moon. Six months later
+            it's shelfware and nobody wants to bring it up in the meeting. The
+            tool wasn't the problem.
+          </p>
+          <div className="aim-pilot">
+            <div className="aim-pilot-card died">
+              <div className="aim-pilot-head">The pilot that died</div>
+              <ul className="aim-pilot-list">
+                <li><span className="aim-pilot-mark">×</span><span>Demoed once, looked like magic</span></li>
+                <li><span className="aim-pilot-mark">×</span><span>Handed the work, never taught the judgment</span></li>
+                <li><span className="aim-pilot-mark">×</span><span>No checks, so it failed silent</span></li>
+                <li><span className="aim-pilot-mark">×</span><span>Six months later, shelfware</span></li>
+              </ul>
+            </div>
+            <div className="aim-pilot-card sticks">
+              <div className="aim-pilot-head">The build that sticks</div>
+              <ul className="aim-pilot-list">
+                <li><span className="aim-pilot-mark">→</span><span>Runs every day, on your real calls</span></li>
+                <li><span className="aim-pilot-mark">→</span><span>Trained on the judgment the work carries</span></li>
+                <li><span className="aim-pilot-mark">→</span><span>Checks that fail loud, before you're burned</span></li>
+                <li><span className="aim-pilot-mark">→</span><span>Keeps working when I'm not in the room</span></li>
+              </ul>
+            </div>
+          </div>
+          <p className="aim-pilot-money">
+            <strong>That gap is the whole job.</strong> Break the expert work
+            down, train the AI on the parts that carry real judgment, and
+            engineer the checks so it fails loud instead of silent. The pilot
+            didn't die because AI can't do the work. It died because it got
+            handed the work without being taught how you actually do it.
+          </p>
         </div>
       </section>
 
@@ -541,14 +607,46 @@ const AIMaestro = () => {
       <section className="aim-section on-white">
         <div className="aim-wrap">
           <div className="aim-snum">04 / How we start</div>
-          <h2 className="aim-h2">Built around how you actually operate.</h2>
+          <h2 className="aim-h2">Listen first. Then build.</h2>
           <p className="aim-lead">
-            The first thing I do is listen. With AI Maestro the hunt is for the
-            biggest wins, the things eating the most time, or slowing down your
-            decisions and growth. This isn't off-the-shelf software you bend
-            your work around. It's built around what matters to you and how
-            you actually operate.
+            No off-the-shelf software you bend your work around, and no build
+            before I understand what actually eats your time and where the work
+            waits on one person. It runs in three passes.
           </p>
+          <div className="aim-cats">
+            <div className="aim-cat">
+              <div className="aim-cat-n">1</div>
+              <div>
+                <h3>Listen</h3>
+                <p>
+                  We sit down and learn how you actually operate. Where the time
+                  goes, where one person's judgment is the bottleneck, what a
+                  good day and a bad day look like.
+                </p>
+              </div>
+            </div>
+            <div className="aim-cat">
+              <div className="aim-cat-n">2</div>
+              <div>
+                <h3>Reflect</h3>
+                <p>
+                  I come back with what I heard and we sharpen it together. This
+                  is where the real target separates from the obvious one.
+                </p>
+              </div>
+            </div>
+            <div className="aim-cat">
+              <div className="aim-cat-n">3</div>
+              <div>
+                <h3>Map</h3>
+                <p>
+                  We lay out what to build and where, scoped to your operation,
+                  before a line of anything gets built. You see the plan before
+                  you commit to it.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -684,16 +782,82 @@ const AIMaestro = () => {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="aim-section on-cream">
+        <div className="aim-wrap">
+          <div className="aim-snum">Questions</div>
+          <h2 className="aim-h2">Before you book the call.</h2>
+          <div className="aim-faq">
+            <div className="aim-faq-item">
+              <p className="aim-faq-q">What if my process is just repetition?</p>
+              <p className="aim-faq-a">
+                Then you don't need me. If the work is the same every time with
+                no judgment in it, there are cheaper tools that'll do it, and
+                I'll point you to them. Where the right call changes case by case
+                is the only place I'm useful.
+              </p>
+            </div>
+            <div className="aim-faq-item">
+              <p className="aim-faq-q">Does this replace my people?</p>
+              <p className="aim-faq-a">
+                No. AI runs the loop. Your people decide what the loop is for,
+                what "good" means, and the calls that shape the company. What AI
+                takes over is the repetitive, judgment-light work that was
+                burning your best people out.
+              </p>
+            </div>
+            <div className="aim-faq-item">
+              <p className="aim-faq-q">Who owns what we build?</p>
+              <p className="aim-faq-a">
+                You do. Your data, your process, your build. No lock-in. If we
+                stop working together tomorrow, you keep everything and it keeps
+                running.
+              </p>
+            </div>
+            <div className="aim-faq-item">
+              <p className="aim-faq-q">What if the pilot dies like last time?</p>
+              <p className="aim-faq-a">
+                That's the failure I'm built against. Pilots die when a tool gets
+                handed the work without being taught the judgment behind it, or
+                the checks to catch it when it's quietly wrong. Closing that gap
+                is the whole job.
+              </p>
+            </div>
+            <div className="aim-faq-item">
+              <p className="aim-faq-q">
+                "Months becomes days" sounds great, but what does it cost to
+                start?
+              </p>
+              <p className="aim-faq-a">
+                A 15-minute read and one conversation. I listen first and come
+                back with what I'd build and where, scoped to your operation,
+                before you commit to anything.
+              </p>
+            </div>
+            <div className="aim-faq-item">
+              <p className="aim-faq-q">What happens after you build it and leave?</p>
+              <p className="aim-faq-a">
+                I don't hand you a black box and vanish. The build is yours,
+                documented, and your people learn to run it. The whole point is
+                that it keeps working when I'm not in the room.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="aim-cta-band">
         <div className="aim-wrap">
-          <h2>Take the 15-minute discovery.</h2>
+          <h2>Get a free read on where AI lifts your operation.</h2>
           <p>
-            Five categories, one priority pick, three free-text questions. We
-            read every one. If your problem fits, we'll book a call.
+            Fifteen minutes. Five categories, one priority pick, three questions
+            in your own words. We read every one and come back within two working
+            days with our honest take on your top three, including whether a
+            simpler tool would do the job cheaper. No pitch, no obligation.
           </p>
           <a className="aim-btn-light" href="https://discovery.dreamscope.win/ai_maestro">
-            Take the discovery →
+            Get your free read →
           </a>
           <div className="aim-cta-email">
             Or email directly:{" "}

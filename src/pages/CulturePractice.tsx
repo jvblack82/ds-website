@@ -122,6 +122,12 @@ const css = `
   .cp-step-name { font-size: 0.9rem; font-weight: 600; color: var(--dark); transition: color 0.25s; }
   .cp-step:hover .cp-step-num { color: var(--teal-light); }
   .cp-step:hover .cp-step-name { color: #fff; }
+  .cp-method { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 2rem; }
+  .cp-method-step { border-top: 2px solid var(--teal-light); padding-top: 1rem; }
+  .cp-method-num { font-family: 'DM Serif Display', serif; color: var(--teal-light); font-size: 1.3rem; }
+  .cp-method-name { color: #fff; font-weight: 600; font-size: 1.1rem; margin: 0.3rem 0 0.5rem; }
+  .cp-method-desc { color: rgba(255,255,255,0.72); font-size: 0.98rem; line-height: 1.6; margin: 0; }
+  @media (max-width: 820px) { .cp-method { grid-template-columns: 1fr; } }
 
   .cp-phase { padding: 4.5rem 0; }
   .cp-phase.light { background: var(--warm-white); }
@@ -816,26 +822,51 @@ const CulturePractice = () => {
       <section className="cp-section cp-engage" id="engagement">
         <div className="cp-wrap">
           <div className="cp-label">How we start</div>
-          <h2 className="cp-title">Wherever you're starting from.</h2>
+          <h2 className="cp-title">Listen first. Then build.</h2>
           <p className="cp-engage-lead">
             There's no template. Every company is different, and every one is
             starting from a different place. So the first thing I do is sit down
-            and listen to what's actually going on. From there we work out what
-            the work should be, and we align on it together before anything
-            starts. Wherever you are, that's where we begin.
+            and listen to what's actually going on, before a word about what to
+            build. It runs in three passes.
           </p>
+          <div className="cp-method">
+            <div className="cp-method-step">
+              <div className="cp-method-num">1</div>
+              <p className="cp-method-name">Listen</p>
+              <p className="cp-method-desc">
+                I sit down and learn what's really going on. What's working, what
+                people actually feel, where the culture is quietly costing you.
+              </p>
+            </div>
+            <div className="cp-method-step">
+              <div className="cp-method-num">2</div>
+              <p className="cp-method-name">Reflect</p>
+              <p className="cp-method-desc">
+                I come back with what I heard and we sharpen it together. This is
+                where the real problem separates from the obvious one.
+              </p>
+            </div>
+            <div className="cp-method-step">
+              <div className="cp-method-num">3</div>
+              <p className="cp-method-name">Align</p>
+              <p className="cp-method-desc">
+                We agree on what the work should be and where it starts, together,
+                before anything begins. Wherever you are, that's where we begin.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* K - CLOSING CTA */}
       <section className="cp-cta" id="contact">
         <div className="cp-wrap">
-          <h2>Want to know where to start?</h2>
+          <h2>Get a free read on where your culture is quietly costing you.</h2>
           <p>
-            The discovery questionnaire takes about 15 minutes. Eight things
-            culture work could change for you. Pick the three that matter most,
-            and answer three questions on where the work would fit. We read every
-            one.
+            Fifteen minutes: eight things culture work could change, pick the
+            three that matter most, three questions on where the work would fit.
+            We read every one and come back within two working days with what
+            we'd look at first. No pitch.
           </p>
           <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "1rem" }}>
             <a className="cp-btn teal" href={DISCOVERY}>

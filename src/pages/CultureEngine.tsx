@@ -373,6 +373,12 @@ const css = `
   }
   .fit-chip-link:hover { transform: translateY(-1px); box-shadow: 0 8px 20px -12px rgba(30,43,58,0.35); }
 
+  .ce-faq { max-width: 760px; margin: 0 auto; }
+  .ce-faq-item { padding: 1.4rem 0; border-top: 1px solid var(--sand); }
+  .ce-faq-item:last-child { border-bottom: 1px solid var(--sand); }
+  .ce-faq-q { font-weight: 600; color: var(--dark); font-size: 1.06rem; margin: 0 0 0.5rem; }
+  .ce-faq-a { font-size: 1rem; color: var(--body); margin: 0; line-height: 1.7; }
+
   .cta {
     background: var(--dark);
     color: white;
@@ -847,15 +853,59 @@ const CultureEngine = () => {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="ds-section" style={{ background: "var(--cream)" }}>
+        <div className="section-inner">
+          <div className="section-label">Questions</div>
+          <h2 className="section-title">Before we talk.</h2>
+          <div className="ce-faq">
+            <div className="ce-faq-item">
+              <p className="ce-faq-q">Is this just another engagement survey?</p>
+              <p className="ce-faq-a">
+                No. A survey gives you scores. The Culture Engine reads the
+                surveys, interviews, and focus groups together, classifies every
+                comment against 19 validated drivers, and tells you what's
+                actually driving the number, with the quotes to back it. On a
+                450-person company it flagged 5 flight risks in a blind
+                retrospective, all 5 among the 7 people who actually left.
+              </p>
+            </div>
+            <div className="ce-faq-item">
+              <p className="ce-faq-q">Is our data safe and private?</p>
+              <p className="ce-faq-a">
+                Yes. Individual responses stay confidential. You get the patterns
+                and the evidence, not a way to point at one person.
+              </p>
+            </div>
+            <div className="ce-faq-item">
+              <p className="ce-faq-q">What do we actually walk away with?</p>
+              <p className="ce-faq-a">
+                A live report your leaders can question in plain English and get
+                cited answers from in seconds, in the room. Not a PDF that gets
+                skimmed once and filed.
+              </p>
+            </div>
+            <div className="ce-faq-item">
+              <p className="ce-faq-q">What does it cost to find out if this fits?</p>
+              <p className="ce-faq-a">
+                A 15-minute read and a short conversation. No pitch. If it's not
+                the right move for you, I'll say so.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="cta" id="contact">
-        <h2>Let's start with a conversation.</h2>
+        <h2>Get a free read on what's actually going on in your culture.</h2>
         <p>
-          30 minutes. No pitch. Just understanding what you're dealing with, and
-          whether this can help.
+          Fifteen minutes to tell us where it hurts. We come back within two
+          working days with the three things we'd look at first, and whether the
+          Culture Engine is even the right move for you. No pitch.
         </p>
         <a href="https://discovery.dreamscope.win/culture" className="cta-btn">
-          Take the culture discovery →
+          Get your free read →
         </a>
         <div className="cta-email">
           Or email directly:{" "}

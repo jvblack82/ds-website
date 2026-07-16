@@ -535,8 +535,8 @@ const CulturePractice = () => {
             </div>
             <div className="cp-converge-arrow">→</div>
             <div className="cp-converge-target">
-              <span className="cp-tg-num">19</span>
-              <span className="cp-tg-label">research-validated drivers of workplace happiness. Every layer classified against the same framework.</span>
+              <span className="cp-tg-num">1</span>
+              <span className="cp-tg-label">research-backed framework of workplace happiness. Every layer classified against the same lens.</span>
             </div>
           </div>
           <div className="cp-deliv">

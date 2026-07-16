@@ -514,8 +514,8 @@ const AIMaestro = () => {
                   it answers with full context.
                 </p>
                 <p className="aim-proof">
-                  The Culture Engine is the built proof. Three data sources, 19
-                  drivers, AI-classified and queryable. On a 450-person company
+                  The Culture Engine is the built proof. Three data sources, one
+                  research-backed happiness framework, AI-classified and queryable. On a 450-person company
                   it flagged 5 flight risks in a blind retrospective, all 5
                   among the 7 real departures, and caught a -87% sentiment
                   crisis that 40 leaders missed.

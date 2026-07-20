@@ -1,4 +1,4 @@
-# Dreamscope website (dream-team-builder)
+# Dreamscope website (ds-website)
 
 Marketing site for Dreamscope Consulting. Deployed to **www.dreamscope.win** via Vercel (auto-deploys from `main`).
 

@@ -265,6 +265,29 @@ const css = `
   .ws-bench .ws-h2 { color: #fff; }
   .ws-bench .ws-note { color: rgba(255,255,255,0.55); }
   .ws-bench .ws-note strong { color: rgba(255,255,255,0.9); }
+  .ws-bench .ws-quote {
+    margin: 3rem 0 0;
+    border-left: 3px solid var(--ws-caramel);
+    padding: 0.4rem 0 0.4rem 1.6rem;
+    max-width: 720px;
+  }
+  .ws-bench .ws-quote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.35;
+    color: #fff;
+    margin: 0;
+  }
+  .ws-bench .ws-quote figcaption {
+    margin-top: 1.1rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    font-style: normal;
+    color: rgba(255,255,255,0.6);
+  }
+  .ws-bench .ws-quote figcaption strong { display: block; color: rgba(255,255,255,0.9); font-weight: 600; }
   .ws-tiers.ws-tiers-pair { grid-template-columns: repeat(2, 1fr); max-width: 920px; }
   @media (max-width: 640px) {
     .ws-tiers.ws-tiers-pair { grid-template-columns: 1fr; }
@@ -941,6 +964,18 @@ const Workshops = () => {
             target ahead of the day. Account prerequisites are confirmed in
             pre-work before the day.
           </p>
+
+          <figure className="ws-quote">
+            <blockquote>
+              You made the topics very interesting and relatable, and the
+              students raved about your session! You were one of the best and
+              most dynamic speakers we've had.
+            </blockquote>
+            <figcaption>
+              <strong>Dr. Marvin Deitz, Professor</strong>
+              Golisano Institute for Business and Entrepreneurship
+            </figcaption>
+          </figure>
         </div>
       </section>
 

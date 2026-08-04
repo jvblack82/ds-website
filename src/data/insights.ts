@@ -74,7 +74,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "And the cost of leaving it to accident isn't abstract. Gallup's Q12 meta-analysis, built on 183,000+ business units, puts highly engaged teams at +23% profitability, +18% productivity, 21% to 51% lower turnover, and +10% customer loyalty. Culture is the system that produces that engagement. People who like what they do, do it a lot better. The claim is commercial, not sentimental.",
+        x: "And the cost of leaving it to accident isn't abstract. Gallup's Q12 meta-analysis, built on 183,000+ business units, puts highly engaged teams at +23% profitability, +18% productivity, 21% to 51% lower turnover, and +10% customer loyalty. Culture is the system that produces that engagement. Everything works better if people love what they do. The claim is commercial, not sentimental.",
       },
       { t: "h2", x: "What on purpose looks like" },
       {
@@ -292,7 +292,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "If a company can fund exactly one system, my answer is the listening loop, because nothing moves a culture faster than people seeing their feedback acted on. And if you want the whole framework in one line, it's the line the practice runs on: people who like what they do, do it a lot better.",
+        x: "If a company can fund exactly one system, my answer is the listening loop, because nothing moves a culture faster than people seeing their feedback acted on. And if you want the whole framework in one line, it's the line the practice runs on: everything works better if people love what they do.",
       },
     ],
     band: {

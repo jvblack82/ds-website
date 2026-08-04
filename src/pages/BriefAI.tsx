@@ -100,11 +100,11 @@ const css = `
   }
 `;
 
-const Brief = () => {
+const BriefAI = () => {
   usePageMeta({
-    title: "The Dreamscope Brief",
+    title: "The Dreamscope Brief | AI Maestro",
     description:
-      "An end-to-end culture practice and AI Maestro, where expert work gets trained into AI. 20+ years operating, based in Ho Chi Minh City, working anywhere.",
+      "AI Maestro: I take the expert work that lives in one person's head and train AI to do it. Months of work becomes days. A 90-second read.",
     noindex: true,
   });
 
@@ -229,7 +229,7 @@ const Brief = () => {
             </div>
             <div className="brf-stat">
               <span className="n">161</span>
-              <span className="l">working practices documented from their own top performers</span>
+              <span className="l">working practices documented from their own top performers, 50 of them mapped to strategic goals</span>
             </div>
           </div>
           <p className="brf-lead">Work that took an expert months now takes days.</p>
@@ -307,8 +307,9 @@ const Brief = () => {
             <a href="mailto:joe@dreamscope.win?subject=The%20Brief%20-%20Let's%20talk">
               joe@dreamscope.win
             </a>{" "}
-            · Prefer paper?{" "}
-            <a href="/Dreamscope_Brief.pdf">Download as a PDF</a>
+            · Here for culture?{" "}
+            <Link to="/brief/culture">Read the culture brief</Link> · Prefer
+            paper? <a href="/Dreamscope_Brief.pdf">Download as a PDF</a>
           </div>
         </div>
       </section>
@@ -324,4 +325,4 @@ const Brief = () => {
   );
 };
 
-export default Brief;
+export default BriefAI;

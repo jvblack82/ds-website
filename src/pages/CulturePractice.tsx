@@ -423,7 +423,7 @@ const CulturePractice = () => {
             <div className="cp-premise-text">
               <div className="cp-label">The premise</div>
               <h2 className="cp-title">
-                People who like what they do, do it a lot better.
+                Everything works better if people love what they do.
               </h2>
               <p>
                 I've spent my career inside companies trying to grow fast

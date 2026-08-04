@@ -25,3 +25,7 @@ dist-ssr
 *.sw?
 .vercel
 .env*
+
+# Python bytecode from scripts/ (the culture brief PDF generator)
+__pycache__/
+*.pyc

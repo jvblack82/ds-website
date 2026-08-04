@@ -31,7 +31,7 @@ const CARD = {
   country: "Vietnam",
   // Shows inside the saved contact. Written to still make sense to someone
   // opening it six months after they met him.
-  note: "Culture and operations for growing companies. And I take expert work and train AI to do it. dreamscope.win/joeblack",
+  note: "Culture and operations for growing companies. I take expert work and train AI to do it. dreamscope.win/joeblack",
   photo: "src/assets/joe-black.jpg",
 };
 

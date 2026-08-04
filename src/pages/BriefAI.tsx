@@ -309,7 +309,7 @@ const BriefAI = () => {
             </a>{" "}
             · Here for culture?{" "}
             <Link to="/brief/culture">Read the culture brief</Link> · Prefer
-            paper? <a href="/Dreamscope_Brief.pdf">Download as a PDF</a>
+            paper? <a href="/Dreamscope_Brief_AI.pdf">Download as a PDF</a>
           </div>
         </div>
       </section>

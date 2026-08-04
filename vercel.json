@@ -9,6 +9,13 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/Dreamscope_Brief.pdf",
+      "destination": "/Dreamscope_Brief_AI.pdf",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

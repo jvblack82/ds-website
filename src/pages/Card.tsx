@@ -18,6 +18,46 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 const EMAIL = "joe@dreamscope.win";
 const LINKEDIN = "https://www.linkedin.com/in/joevblack";
 
+/* Talks the card offers slides for, and only while they are current.
+ *
+ * There is no scheduler here on purpose: visibility is a pure function of the
+ * date, so nothing can fail to fire and nothing can be left hanging. Outside
+ * every window the block simply does not render.
+ *
+ * Dates are inclusive and are VIETNAM calendar days, not the viewer's. A
+ * phone left on London time must not decide a Hanoi talk is over.
+ */
+const TALKS = [
+  {
+    from: "2026-09-19",
+    to: "2026-09-21",
+    title: "Symphony of Experience, Ha Noi",
+    sub: "Slides from the talk",
+    href: "/decks/hanoi-keynote.pdf",
+  },
+  {
+    from: "2026-09-23",
+    to: "2026-09-25",
+    title: "She Loves Data",
+    sub: "Slides from the talk",
+    href: "/decks/she-loves-data.pdf",
+  },
+  {
+    from: "2026-09-26",
+    to: "2026-09-28",
+    title: "Symphony of Experience, Ho Chi Minh City",
+    sub: "Slides from the workshop",
+    href: "/decks/hcmc-workshop.pdf",
+  },
+];
+
+/** Today in Vietnam as YYYY-MM-DD, so the windows compare as plain strings. */
+const vnToday = () =>
+  new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Ho_Chi_Minh" }).format(new Date());
+
+const currentTalk = (today = vnToday()) =>
+  TALKS.find((t) => today >= t.from && today <= t.to) ?? null;
+
 const css = `
   .jbc-page {
     --dark: #1E2B3A;
@@ -178,6 +218,19 @@ const css = `
   .jbc-brief svg { width: 20px; height: 20px; color: var(--teal-light); flex-shrink: 0; }
 
   /* QR */
+  .jbc-talk {
+    display: flex; align-items: center; justify-content: space-between; gap: 0.9rem;
+    background: var(--teal); color: #fff; border-radius: 12px;
+    padding: 0.95rem 1.1rem; margin-bottom: 1.1rem;
+    transition: transform 0.15s ease;
+  }
+  .jbc-talk:hover { transform: translateY(-2px); }
+  .jbc-talk-title { display: block; font-weight: 700; font-size: 0.98rem; line-height: 1.3; }
+  .jbc-talk-sub {
+    display: block; font-size: 0.78rem; margin-top: 0.2rem; color: rgba(255,255,255,0.78);
+  }
+  .jbc-talk svg { width: 20px; height: 20px; flex-shrink: 0; }
+
   .jbc-qr-toggle {
     display: flex; align-items: center; justify-content: center; gap: 0.45rem;
     width: 100%; margin-top: 1rem; padding: 0.7rem;
@@ -212,6 +265,24 @@ const css = `
 
 const Card = () => {
   const [showQr, setShowQr] = useState(false);
+  const [talk, setTalk] = useState<(typeof TALKS)[number] | null>(null);
+
+  // Fail closed. The date window opens the block, but it only renders once the
+  // deck is confirmed present, so an unuploaded PDF hides the block instead of
+  // handing the audience a 404.
+  useEffect(() => {
+    const t = currentTalk();
+    if (!t) return;
+    let live = true;
+    fetch(t.href, { method: "HEAD" })
+      .then((r) => {
+        if (live && r.ok) setTalk(t);
+      })
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, []);
 
   usePageMeta({
     title: "Joe Black | Dreamscope",
@@ -257,6 +328,16 @@ const Card = () => {
             <ArrowRight aria-hidden="true" /> Save my contact
           </a>
           <p className="jbc-save-note">Adds straight to your phone, photo and all.</p>
+
+          {talk && (
+            <a className="jbc-talk" href={talk.href} target="_blank" rel="noreferrer">
+              <span>
+                <span className="jbc-talk-title">{talk.sub}</span>
+                <span className="jbc-talk-sub">{talk.title}</span>
+              </span>
+              <ArrowRight aria-hidden="true" />
+            </a>
+          )}
 
           <ul className="jbc-links">
             <li>

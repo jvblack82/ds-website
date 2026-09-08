@@ -17,6 +17,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/cloud/:path*", "destination": "https://cloud.dreamscope.win/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

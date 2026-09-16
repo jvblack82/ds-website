@@ -18,7 +18,8 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 const EMAIL = "joe@dreamscope.win";
 const LINKEDIN = "https://www.linkedin.com/in/joevblack";
 
-/* Talks the card offers slides for, and only while they are current.
+/* Talks the card offers slides for, and only while they are current. A talk
+ * carries one or more links (slides, a handout); each renders as its own tile.
  *
  * There is no scheduler here on purpose: visibility is a pure function of the
  * date, so nothing can fail to fire and nothing can be left hanging. Outside
@@ -27,27 +28,30 @@ const LINKEDIN = "https://www.linkedin.com/in/joevblack";
  * Dates are inclusive and are VIETNAM calendar days, not the viewer's. A
  * phone left on London time must not decide a Hanoi talk is over.
  */
-const TALKS = [
+type TalkLink = { sub: string; href: string };
+type Talk = { from: string; to: string; title: string; links: TalkLink[] };
+
+const TALKS: Talk[] = [
   {
     from: "2026-09-19",
     to: "2026-09-21",
     title: "Symphony of Experience, Ha Noi",
-    sub: "Slides from the talk",
-    href: "/decks/hanoi-keynote.pdf",
+    links: [{ sub: "Slides from the talk", href: "/decks/hanoi-keynote.pdf" }],
   },
   {
     from: "2026-09-23",
     to: "2026-09-25",
     title: "She Loves Data",
-    sub: "Slides from the talk",
-    href: "/decks/she-loves-data.pdf",
+    links: [
+      { sub: "Slides from the talk", href: "/decks/she-loves-data.pdf" },
+      { sub: "The handout (2 pages)", href: "/decks/she-loves-data-handout.pdf" },
+    ],
   },
   {
     from: "2026-09-26",
     to: "2026-09-28",
     title: "Symphony of Experience, Ho Chi Minh City",
-    sub: "Slides from the workshop",
-    href: "/decks/hcmc-workshop.pdf",
+    links: [{ sub: "Slides from the workshop", href: "/decks/hcmc-workshop.pdf" }],
   },
 ];
 
@@ -221,9 +225,10 @@ const css = `
   .jbc-talk {
     display: flex; align-items: center; justify-content: space-between; gap: 0.9rem;
     background: var(--teal); color: #fff; border-radius: 12px;
-    padding: 0.95rem 1.1rem; margin-bottom: 1.1rem;
+    padding: 0.95rem 1.1rem; margin-bottom: 0.5rem;
     transition: transform 0.15s ease;
   }
+  .jbc-talk:last-of-type { margin-bottom: 1.1rem; }
   .jbc-talk:hover { transform: translateY(-2px); }
   .jbc-talk-title { display: block; font-weight: 700; font-size: 0.98rem; line-height: 1.3; }
   .jbc-talk-sub {
@@ -265,20 +270,25 @@ const css = `
 
 const Card = () => {
   const [showQr, setShowQr] = useState(false);
-  const [talk, setTalk] = useState<(typeof TALKS)[number] | null>(null);
+  const [talk, setTalk] = useState<Talk | null>(null);
 
-  // Fail closed. The date window opens the block, but it only renders once the
-  // deck is confirmed present, so an unuploaded PDF hides the block instead of
-  // handing the audience a 404.
+  // Fail closed. The date window opens the block, but each link only renders
+  // once its file is confirmed present, so an unuploaded PDF hides that tile
+  // instead of handing the audience a 404.
   useEffect(() => {
     const t = currentTalk();
     if (!t) return;
     let live = true;
-    fetch(t.href, { method: "HEAD" })
-      .then((r) => {
-        if (live && r.ok) setTalk(t);
-      })
-      .catch(() => {});
+    Promise.all(
+      t.links.map((l) =>
+        fetch(l.href, { method: "HEAD" })
+          .then((r) => (r.ok ? l : null))
+          .catch(() => null),
+      ),
+    ).then((checked) => {
+      const links = checked.filter((l): l is TalkLink => l !== null);
+      if (live && links.length) setTalk({ ...t, links });
+    });
     return () => {
       live = false;
     };
@@ -329,15 +339,16 @@ const Card = () => {
           </a>
           <p className="jbc-save-note">Adds straight to your phone, photo and all.</p>
 
-          {talk && (
-            <a className="jbc-talk" href={talk.href} target="_blank" rel="noreferrer">
-              <span>
-                <span className="jbc-talk-title">{talk.sub}</span>
-                <span className="jbc-talk-sub">{talk.title}</span>
-              </span>
-              <ArrowRight aria-hidden="true" />
-            </a>
-          )}
+          {talk &&
+            talk.links.map((l) => (
+              <a key={l.href} className="jbc-talk" href={l.href} target="_blank" rel="noreferrer">
+                <span>
+                  <span className="jbc-talk-title">{l.sub}</span>
+                  <span className="jbc-talk-sub">{talk.title}</span>
+                </span>
+                <ArrowRight aria-hidden="true" />
+              </a>
+            ))}
 
           <ul className="jbc-links">
             <li>

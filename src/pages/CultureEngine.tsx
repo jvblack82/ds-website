@@ -455,7 +455,7 @@ const CultureEngine = () => {
   usePageMeta({
     title: "The Culture Engine · AI-Powered Culture Diagnostics",
     description:
-      "Three data layers, one research-backed happiness framework, one convergent diagnosis. What leaders miss, the system catches.",
+      "Three data layers, one research-backed framework (the Dreamscope Factors), one convergent diagnosis. What leaders miss, the system catches.",
   });
 
   useEffect(() => {
@@ -562,7 +562,7 @@ const CultureEngine = () => {
                   Companies collect the data, then it stalls. Either they can't
                   tell what it's really saying, or turning it into something they
                   can act on takes so long the moment has passed. We classify
-                  every response against research-backed workplace happiness factors and synthesize it
+                  every response against the Dreamscope Factors, a research-backed set of workplace factors, and synthesize it
                   fast, so you can act while it still matters.
                 </div>
               </div>
@@ -780,7 +780,7 @@ const CultureEngine = () => {
               <div className="phase-label">Phase 2</div>
               <h3>Analysis</h3>
               <p>
-                AI-powered classification against research-backed happiness factors. Leader
+                AI-powered classification against the research-backed Dreamscope Factors. Leader
                 scoring with evidence chains. Convergent analysis across all
                 three data sources. Full report delivery and action plan
                 workshop.
@@ -845,8 +845,7 @@ const CultureEngine = () => {
             Built on a{" "}
             <strong style={{ color: "var(--dark)" }}>
               research-backed framework
-            </strong>{" "}
-            of workplace happiness factors. AI-powered classification across surveys,
+            </strong>, the Dreamscope Factors. AI-powered classification across surveys,
             interviews, and focus groups. Every finding is evidence-backed and
             traceable to source data.
           </p>
@@ -864,7 +863,7 @@ const CultureEngine = () => {
               <p className="ce-faq-a">
                 No. A survey gives you scores. The Culture Engine reads the
                 surveys, interviews, and focus groups together, classifies every
-                comment against research-backed happiness factors, and tells you what's
+                comment against the research-backed Dreamscope Factors, and tells you what's
                 actually driving the number, with the quotes to back it. On a
                 450-person company it flagged 5 flight risks in a blind
                 retrospective, all 5 among the 7 people who actually left.

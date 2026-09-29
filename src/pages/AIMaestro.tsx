@@ -515,7 +515,7 @@ const AIMaestro = () => {
                 </p>
                 <p className="aim-proof">
                   The Culture Engine is the built proof. Three data sources, one
-                  research-backed happiness framework, AI-classified and queryable. On a 450-person company
+                  research-backed framework (the Dreamscope Factors), AI-classified and queryable. On a 450-person company
                   it flagged 5 flight risks in a blind retrospective, all 5
                   among the 7 real departures, and caught a -87% sentiment
                   crisis that 40 leaders missed.

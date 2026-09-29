@@ -273,7 +273,7 @@ const BriefCulture = () => {
       <section className="brc-section on-white">
         <div className="brc-wrap">
           <div className="brc-snum">05 / The operator</div>
-          <h2 className="brc-h2">Twenty years operating. Nine across Asia.</h2>
+          <h2 className="brc-h2">20 years running teams, the last ten in Vietnam.</h2>
           <ul className="brc-creds">
             <li className="brc-cred">
               <div className="role">

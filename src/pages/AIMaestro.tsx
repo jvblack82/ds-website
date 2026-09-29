@@ -654,7 +654,7 @@ const AIMaestro = () => {
       <section className="aim-section on-cream">
         <div className="aim-wrap">
           <div className="aim-snum">05 / The operator</div>
-          <h2 className="aim-h2">Twenty-plus years operating. Nine across Asia.</h2>
+          <h2 className="aim-h2">20 years running teams, the last ten in Vietnam.</h2>
           <p className="aim-lead">
             Vietnam, Cambodia, India, Japan. The career has been one long run of
             building the systems that let companies scale without losing what
@@ -669,8 +669,8 @@ const AIMaestro = () => {
                 <p>
                   Built Culture and L&amp;D from zero across 37 locations, 4
                   countries, 3,700 people. 260+ SOPs into one backbone. eNPS
-                  up 18 points, store satisfaction up 20% on average (60% in the
-                  best store).
+                  up 18 points, store satisfaction up 20% on average the month
+                  after rollout (60% in the best store).
                 </p>
               </li>
               <li className="aim-cred">

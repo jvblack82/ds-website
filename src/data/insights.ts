@@ -51,7 +51,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "I learned this before I had the vocabulary for it. For nine years I ran a landscaping company with my best friend. No frameworks, no HR, one rule: we do what we said we'd do, when we said we'd do it. We had accidentally built a culture around a single value, integrity, and once we noticed, we started driving it on purpose. Everything I've done in the 20+ years since, 9 of them across Asia, is that discovery at scale.",
+        x: "I learned this before I had the vocabulary for it. For nine years I ran a landscaping company with my best friend. No frameworks, no HR, one rule: we do what we said we'd do, when we said we'd do it. We had accidentally built a culture around a single value, integrity, and once we noticed, we started driving it on purpose. Everything I've done in the 20 years since, the last ten in Vietnam, is that discovery at scale.",
       },
       { t: "quote", x: "Culture is behavior. Everything else is just a nice idea." },
       { t: "h2", x: "Why the accident stops working" },
@@ -223,7 +223,7 @@ export const INSIGHTS: Insight[] = [
     blocks: [
       {
         t: "p",
-        x: "Culture work has a shape. After 20+ years operating, 9 of them across Asia, the practice has settled into four phases that run in a fixed order: Inspire, Discover, Build or Refresh, Implement. Run it as one engagement or enter at a single phase, the shape stays the same. Get the people in, find the truth, build what holds, make it live. Here's the tour, and the reasoning behind the order.",
+        x: "Culture work has a shape. After 20 years running teams, the last ten in Vietnam, the practice has settled into four phases that run in a fixed order: Inspire, Discover, Build or Refresh, Implement. Run it as one engagement or enter at a single phase, the shape stays the same. Get the people in, find the truth, build what holds, make it live. Here's the tour, and the reasoning behind the order.",
       },
       { t: "h2", x: "Phase 1: Inspire" },
       {

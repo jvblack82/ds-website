@@ -575,8 +575,8 @@ const Workshops = () => {
           </div>
           <div className="ws-proof">
             <div>
-              <div className="num">20+ yrs</div>
-              <div className="lab">building operations across Asia</div>
+              <div className="num">20 yrs</div>
+              <div className="lab">running teams, the last ten in Vietnam</div>
             </div>
             <div>
               <div className="num">3,700</div>

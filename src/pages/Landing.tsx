@@ -210,7 +210,7 @@ const Landing = () => {
   usePageMeta({
     title: "Dreamscope Consulting · Culture and AI, Run by an Operator",
     description:
-      "An end-to-end culture practice and AI Maestro, where expert work gets trained into AI. 20+ years operating, based in Ho Chi Minh City, working anywhere.",
+      "An end-to-end culture practice and AI Maestro, where expert work gets trained into AI. 20 years operating, based in Ho Chi Minh City, working anywhere.",
   });
 
   useEffect(() => {
@@ -231,7 +231,7 @@ const Landing = () => {
             <span className="land-kicker">Dreamscope Consulting</span>
             <h1>Two practices. One operator mindset.</h1>
             <p className="land-sub">
-              Two parent practices. One operator who's spent 20+ years building the
+              Two parent practices. One operator who's spent 20 years building the
               systems that let companies scale. Culture, end to end. AI Maestro,
               for any process bottlenecked on one person's expert judgment.
             </p>
@@ -260,7 +260,7 @@ const Landing = () => {
         <div className="land-wrap">
           <div className="land-cred-grid">
             <div>
-              <span className="land-cred-num">20+ yrs</span>
+              <span className="land-cred-num">20 yrs</span>
               <span className="land-cred-label">
                 Operating and building the systems that let companies scale
               </span>

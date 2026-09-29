@@ -298,7 +298,7 @@ def build():
 
     # 05 THE OPERATOR
     p.snum("05 / The operator")
-    p.h2("Twenty years operating. Nine across Asia.")
+    p.h2("20 years running teams, the last ten in Vietnam.")
     p.space(4)
 
     creds = [

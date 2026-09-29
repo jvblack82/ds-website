@@ -212,7 +212,7 @@ const BriefAI = () => {
           <div className="brf-snum">03 / Proof</div>
           <h2 className="brf-h2">Proven on real data, not a slide.</h2>
           <p className="brf-lead">
-            I've done this work by hand at company after company for 20+ years,
+            I've done this work by hand at company after company for 20 years,
             and built parts of the AI version at another. The Culture Engine is
             the whole system, end to end. I ran it on a 450-person company: a
             year of data, 40 leadership interviews, 290 survey responses. The
@@ -261,7 +261,7 @@ const BriefAI = () => {
       <section className="brf-section on-white">
         <div className="brf-wrap">
           <div className="brf-snum">05 / The operator</div>
-          <h2 className="brf-h2">Twenty years operating. Nine across Asia.</h2>
+          <h2 className="brf-h2">20 years running teams, the last ten in Vietnam.</h2>
           <ul className="brf-creds">
             <li className="brf-cred">
               <div className="role">

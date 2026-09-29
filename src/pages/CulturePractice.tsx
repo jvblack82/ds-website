@@ -319,7 +319,7 @@ const CulturePractice = () => {
   usePageMeta({
     title: "Culture Consulting · The Four-Phase Dreamscope Practice",
     description:
-      "Inspire, Discover, Build, Implement. An end-to-end culture practice for companies scaling fast, run by an operator with 20+ years, 9 of them across Asia.",
+      "Inspire, Discover, Build, Implement. An end-to-end culture practice for companies scaling fast, run by an operator with 20 years running teams, the last ten in Vietnam.",
   });
 
   useEffect(() => {
@@ -342,8 +342,8 @@ const CulturePractice = () => {
             <h1>Build the place people want to do their best work.</h1>
             <p className="cp-hero-sub">
               An end-to-end culture practice for companies that are scaling,
-              scaling fast, or stuck. Built from 20+ years of operating, 9 of
-              them across Asia, and refined in the work itself.
+              scaling fast, or stuck. Built from 20 years of running teams, the
+              last ten in Vietnam, and refined in the work itself.
             </p>
             <div className="cp-hero-btns">
               <a className="cp-btn teal" href={DISCOVERY}>
@@ -770,7 +770,7 @@ const CulturePractice = () => {
               <div className="cp-label">Why Dreamscope</div>
               <h2 className="cp-title">An operator, not a consultant.</h2>
               <p>
-                I'm an operator who's spent 20+ years building the systems that
+                I'm an operator who's spent 20 years building the systems that
                 let companies scale. Pizza 4P's through 4 countries and 3,700
                 people. Seller Candy from 7 to 70 and 6x revenue. Christina's
                 from 50 to 500+ people across 8 cities.

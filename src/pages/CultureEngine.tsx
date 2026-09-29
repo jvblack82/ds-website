@@ -455,7 +455,7 @@ const CultureEngine = () => {
   usePageMeta({
     title: "The Culture Engine · AI-Powered Culture Diagnostics",
     description:
-      "Three data layers, one research-backed framework (the Dreamscope Factors), one convergent diagnosis. What leaders miss, the system catches.",
+      "Three data layers, one research-backed framework (the 20 Dreamscope Factors), one convergent diagnosis. What leaders miss, the system catches.",
   });
 
   useEffect(() => {
@@ -562,7 +562,7 @@ const CultureEngine = () => {
                   Companies collect the data, then it stalls. Either they can't
                   tell what it's really saying, or turning it into something they
                   can act on takes so long the moment has passed. We classify
-                  every response against the Dreamscope Factors, a research-backed set of workplace factors, and synthesize it
+                  every response against the 20 Dreamscope Factors, a research-backed set of workplace factors, and synthesize it
                   fast, so you can act while it still matters.
                 </div>
               </div>
@@ -648,10 +648,11 @@ const CultureEngine = () => {
           </p>
           <div className="results-grid">
             <div className="result-stat">
-              <span className="rs-num">18–60%</span>
-              <span className="rs-label">Happiness boost</span>
+              <span className="rs-num">+20%</span>
+              <span className="rs-label">Store satisfaction</span>
               <span className="rs-desc">
-                Satisfaction jumped from simple, feedback-driven changes.
+                On average the month after the plan rolled out, and 60% in the
+                best store.
               </span>
             </div>
             <div className="result-stat">
@@ -662,13 +663,13 @@ const CultureEngine = () => {
               </span>
             </div>
             <div className="result-stat">
-              <span className="rs-num">20 pts</span>
+              <span className="rs-num">18 pts</span>
               <span className="rs-label">eNPS rise</span>
               <span className="rs-desc">A measurably better place to work.</span>
             </div>
             <div className="result-stat">
               <span className="rs-num">27 → 37</span>
-              <span className="rs-label">Locations, 5 countries</span>
+              <span className="rs-label">Locations, 4 countries</span>
               <span className="rs-desc">Growth the culture could sustain.</span>
             </div>
           </div>

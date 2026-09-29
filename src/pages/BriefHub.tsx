@@ -173,7 +173,7 @@ const BriefHub = () => {
                 they happened
               </li>
               <li>
-                <strong>20 points</strong> of eNPS at a 3,700-person company
+                <strong>18 points</strong> of eNPS at a 3,700-person company
               </li>
             </ul>
             <span className="brh-go">Read the culture brief →</span>

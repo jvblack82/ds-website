@@ -515,7 +515,7 @@ const AIMaestro = () => {
                 </p>
                 <p className="aim-proof">
                   The Culture Engine is the built proof. Three data sources, one
-                  research-backed framework (the Dreamscope Factors), AI-classified and queryable. On a 450-person company
+                  research-backed framework (the 20 Dreamscope Factors), AI-classified and queryable. On a 450-person company
                   it flagged 5 flight risks in a blind retrospective, all 5
                   among the 7 real departures, and caught a -87% sentiment
                   crisis that 40 leaders missed.
@@ -667,9 +667,10 @@ const AIMaestro = () => {
                   Pizza 4P's<span>Culture &amp; Ops Excellence Director</span>
                 </div>
                 <p>
-                  Built Culture and L&amp;D from zero across 40+ locations, 5
-                  countries, 3,700 employees. 260+ SOPs into one backbone. eNPS
-                  up 20 points, happiness up 18-20%.
+                  Built Culture and L&amp;D from zero across 37 locations, 4
+                  countries, 3,700 people. 260+ SOPs into one backbone. eNPS
+                  up 18 points, store satisfaction up 20% on average (60% in the
+                  best store).
                 </p>
               </li>
               <li className="aim-cred">

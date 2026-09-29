@@ -280,9 +280,9 @@ const BriefCulture = () => {
                 Pizza 4P's<span>Culture &amp; Ops Excellence Director</span>
               </div>
               <p>
-                Built Culture and L&amp;D from zero across 40+ locations, 5
-                countries, 3,700 employees. eNPS up 20 points, happiness up 18
-                to 20%.
+                Built Culture and L&amp;D from zero across 37 locations, 4
+                countries, 3,700 people. eNPS up 18 points, store satisfaction
+                up 20% on average (60% in the best store).
               </p>
             </li>
             <li className="brc-cred">

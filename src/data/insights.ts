@@ -161,7 +161,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "The design decision that makes the system work isn't any single layer. It's that every piece of data from all three layers gets classified against the same research-backed framework (the Dreamscope Factors), covering the organization, the people, the job itself, and wellbeing. A survey comment, an interview passage, and a focus-group exchange all land in the same categories with sentiment attached. Three datasets in one coordinate system means convergence and divergence become computable instead of impressionistic. At this company, the three layers produced 1,541 classified data points.",
+        x: "The design decision that makes the system work isn't any single layer. It's that every piece of data from all three layers gets classified against the same research-backed framework (the 20 Dreamscope Factors), covering the organization, the people, the job itself, and wellbeing. A survey comment, an interview passage, and a focus-group exchange all land in the same categories with sentiment attached. Three datasets in one coordinate system means convergence and divergence become computable instead of impressionistic. At this company, the three layers produced 1,541 classified data points.",
       },
       { t: "h2", x: "Why a machine does the reading" },
       {
@@ -241,7 +241,7 @@ export const INSIGHTS: Insight[] = [
       { t: "h2", x: "Phase 2: Discover" },
       {
         t: "p",
-        x: "Discover is where culture stops being anecdote and becomes evidence. It sits second because prescribing before diagnosing is malpractice. Three layers of data get collected: an eNPS survey, one question plus a why, about 30 seconds per employee; leadership interviews, built as story-first conversations; and frontline focus groups, managers banned from the room so the truth can walk in. Everything from all three layers is classified against the same research-backed framework (the Dreamscope Factors), which is what lets you lay the reads on top of each other. Where the layers agree, confidence is high. Where they diverge, the divergence is itself the finding.",
+        x: "Discover is where culture stops being anecdote and becomes evidence. It sits second because prescribing before diagnosing is malpractice. Three layers of data get collected: an eNPS survey, one question plus a why, about 30 seconds per employee; leadership interviews, built as story-first conversations; and frontline focus groups, managers banned from the room so the truth can walk in. Everything from all three layers is classified against the same research-backed framework (the 20 Dreamscope Factors), which is what lets you lay the reads on top of each other. Where the layers agree, confidence is high. Where they diverge, the divergence is itself the finding.",
       },
       {
         t: "p",

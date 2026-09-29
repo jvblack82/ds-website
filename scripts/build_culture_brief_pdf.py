@@ -10,7 +10,9 @@ Matches the existing Dreamscope_Brief.pdf (the AI Maestro one): ReportLab, A4,
 
 The copy here is deliberately kept in sync with src/pages/BriefCulture.tsx by
 hand. If you edit one, edit the other. Every number traces to Joe's July 2026
-culture CV, and the 450-person client is never named.
+culture CV, and the 450-person client is never named. The Pizza 4P's figures
+follow the Belgo and FEFV proposals of 24 and 25 Sep 2026, which Joe made the
+official version on 29 Sep 2026.
 """
 from pathlib import Path
 
@@ -301,7 +303,7 @@ def build():
 
     creds = [
         ("Pizza 4P's", "Culture & Ops Excellence Director",
-         "Built Culture and L&D from zero across 40+ locations, 5 countries, 3,700 employees. eNPS up 20 points, happiness up 18 to 20%."),
+         "Built Culture and L&D from zero across 37 locations, 4 countries, 3,700 people. eNPS up 18 points, store satisfaction up 20% on average (60% in the best store)."),
         ("Seller Candy", "Interim COO",
          "Built the operational foundation through 10x team growth and 6x revenue."),
         ("Christina's", "Operations Team Leader",

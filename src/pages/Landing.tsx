@@ -266,9 +266,9 @@ const Landing = () => {
               </span>
             </div>
             <div>
-              <span className="land-cred-num">40+</span>
+              <span className="land-cred-num">37</span>
               <span className="land-cred-label">
-                Pizza 4P's locations across 5 countries
+                Pizza 4P's locations across 4 countries
               </span>
             </div>
             <div>
@@ -372,8 +372,8 @@ const Landing = () => {
               Happiness. He worked with clients such as VPBank, Seller Candy,
               and Sathapana Bank, and served as the Culture and Operations
               Excellence Director at Pizza 4P's, one of the fastest-growing
-              restaurant chains in SE Asia, with over 40 locations and 3,700
-              employees in 5 countries.
+              restaurant chains in SE Asia, with 37 locations and 3,700
+              people in 4 countries.
             </p>
             <p>
               Through all of it he found that{" "}

@@ -267,7 +267,7 @@ const BriefAI = () => {
               <div className="role">
                 Pizza 4P's<span>Culture &amp; Ops Excellence Director</span>
               </div>
-              <p>40+ locations, 5 countries, 3,700 employees. 260+ SOPs into one backbone. eNPS up 20 points.</p>
+              <p>37 locations, 4 countries, 3,700 people. 260+ SOPs into one backbone. eNPS up 18 points.</p>
             </li>
             <li className="brf-cred">
               <div className="role">

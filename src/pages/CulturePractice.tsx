@@ -427,7 +427,7 @@ const CulturePractice = () => {
               </h2>
               <p>
                 I've spent my career inside companies trying to grow fast
-                without losing what made them good. Pizza 4P's through 5
+                without losing what made them good. Pizza 4P's through 4
                 countries and 3,700 people. Christina's from 50 to 500+ people
                 across 8 cities. Seller Candy from 7 to 70.
               </p>
@@ -536,7 +536,7 @@ const CulturePractice = () => {
             <div className="cp-converge-arrow">→</div>
             <div className="cp-converge-target">
               <span className="cp-tg-num">1</span>
-              <span className="cp-tg-label">research-backed framework, the Dreamscope Factors. Every layer classified against the same lens.</span>
+              <span className="cp-tg-label">research-backed framework, the 20 Dreamscope Factors. Every layer classified against the same lens.</span>
             </div>
           </div>
           <div className="cp-deliv">
@@ -771,7 +771,7 @@ const CulturePractice = () => {
               <h2 className="cp-title">An operator, not a consultant.</h2>
               <p>
                 I'm an operator who's spent 20+ years building the systems that
-                let companies scale. Pizza 4P's through 5 countries and 3,700
+                let companies scale. Pizza 4P's through 4 countries and 3,700
                 people. Seller Candy from 7 to 70 and 6x revenue. Christina's
                 from 50 to 500+ people across 8 cities.
               </p>

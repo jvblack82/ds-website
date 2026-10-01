@@ -51,7 +51,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "I learned this before I had the vocabulary for it. For nine years I ran a landscaping company with my best friend. No frameworks, no HR, one rule: we do what we said we'd do, when we said we'd do it. We had accidentally built a culture around a single value, integrity, and once we noticed, we started driving it on purpose. Everything I've done in the 20 years since, the last ten in Vietnam, is that discovery at scale.",
+        x: "I learned this before I had the vocabulary for it. For nine years I ran a landscaping company with my best friend. No frameworks, no HR, one rule: we do what we said we'd do, when we said we'd do it. We had accidentally built a culture around a single value, integrity, and once we noticed, we started driving it on purpose. Everything I've done since, the last ten years in Vietnam, is that discovery at scale.",
       },
       { t: "quote", x: "Culture is behavior. Everything else is just a nice idea." },
       { t: "h2", x: "Why the accident stops working" },

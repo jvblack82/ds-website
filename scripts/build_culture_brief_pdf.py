@@ -167,30 +167,38 @@ def build():
 
     # 02 THE WORK
     p.snum("02 / The work")
-    p.h2("Four phases. Start wherever it hurts.")
+    p.h2("Culture is how your strategy gets done.")
     p.lead(
-        "You don't need all four. Most engagements start in Discover, because "
-        "you cannot fix what you cannot see."
+        "Four phases. Start wherever it hurts, or run all four as one "
+        "engagement. Find out first. Everything after is built on what you "
+        "found."
     )
     p.space(10)
 
     # Same names and "You get" lines as the page, which reads them from
-    # src/data/framework.ts (the v3 framework, Discover first).
+    # src/data/framework.ts (the v3 framework, Discover first). Like the page,
+    # each tile links to its phase on the /culture map.
     phases = [
-        ("01", "Discover", "A State of Culture report, and what to do first."),
-        ("02", "Inspire", "Leaders who want the changes the data calls for."),
-        ("03", "Build or Refresh", "The Culture Playbook, and the plan to roll it out."),
-        ("04", "Implement", "Seven places running, each with an owner."),
+        ("01", "Discover", "A State of Culture report, and what to do first.", "discover"),
+        ("02", "Inspire", "Leaders who want the changes the data calls for.", "inspire"),
+        ("03", "Build or Refresh", "The Culture Playbook, and the plan to roll it out.", "build"),
+        ("04", "Implement", "Seven places running, each with an owner.", "implement"),
     ]
     col_w = (CW - 24) / 4
     tile_top = p.y
-    tile_h = 138
-    for i, (num, name, desc) in enumerate(phases):
+    tile_h = 76
+    for i, (num, name, desc, phase_id) in enumerate(phases):
         x = M + i * (col_w + 8)
         c.setFillColor(WHITE)
         c.setStrokeColor(CARAMEL if name == "Discover" else LINE)
         c.setLineWidth(1)
         c.roundRect(x, tile_top - tile_h, col_w, tile_h, 6, stroke=1, fill=1)
+        c.linkURL(
+            f"https://www.dreamscope.win/culture#{phase_id}",
+            (x, tile_top - tile_h, x + col_w, tile_top),
+            relative=0,
+            thickness=0,
+        )
 
         ty = tile_top - 18
         c.setFont(SERIF, 12)
@@ -206,12 +214,26 @@ def build():
         for line in simpleSplit(desc, SANS, 7.6, col_w - 20):
             c.drawString(x + 10, ty, line)
             ty -= 9.6
-        if name == "Discover":
-            c.setFont(SANS_SB, 6.4)
-            c.setFillColor(CARAMEL)
-            c.drawString(x + 10, tile_top - tile_h + 9, "MOST START HERE")
 
     p.y = tile_top - tile_h
+
+    # The page's "More details" link, printed as an address so paper copies work too
+    note = "More details on each phase:  dreamscope.win/culture"
+    p.y -= 20
+    c.setFont(SANS_SB, 8.6)
+    c.setFillColor(DARK)
+    c.drawString(M, p.y, note)
+    c.linkURL(
+        "https://www.dreamscope.win/culture#framework",
+        (M, p.y - 3, M + c.stringWidth(note, SANS_SB, 8.6), p.y + 9),
+        relative=0,
+        thickness=0,
+    )
+    if p.y < 38 + 14:
+        raise SystemExit(
+            f"Page 1 overflows its footer (cursor {p.y:.0f}pt, footer rule 38pt). "
+            f"Tighten spacing above or shorten copy; do NOT ship."
+        )
 
     # footer rule
     c.setStrokeColor(LINE)
@@ -281,11 +303,12 @@ def build():
     p.snum("04 / The honest part")
     p.h2("Most culture work stops at the poster.")
     p.lead(
-        "Values on a wall change nothing and everyone who works there knows "
-        "it. It only counts once it reaches what people touch every week: how "
-        "they get hired, trained, recognized, reviewed, and run. I'm an "
-        "operator, so that is where I take it. At Pizza 4P's that meant 260+ "
-        "frontline SOPs folded into one backbone managers train against."
+        "The culture lives in seven places you already run: who you hire, how "
+        "you onboard, train and meet, what and when you recognize, what you "
+        "measure and how you decide. I'm an operator, so that is where I take "
+        "it. At Pizza 4P's that meant 260+ frontline SOPs folded into one "
+        "backbone managers train against. Then the same short survey, every "
+        "quarter. KPIs say whether it works. Your people say why."
     )
     p.space(13)
     p.text(

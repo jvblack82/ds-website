@@ -57,12 +57,16 @@ const css = `
   .brc-pullout { font-family: 'DM Serif Display', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 500; font-style: italic; color: var(--brc-caramel); max-width: 24ch; line-height: 1.25; margin-top: 2rem; }
 
   .brc-grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
-  .brc-tile { border: 1px solid var(--brc-line); border-radius: 12px; padding: 1.2rem; background: var(--brc-white); display: flex; flex-direction: column; }
+  .brc-tile { border: 1px solid var(--brc-line); border-radius: 12px; padding: 1.2rem; background: var(--brc-white); display: flex; flex-direction: column; text-decoration: none; transition: border-color 0.2s, transform 0.2s; }
   .brc-tile.hard { border-color: var(--brc-caramel); }
+  .brc-tile:hover { border-color: var(--brc-caramel); transform: translateY(-2px); }
+  .brc-tile:focus-visible { outline: 2px solid var(--brc-dark); outline-offset: 2px; }
+  /* Small caramel text fails contrast on cream, so the link is navy, underlined in caramel */
+  .brc-grid-note { margin: 1.1rem 0 0; font-size: 0.95rem; }
+  .brc-grid-note a { color: var(--brc-dark); font-weight: 600; text-decoration: underline; text-decoration-color: var(--brc-caramel); text-underline-offset: 3px; }
   .brc-tile .tn { font-family: 'DM Serif Display', serif; font-size: 1.25rem; font-weight: 600; color: var(--brc-caramel); line-height: 1; }
   .brc-tile h3 { font-size: 1rem; color: var(--brc-dark); margin: 0.35rem 0 0.4rem; font-weight: 600; }
   .brc-tile p { font-size: 0.86rem; color: var(--brc-body); margin: 0; line-height: 1.45; }
-  .brc-tile .tag { margin-top: auto; padding-top: 0.7rem; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 1px; color: var(--brc-caramel); font-weight: 700; }
 
   .brc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0 1.2rem; }
   .brc-stat { border-top: 2px solid var(--brc-caramel); padding-top: 1rem; }
@@ -169,26 +173,31 @@ const BriefCulture = () => {
       <section className="brc-section on-cream">
         <div className="brc-wrap">
           <div className="brc-snum">02 / The work</div>
-          <h2 className="brc-h2">Four phases. Start wherever it hurts.</h2>
+          <h2 className="brc-h2">Culture is how your strategy gets done.</h2>
           <p className="brc-lead">
-            You don't need all four. Most engagements start in Discover, because
-            you cannot fix what you cannot see.
+            Four phases. Start wherever it hurts, or run all four as one
+            engagement. Find out first. Everything after is built on what you
+            found.
           </p>
           <div className="brc-grid4">
-            {/* Names and "You get" lines come from the framework data; the PDF
-                generator keeps its own copy of these four tiles. */}
+            {/* Names and "You get" lines come from the framework data, and each
+                tile opens its phase on the /culture map; the PDF generator
+                keeps its own copy of these four tiles. */}
             {FRAMEWORK_PHASES.map((phase) => (
-              <div
+              <Link
+                to={`/culture#${phase.id}`}
                 className={"brc-tile" + (phase.id === "discover" ? " hard" : "")}
                 key={phase.id}
               >
                 <span className="tn">{phase.num}</span>
                 <h3>{phase.name}</h3>
                 <p>{phase.youGet}</p>
-                {phase.id === "discover" && <span className="tag">Most start here</span>}
-              </div>
+              </Link>
             ))}
           </div>
+          <p className="brc-grid-note">
+            <Link to="/culture#framework">More details on each phase →</Link>
+          </p>
         </div>
       </section>
 
@@ -238,12 +247,13 @@ const BriefCulture = () => {
           <div className="brc-snum">04 / The honest part</div>
           <h2 className="brc-h2">Most culture work stops at the poster.</h2>
           <p className="brc-lead">
-            Values on a wall change nothing and everyone who works there knows
-            it. It only counts once it reaches what people touch every week: how
-            they get hired, trained, recognized, reviewed, and run.{" "}
+            The culture lives in seven places you already run: who you hire, how
+            you onboard, train and meet, what and when you recognize, what you
+            measure and how you decide.{" "}
             <strong>I'm an operator, so that is where I take it.</strong> At
             Pizza 4P's that meant 260+ frontline SOPs folded into one backbone
-            managers train against.
+            managers train against. Then the same short survey, every quarter.
+            KPIs say whether it works. Your people say why.
           </p>
           <p className="brc-pullout">
             Culture you can point at on a wall isn't culture. It's decor.

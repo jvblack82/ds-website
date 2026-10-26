@@ -228,7 +228,7 @@ export const INSIGHTS: Insight[] = [
       { t: "h2", x: "Phase 1: Discover" },
       {
         t: "p",
-        x: "Discover is where culture stops being anecdote and becomes evidence. It sits first because what gets built has to come from what's really going on. Prescribing before diagnosing is malpractice. Three layers of data get collected: an eNPS survey, one question plus a why, about 30 seconds per employee; leadership interviews, built as story-first conversations; and frontline focus groups, managers banned from the room so the truth can walk in. Everything from all three layers is classified against the same research-backed framework (the 20 Dreamscope Factors), which is what lets you lay the reads on top of each other. Where the layers agree, confidence is high. Where they diverge, the divergence is itself the finding.",
+        x: "Discover is where culture stops being anecdote and becomes evidence. It sits first because what gets built has to come from what's really going on. Prescribing before diagnosing is malpractice. Three layers of data get collected: a short survey, one core question plus a why (the eNPS is the one I recommend), about 30 seconds per employee; leadership interviews, built as story-first conversations; and frontline focus groups, managers banned from the room so the truth can walk in. Everything from all three layers is classified against the same research-backed framework (the 20 Dreamscope Factors), which is what lets you lay the reads on top of each other. Where the layers agree, confidence is high. Where they diverge, the divergence is itself the finding.",
       },
       {
         t: "p",
@@ -283,7 +283,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "Sustain is the part that keeps working long after I'm gone. eNPS every quarter, about 30 seconds per employee, plus 1 to 3 deep-dive questions earned by whatever the last round couldn't answer. Every initiative gets scored by the next round: KPIs tell you whether it's working, your people tell you why. Values go into performance reviews, weighted heavily enough to move promotions, raises, and improvement plans, because if living the values doesn't affect anyone's pay, the company has posters, not values. Hiring and onboarding screen for values at the door. And the whole thing runs on a strengths lens: make what is great greater, give the weaknesses bumpers, not the spotlight.",
+        x: "Sustain is the part that keeps working long after I'm gone. The same short survey every quarter, about 30 seconds per employee, plus 1 to 3 deep-dive questions earned by whatever the last round couldn't answer. Every initiative gets scored by the next round: KPIs tell you whether it's working, your people tell you why. Values go into performance reviews, weighted heavily enough to move promotions, raises, and improvement plans, because if living the values doesn't affect anyone's pay, the company has posters, not values. Hiring and onboarding screen for values at the door. And the whole thing runs on a strengths lens: make what is great greater, give the weaknesses bumpers, not the spotlight.",
       },
       {
         t: "quote",

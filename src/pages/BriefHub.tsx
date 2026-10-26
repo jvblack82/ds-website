@@ -189,7 +189,7 @@ const BriefHub = () => {
             </p>
             <ul className="brh-points">
               <li>
-                For work that only one person in the building can currently do
+                For work that only one person in the company can currently do
               </li>
               <li>
                 <strong>Five places</strong> expert work reliably compresses

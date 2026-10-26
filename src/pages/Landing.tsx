@@ -298,6 +298,8 @@ const Landing = () => {
                 className="land-logo"
                 src={logo.src}
                 alt={logo.alt}
+                width={logo.width}
+                height={logo.height}
                 loading="lazy"
                 decoding="async"
                 style={logo.scale ? { height: `${Math.round(30 * logo.scale)}px` } : undefined}
@@ -315,7 +317,7 @@ const Landing = () => {
               <div className="lp-eyebrow">End-to-end culture practice</div>
               <h2>Culture</h2>
               <p>
-                Inspire, Discover, Build, Implement. The four-phase Dreamscope
+                Discover, Inspire, Build or Refresh, Implement. The four-phase Dreamscope
                 framework, applied as one engagement or any piece in isolation.
                 The Culture Engine is the AI tool that powers the Discover phase.
               </p>

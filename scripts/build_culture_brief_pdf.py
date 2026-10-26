@@ -9,7 +9,8 @@ Matches the existing Dreamscope_Brief.pdf (the AI Maestro one): ReportLab, A4,
 2 pages, real brand fonts embedded from assets/fonts/.
 
 The copy here is deliberately kept in sync with src/pages/BriefCulture.tsx by
-hand. If you edit one, edit the other. Every number traces to Joe's July 2026
+hand (the four phase tiles with src/data/framework.ts, which the page reads).
+If you edit one, edit the other. Every number traces to Joe's July 2026
 culture CV, and the 450-person client is never named. The Pizza 4P's figures
 follow the Belgo and FEFV proposals of 24 and 25 Sep 2026, which Joe made the
 official version on 29 Sep 2026.
@@ -173,11 +174,13 @@ def build():
     )
     p.space(10)
 
+    # Same names and "You get" lines as the page, which reads them from
+    # src/data/framework.ts (the v3 framework, Discover first).
     phases = [
-        ("01", "Inspire", "Vision, mission, values, and what each one means during a shift."),
-        ("02", "Discover", "Interviews, focus groups, surveys, read together by AI that catches what no single source shows."),
-        ("03", "Build", "Middle managers, and training and SOPs built from what your top performers already do."),
-        ("04", "Implement", "Recognition, meetings, onboarding, reviews. Where culture stops being a deck."),
+        ("01", "Discover", "A State of Culture report, and what to do first."),
+        ("02", "Inspire", "Leaders who want the changes the data calls for."),
+        ("03", "Build or Refresh", "The Culture Playbook, and the plan to roll it out."),
+        ("04", "Implement", "Seven places running, each with an owner."),
     ]
     col_w = (CW - 24) / 4
     tile_top = p.y
@@ -185,7 +188,7 @@ def build():
     for i, (num, name, desc) in enumerate(phases):
         x = M + i * (col_w + 8)
         c.setFillColor(WHITE)
-        c.setStrokeColor(CARAMEL if num == "02" else LINE)
+        c.setStrokeColor(CARAMEL if name == "Discover" else LINE)
         c.setLineWidth(1)
         c.roundRect(x, tile_top - tile_h, col_w, tile_h, 6, stroke=1, fill=1)
 
@@ -203,7 +206,7 @@ def build():
         for line in simpleSplit(desc, SANS, 7.6, col_w - 20):
             c.drawString(x + 10, ty, line)
             ty -= 9.6
-        if num == "02":
+        if name == "Discover":
             c.setFont(SANS_SB, 6.4)
             c.setFillColor(CARAMEL)
             c.drawString(x + 10, tile_top - tile_h + 9, "MOST START HERE")

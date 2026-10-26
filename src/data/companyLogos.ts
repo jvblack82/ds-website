@@ -11,6 +11,12 @@ import logoVpbank from "@/assets/logo-vpbank.svg";
 export interface CompanyLogo {
   src: string;
   alt: string;
+  // The file's intrinsic pixel size. Passed as width and height so the strip
+  // keeps its final wrap while the lazy images load; otherwise it grows a few
+  // rows late and pushes a hash link's target down (no scroll anchoring in
+  // Safari before 27).
+  width: number;
+  height: number;
   // Optical size multiplier vs the strip's base height (default 1). Compact
   // marks (a heart, a badge) need a bump to carry the same visual weight as
   // wide wordmarks.
@@ -22,13 +28,13 @@ export interface CompanyLogo {
 // engagements, so the strip is never labelled "clients". Order is tuned for
 // visual balance (wide wordmarks alternate with compact marks).
 export const COMPANY_LOGOS: CompanyLogo[] = [
-  { src: logo4ps, alt: "Pizza 4P's" },
-  { src: logoSellercandy, alt: "Seller Candy" },
-  { src: logoChristinas, alt: "Christina's", scale: 1.35 },
-  { src: logoDreamplex, alt: "Dreamplex" },
-  { src: logoDh, alt: "Delivering Happiness" },
-  { src: logoTpbank, alt: "TPBank" },
-  { src: logoMarou, alt: "Marou" },
-  { src: logoSathapana, alt: "Sathapana Bank", scale: 1.3 },
-  { src: logoVpbank, alt: "VPBank" },
+  { src: logo4ps, alt: "Pizza 4P's", width: 104, height: 80 },
+  { src: logoSellercandy, alt: "Seller Candy", width: 469, height: 42 },
+  { src: logoChristinas, alt: "Christina's", width: 80, height: 80, scale: 1.35 },
+  { src: logoDreamplex, alt: "Dreamplex", width: 67, height: 80 },
+  { src: logoDh, alt: "Delivering Happiness", width: 84, height: 80 },
+  { src: logoTpbank, alt: "TPBank", width: 259, height: 80 },
+  { src: logoMarou, alt: "Marou", width: 80, height: 80 },
+  { src: logoSathapana, alt: "Sathapana Bank", width: 96, height: 96, scale: 1.3 },
+  { src: logoVpbank, alt: "VPBank", width: 706, height: 160 },
 ];

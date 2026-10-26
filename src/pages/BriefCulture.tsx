@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { FRAMEWORK_PHASES } from "@/data/framework";
 
 /**
  * The culture half of the Brief pair, at /brief/culture. Deliberately built to
@@ -174,38 +175,19 @@ const BriefCulture = () => {
             you cannot fix what you cannot see.
           </p>
           <div className="brc-grid4">
-            <div className="brc-tile">
-              <span className="tn">01</span>
-              <h3>Inspire</h3>
-              <p>
-                Vision, mission, values, and what each one means during a shift.
-              </p>
-            </div>
-            <div className="brc-tile hard">
-              <span className="tn">02</span>
-              <h3>Discover</h3>
-              <p>
-                Interviews, focus groups, surveys, read together by AI that
-                catches what no single source shows.
-              </p>
-              <span className="tag">Most start here</span>
-            </div>
-            <div className="brc-tile">
-              <span className="tn">03</span>
-              <h3>Build</h3>
-              <p>
-                Middle managers, and training and SOPs built from what your top
-                performers already do.
-              </p>
-            </div>
-            <div className="brc-tile">
-              <span className="tn">04</span>
-              <h3>Implement</h3>
-              <p>
-                Recognition, meetings, onboarding, reviews. Where culture stops
-                being a deck.
-              </p>
-            </div>
+            {/* Names and "You get" lines come from the framework data; the PDF
+                generator keeps its own copy of these four tiles. */}
+            {FRAMEWORK_PHASES.map((phase) => (
+              <div
+                className={"brc-tile" + (phase.id === "discover" ? " hard" : "")}
+                key={phase.id}
+              >
+                <span className="tn">{phase.num}</span>
+                <h3>{phase.name}</h3>
+                <p>{phase.youGet}</p>
+                {phase.id === "discover" && <span className="tag">Most start here</span>}
+              </div>
+            ))}
           </div>
         </div>
       </section>

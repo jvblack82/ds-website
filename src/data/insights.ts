@@ -125,7 +125,7 @@ export const INSIGHTS: Insight[] = [
     slug: "what-290-employees-said",
     title: "What 290 employees said that 40 leaders missed",
     description:
-      "290 survey responses described a crisis at one level of the company. 40 leadership interviews barely mentioned it. The visibility wall, and how three data layers read against one framework caught what leaders could not see.",
+      "290 survey responses described a crisis at one level of the company. 40 leadership interviews barely mentioned it. Why leaders can't see it, and how three data layers read against one framework caught what they missed.",
     date: "2026-07-12",
     minutes: 5,
     blocks: [
@@ -141,10 +141,10 @@ export const INSIGHTS: Insight[] = [
         t: "p",
         x: "290 people were describing a crisis. 40 leaders barely mentioned it. And nobody was lying. That last part is why this piece exists.",
       },
-      { t: "h2", x: "The visibility wall" },
+      { t: "h2", x: "What leadership can't see" },
       {
         t: "p",
-        x: "Leadership cannot see what happens at the levels of the company it doesn't work at. That is not a competence problem. It's structural. Information travels upward through summary: each management layer compresses what it heard, softens what's awkward, and forwards what it believes matters. By the time reality reaches the executive floor, it has been filtered three or four times.",
+        x: "Leadership cannot see what happens at the levels of the company it doesn't work at. That is not a competence problem. It's structural. Information travels upward through summary: each management layer compresses what it heard, softens what's awkward, and forwards what it believes matters. By the time reality reaches the leadership team, it has been filtered three or four times.",
       },
       {
         t: "p",
@@ -152,7 +152,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "The standard tools don't break the wall. Annual engagement surveys measure too slowly to manage anything. Long question batteries capture what people think they should say rather than what they mean. And the traditional diagnostic samples: a handful of interviews, a site visit, a report anchored on the loudest voices in the building.",
+        x: "The standard tools don't fix this. Annual engagement surveys measure too slowly to manage anything. Long question batteries capture what people think they should say rather than what they mean. And the traditional diagnostic samples: a handful of interviews, a site visit, a report anchored on the loudest voices in the company.",
       },
       { t: "h2", x: "Three layers, one coordinate system" },
       {
@@ -189,7 +189,7 @@ export const INSIGHTS: Insight[] = [
       { t: "h2", x: "What to do with this" },
       {
         t: "p",
-        x: "The wall is structural, so the fix has to be structural. You will not interview your way through it, and you cannot fix it by being more approachable, because the filter isn't about you. What the leaders missed was never hidden. It was distributed across 290 comments that no human had time to read properly, sitting in plain sight the whole time.",
+        x: "The problem is structural, so the fix has to be structural. You will not interview your way out of it, and you cannot fix it by being more approachable, because the filter isn't about you. What the leaders missed was never hidden. It was distributed across 290 comments that no human had time to read properly, sitting in plain sight the whole time.",
       },
       {
         t: "p",
@@ -217,18 +217,27 @@ export const INSIGHTS: Insight[] = [
     slug: "four-phase-culture-framework",
     title: "The four-phase culture framework, explained",
     description:
-      "Inspire, Discover, Build or Refresh, Implement. A guided tour of the Dreamscope practice: why the order is fixed, what each phase produces, and how the quarterly loop keeps the whole thing alive.",
+      "Discover, Inspire, Build or Refresh, Implement. A guided tour of the Dreamscope practice: why the order is fixed, what each phase produces, and how the quarterly loop keeps the whole thing alive.",
     date: "2026-07-12",
     minutes: 6,
     blocks: [
       {
         t: "p",
-        x: "Culture work has a shape. After 20 years running teams, the last ten in Vietnam, the practice has settled into four phases that run in a fixed order: Inspire, Discover, Build or Refresh, Implement. Run it as one engagement or enter at a single phase, the shape stays the same. Get the people in, find the truth, build what holds, make it live. Here's the tour, and the reasoning behind the order.",
+        x: "Culture work has a shape. After 20 years running teams, the last ten in Vietnam, the practice has settled into four phases that run in a fixed order: Discover, Inspire, Build or Refresh, Implement. Run it as one engagement or enter at a single phase, the shape stays the same. Find out what's really going on, get the people in, build what holds, make it live. Here's the tour, and the reasoning behind the order.",
       },
-      { t: "h2", x: "Phase 1: Inspire" },
+      { t: "h2", x: "Phase 1: Discover" },
       {
         t: "p",
-        x: "Inspire sits first because buy-in decides everything downstream. Culture work fails when people are told what culture is instead of pulled into building it, so before anything gets measured or built, leadership gets a working session, not a lecture. What culture actually is, what it isn't, and why it matters for the company they're trying to build.",
+        x: "Discover is where culture stops being anecdote and becomes evidence. It sits first because what gets built has to come from what's really going on. Prescribing before diagnosing is malpractice. Three layers of data get collected: an eNPS survey, one question plus a why, about 30 seconds per employee; leadership interviews, built as story-first conversations; and frontline focus groups, managers banned from the room so the truth can walk in. Everything from all three layers is classified against the same research-backed framework (the 20 Dreamscope Factors), which is what lets you lay the reads on top of each other. Where the layers agree, confidence is high. Where they diverge, the divergence is itself the finding.",
+      },
+      {
+        t: "p",
+        x: "The output is a State of Culture report that ends in recommendations rather than charts, and a diagnosis that determines the next phase. What gets built next is decided by data, not assumption.",
+      },
+      { t: "h2", x: "Phase 2: Inspire" },
+      {
+        t: "p",
+        x: "Inspire comes next because buy-in decides everything downstream. Culture work fails when people are told what culture is instead of pulled into building it, so before anything gets built, leadership gets a working session built from what Discover found, not a lecture. What culture actually is, what it isn't, and why it matters for the company they're trying to build. I've never met a company where it should be skipped. Once people are excited, the whole project goes better.",
       },
       {
         t: "p",
@@ -236,33 +245,28 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "Inspire runs twice. Once at the start, with the founder and leadership. Again later, when the work has matured enough to roll out to middle management, because middle managers are the ones who live it day to day. Without their buy-in, the work doesn't land.",
-      },
-      { t: "h2", x: "Phase 2: Discover" },
-      {
-        t: "p",
-        x: "Discover is where culture stops being anecdote and becomes evidence. It sits second because prescribing before diagnosing is malpractice. Three layers of data get collected: an eNPS survey, one question plus a why, about 30 seconds per employee; leadership interviews, built as story-first conversations; and frontline focus groups, managers banned from the room so the truth can walk in. Everything from all three layers is classified against the same research-backed framework (the 20 Dreamscope Factors), which is what lets you lay the reads on top of each other. Where the layers agree, confidence is high. Where they diverge, the divergence is itself the finding.",
-      },
-      {
-        t: "p",
-        x: "The output is a State of Culture report that ends in recommendations rather than charts, and a diagnosis that determines the next phase. What gets built next is decided by data, not assumption.",
+        x: "Inspire runs twice. Once right after Discover, with the founder and leadership, and that session opens the build. Again at the rollout, for every manager, because middle managers are the ones who live it day to day. Without their buy-in, the work doesn't land.",
       },
       { t: "h2", x: "Phase 3: Build or Refresh" },
       {
         t: "p",
-        x: "The slash means or. Build a culture because there isn't one, or refresh the one that exists because it's broken. Only the Discover evidence can say which job you're facing, which is why this phase sits third. In practice there are three outcomes: build, when nothing exists; refresh, when the artifacts are dated, broken, or never fit how the company operates; and complete, when the values are genuinely lived but the layers that make them operational were never built. That last one is better news than it sounds. The culture is real. It just outgrew word of mouth.",
+        x: "Build or Refresh means one or the other. Build a culture because there isn't one, or refresh the one that exists because it doesn't fit. Only the Discover evidence can say which job you're facing, which is why this phase sits third. In practice there are three outcomes: build, when nothing exists; refresh, when the artifacts are dated, broken, or never fit how the company operates; and complete, when the values are genuinely lived but the layers that make them operational were never built. That last one is better news than it sounds. The culture is real. It just outgrew word of mouth.",
       },
       {
         t: "p",
-        x: "The construction walks a foundation chain: Vision, Mission, Values, Value Definitions, Value Actions, North Star. Vision is why the company exists long term, written for the team and daring enough that someone could disagree. Mission is present tense, what you deliver and what makes you different. Values are behaviors, not word-picking, and the whole company feeds the draft before the cut: five values, seven at the ceiling, because focus on too many things is focus on nothing.",
+        x: "The construction walks a chain: vision and mission, the North Star, behaviors, values, then team actions and definitions. Vision is why the company exists long term, written for the team and daring enough that someone could disagree. Mission is present tense, what you deliver and what makes you different. Vision inspires and mission directs, but neither tells anyone what to do on a normal working day. The North Star does: what a customer should feel, every time. It works when people repeat it unprompted.",
       },
       {
         t: "p",
-        x: "Inside definitions and actions, the order is counterintuitive: actions first, definitions second. The company crowdsources real stories of the values being lived. Teams turn those stories into 2 to 5 observable actions per value, per division, because a value looks different on a factory line than in an office. Then candidate definitions get reverse-engineered from the teams' own actions, and the room votes. The definitions end up carrying the company's fingerprints, which is why people remember and use them. Generic values mean nothing.",
+        x: "Behaviors come next: what we would have to do to deliver that feeling. The whole company feeds that list. Then the values: those behaviors, grouped and named. Values are behaviors, not word-picking.",
       },
       {
         t: "p",
-        x: "The North Star closes the chain. Vision inspires and mission directs, but neither tells anyone what to do on a Tuesday afternoon. The North Star does: one sentence per team defining the experience it delivers, emotional enough to feel, concrete enough to act on under pressure. It works when people repeat it unprompted.",
+        x: "Then the values come back to every team, and the order is counterintuitive: actions first, definitions second. The company crowdsources real stories of the values being lived. Teams turn those stories into 2 to 5 observable actions per value, per division, because a value looks different on a factory line than in an office. Then candidate definitions get reverse-engineered from the teams' own actions, and everyone in the workshop votes. The definitions end up carrying the company's fingerprints, which is why people remember and use them. Generic values mean nothing.",
+      },
+      {
+        t: "p",
+        x: "Then the real meat of the phase: the implementation plan. The culture lives in seven places you already run: who you hire, how you onboard, how you train, how you meet, what and when you recognize, what you measure, and how you decide. The plan gives each place an owner, picks which ones go first from the Discover results and the new elements, and lays out the rollout.",
       },
       {
         t: "p",
@@ -271,7 +275,7 @@ export const INSIGHTS: Insight[] = [
       { t: "h2", x: "Phase 4: Implement" },
       {
         t: "p",
-        x: "Implement is where culture becomes how the place runs, and it splits into Live and Sustain. The rollout is sequenced by quick wins, easiest first, so visible wins land from day one while the bigger systems build. The actual order gets re-derived per client from their data and their named goal. Retention, customer experience, whatever the evidence says. Not a template.",
+        x: "Implement is where culture becomes how the place runs, and it splits into Live and Sustain. It starts by embedding the plan: leaders, then managers, then everyone. There's no fixed order after that. The Discover results and the new elements pick the first places, and quick wins break ties. Retention, customer experience, whatever the evidence says. Not a template.",
       },
       {
         t: "p",
@@ -279,7 +283,7 @@ export const INSIGHTS: Insight[] = [
       },
       {
         t: "p",
-        x: "Sustain is the part that keeps working without me in the building. eNPS every quarter, about 30 seconds per employee, plus 1 to 3 deep-dive questions earned by whatever the last round couldn't answer. Every initiative gets scored by the next round: KPIs tell you whether it's working, your people tell you why. Values go into performance reviews, weighted heavily enough to move promotions, raises, and improvement plans, because if living the values doesn't affect anyone's pay, the company has posters, not values. Hiring and onboarding screen for values at the door. And the whole thing runs on a strengths lens: make what is great greater, give the weaknesses bumpers, not the spotlight.",
+        x: "Sustain is the part that keeps working long after I'm gone. eNPS every quarter, about 30 seconds per employee, plus 1 to 3 deep-dive questions earned by whatever the last round couldn't answer. Every initiative gets scored by the next round: KPIs tell you whether it's working, your people tell you why. Values go into performance reviews, weighted heavily enough to move promotions, raises, and improvement plans, because if living the values doesn't affect anyone's pay, the company has posters, not values. Hiring and onboarding screen for values at the door. And the whole thing runs on a strengths lens: make what is great greater, give the weaknesses bumpers, not the spotlight.",
       },
       {
         t: "quote",
@@ -288,7 +292,7 @@ export const INSIGHTS: Insight[] = [
       { t: "h2", x: "One system, not four projects" },
       {
         t: "p",
-        x: "The phases compound. Inspire creates the want. Discover replaces assumptions with evidence. Build or Refresh constructs the operating layer. Implement wires it into daily work, and the quarterly loop feeds new evidence back so the system steers itself. Skip Inspire and you get polite compliance. Skip Discover and you're prescribing blind. Skip the build and there's nothing to implement. Skip Implement and you've bought a binder.",
+        x: "The phases compound. Discover replaces assumptions with evidence. Inspire creates the want. Build or Refresh constructs the operating layer. Implement wires it into daily work, and the quarterly loop feeds new evidence back so the system steers itself. Skip Discover and you're prescribing blind. Skip Inspire and you get polite compliance. Skip the build and there's nothing to implement. Skip Implement and you've bought a binder.",
       },
       {
         t: "p",
@@ -301,7 +305,7 @@ export const INSIGHTS: Insight[] = [
       links: [
         {
           label: "Explore the culture practice →",
-          href: "/culture",
+          href: "/culture#framework",
           primary: true,
         },
       ],

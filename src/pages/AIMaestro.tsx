@@ -405,7 +405,7 @@ const AIMaestro = () => {
             </div>
             <div>
               <p className="aim-body-p">
-                I've spent nine years building the systems that run companies:
+                I've spent 20 years building the systems that run companies:
                 SOP suites, KPI structures, and BPM rollouts at Christina's,
                 Dreamplex, Seller Candy, and Pizza 4P's. Then I built the Culture
                 Engine, where I trained AI to do expert work that used to take

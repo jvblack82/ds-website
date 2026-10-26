@@ -135,7 +135,7 @@ const BriefCulture = () => {
               className="brc-btn"
               href="https://discovery.dreamscope.win/culture"
             >
-              Take the 15-minute discovery →
+              See where to start (15 min) →
             </a>
             <span className="brc-quiet">
               or email{" "}
@@ -310,7 +310,7 @@ const BriefCulture = () => {
             className="brc-btn-light"
             href="https://discovery.dreamscope.win/culture"
           >
-            Take the discovery →
+            See where to start →
           </a>
           <div className="brc-cta-links">
             Email{" "}

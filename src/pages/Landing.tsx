@@ -322,9 +322,10 @@ const Landing = () => {
                 The Culture Engine is the AI tool that powers the Discover phase.
               </p>
               <p className="lp-detail">
-                Vision and values that hold up under pressure. Leadership and
-                frontline data converged into a single playbook. Implementation
-                that lives in the work, not in a binder.
+                Leadership and frontline data converged into one State of
+                Culture report. Vision and values that hold up under pressure,
+                written into the Culture Playbook. Implementation that lives in
+                the work, not in a binder.
               </p>
               <span className="lp-more">See the practice →</span>
             </Link>
@@ -402,10 +403,10 @@ const Landing = () => {
           </p>
           <div className="land-cta-btns">
             <a className="land-btn teal" href="https://discovery.dreamscope.win/culture">
-              Take the Culture discovery →
+              Culture: see where to start →
             </a>
             <a className="land-btn caramel" href="https://discovery.dreamscope.win/ai_maestro">
-              Take the AI Maestro discovery →
+              AI Maestro: see where to start →
             </a>
             <a className="land-btn white-outline" href="mailto:joe@dreamscope.win?subject=Dreamscope%20-%20Let's%20talk">
               Book a conversation

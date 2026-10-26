@@ -482,7 +482,7 @@ const CultureEngine = () => {
             href="https://discovery.dreamscope.win/culture"
             className="hero-btn"
           >
-            Take the culture discovery →
+            See where to start →
           </a>
         </div>
       </div>
@@ -746,9 +746,10 @@ const CultureEngine = () => {
             <div className="deliv-card">
               <h3>Culture Engine Quarterly</h3>
               <p>
-                Optional ongoing measurement. Pulse survey every 90 days through
-                the same framework. Track whether your initiatives are
-                actually working. Course-correct in weeks, not years.
+                Optional ongoing measurement. A short survey every quarter, plus
+                deep-dive questions, read through the same framework. Track
+                whether your initiatives are actually working. Course-correct in
+                weeks, not years.
               </p>
             </div>
           </div>
@@ -792,9 +793,9 @@ const CultureEngine = () => {
               <div className="phase-label">Phase 3</div>
               <h3>Activation</h3>
               <p>
-                Implementation support alongside your team. Quarterly pulse
-                measurement. AI knowledge base always-on. We don't hand you a
-                report and walk away. We help you make it real.
+                Implementation support alongside your team. A quarterly survey
+                plus deep-dive questions. AI knowledge base always-on. We don't
+                hand you a report and walk away. We help you make it real.
               </p>
               <div className="phase-timeline">Ongoing</div>
             </div>

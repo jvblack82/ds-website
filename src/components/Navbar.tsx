@@ -22,7 +22,7 @@ const groups: NavGroupDef[] = [
       { label: "The Culture Engine", to: "/culture-engine" },
       { label: "The 2-minute Culture Check", to: "/check/culture" },
       {
-        label: "Take the discovery",
+        label: "See where to start",
         href: "https://discovery.dreamscope.win/culture",
       },
     ],

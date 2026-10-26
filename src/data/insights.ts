@@ -112,7 +112,7 @@ export const INSIGHTS: Insight[] = [
       body: "Eight things culture work could change for you. Pick the three that matter most, answer three questions on where the work would fit. We read every one.",
       links: [
         {
-          label: "Take the 15-minute culture discovery →",
+          label: "See where to start (15 min) →",
           href: DISCOVERY_CULTURE,
           external: true,
           primary: true,
@@ -198,7 +198,7 @@ export const INSIGHTS: Insight[] = [
     ],
     band: {
       heading: "This is what the Culture Engine does.",
-      body: "Three data layers, one research-backed framework (the Dreamscope Factors), one convergent diagnosis. The full methodology is written up, and the discovery takes 15 minutes.",
+      body: "Three data layers, one research-backed framework (the Dreamscope Factors), one convergent diagnosis. The full methodology is written up, and the first step takes 15 minutes.",
       links: [
         {
           label: "See how the Culture Engine works →",
@@ -206,7 +206,7 @@ export const INSIGHTS: Insight[] = [
           primary: true,
         },
         {
-          label: "Take the 15-minute culture discovery →",
+          label: "See where to start (15 min) →",
           href: DISCOVERY_CULTURE,
           external: true,
         },

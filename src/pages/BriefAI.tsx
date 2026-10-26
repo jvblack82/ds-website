@@ -133,7 +133,7 @@ const BriefAI = () => {
           <span className="brf-read-time">90-second read</span>
           <div className="brf-cta-row">
             <a className="brf-btn" href="https://discovery.dreamscope.win/ai_maestro">
-              Take the 15-minute discovery →
+              See where to start (15 min) →
             </a>
             <span className="brf-quiet">
               or email{" "}
@@ -300,7 +300,7 @@ const BriefAI = () => {
             read every one. If your problem fits, we'll book a call.
           </p>
           <a className="brf-btn-light" href="https://discovery.dreamscope.win/ai_maestro">
-            Take the discovery →
+            See where to start →
           </a>
           <div className="brf-cta-links">
             Email{" "}

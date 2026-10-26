@@ -232,7 +232,7 @@ const CulturePractice = () => {
             </p>
             <div className="cp-hero-btns">
               <a className="cp-btn teal" href={DISCOVERY}>
-                Take the 15-minute discovery →
+                See where to start (15 min) →
               </a>
               <a className="cp-btn outline" href="#framework">
                 See how it works ↓
@@ -423,20 +423,20 @@ const CulturePractice = () => {
       <section className="cp-section cp-engage" id="engagement">
         <div className="cp-wrap">
           <div className="cp-label">How we start</div>
-          <h2 className="cp-title">Listen first. Then build.</h2>
+          <h2 className="cp-title">Before the work, we talk.</h2>
           <p className="cp-engage-lead">
             There's no template. Every company is different, and every one is
             starting from a different place. So the first thing I do is sit down
-            and listen to what's actually going on, before a word about what to
-            build. It runs in three passes.
+            and listen, before a word about what to build. It runs in three
+            passes.
           </p>
           <div className="cp-method">
             <div className="cp-method-step">
               <div className="cp-method-num">1</div>
               <p className="cp-method-name">Listen</p>
               <p className="cp-method-desc">
-                I sit down and learn what's really going on. What's working, what
-                people actually feel, where the culture is quietly costing you.
+                I sit down and learn what you already know. What's working, what
+                isn't, where you think the culture is quietly costing you.
               </p>
             </div>
             <div className="cp-method-step">
@@ -471,7 +471,7 @@ const CulturePractice = () => {
           </p>
           <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "1rem" }}>
             <a className="cp-btn teal" href={DISCOVERY}>
-              Take the culture discovery →
+              See where to start →
             </a>
           </div>
           <Link to="/check/culture" className="cp-chip-link">

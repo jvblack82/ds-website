@@ -29,7 +29,10 @@ const LINKEDIN = "https://www.linkedin.com/in/joevblack";
  * phone left on London time must not decide a Hanoi talk is over.
  */
 type TalkLink = { sub: string; href: string };
-type Talk = { from: string; to: string; title: string; links: TalkLink[] };
+/* gate: an optional URL answering {"open": true|false}. The live show server
+ * opens it the first time the talk's card stage goes live and closes it 48
+ * hours later; the date window is the outer bound. Fails closed. */
+type Talk = { from: string; to: string; title: string; links: TalkLink[]; gate?: string };
 
 const TALKS: Talk[] = [
   {
@@ -52,6 +55,13 @@ const TALKS: Talk[] = [
     to: "2026-09-28",
     title: "Symphony of Experience, Ho Chi Minh City",
     links: [{ sub: "Slides from the workshop", href: "/decks/hcmc-workshop.pdf" }],
+  },
+  {
+    from: "2026-11-05",
+    to: "2026-11-07",
+    title: "Reading the Intangibles, CognivaLab",
+    gate: "https://cloud.dreamscope.win/api/cog/card",
+    links: [{ sub: "Slides from the talk", href: "/decks/reading-the-intangibles.pdf" }],
   },
 ];
 
@@ -279,16 +289,28 @@ const Card = () => {
     const t = currentTalk();
     if (!t) return;
     let live = true;
-    Promise.all(
-      t.links.map((l) =>
-        fetch(l.href, { method: "HEAD" })
-          .then((r) => (r.ok ? l : null))
-          .catch(() => null),
-      ),
-    ).then((checked) => {
-      const links = checked.filter((l): l is TalkLink => l !== null);
-      if (live && links.length) setTalk({ ...t, links });
-    });
+    const gate = t.gate
+      ? fetch(t.gate, { cache: "no-store" })
+          .then((r) => (r.ok ? r.json() : { open: false }))
+          .then((g) => g?.open === true)
+          .catch(() => false)
+      : Promise.resolve(true);
+    gate
+      .then((open) =>
+        open
+          ? Promise.all(
+              t.links.map((l) =>
+                fetch(l.href, { method: "HEAD" })
+                  .then((r) => (r.ok ? l : null))
+                  .catch(() => null),
+              ),
+            )
+          : [],
+      )
+      .then((checked) => {
+        const links = checked.filter((l): l is TalkLink => l !== null);
+        if (live && links.length) setTalk({ ...t, links });
+      });
     return () => {
       live = false;
     };

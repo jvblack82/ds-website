@@ -598,7 +598,7 @@ const CultureEngine = () => {
                 <h3>Find who's already winning</h3>
                 <p>
                   Every leader scored 1–6 against documented behavioral criteria.
-                  10 Rockstar signals, 9 Red Flag signals, full evidence chains
+                  11 Rockstar signals, 9 Red Flag signals, full evidence chains
                   from their own words. Not a vibe check. A defensible assessment.
                 </p>
               </div>

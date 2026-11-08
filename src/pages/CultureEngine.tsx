@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import workshopLive from "@/assets/ce-workshop-live.jpg";
 import stageTalk from "@/assets/ce-stage-culture-talk.jpg";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import VoiceLoop from "@/components/VoiceLoop";
 
 const css = `
   :root {
@@ -578,6 +579,9 @@ const CultureEngine = () => {
           </div>
         </div>
       </section>
+
+      {/* THE VOICE ENGINE LOOP */}
+      <VoiceLoop />
 
       {/* APPROACH */}
       <section className="approach ds-section" id="approach">

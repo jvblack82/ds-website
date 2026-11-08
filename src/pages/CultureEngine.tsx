@@ -189,7 +189,7 @@ const css = `
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 85% 50%;
+    object-position: 70% 50%;
     display: block;
   }
   .approach-step {

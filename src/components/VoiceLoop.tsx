@@ -47,6 +47,8 @@ const css = `
     --vl-teal: #0C7C8A;
     /* Text set straight on --vl-bg: the site teal is only 4.4:1 there */
     --vl-teal-text: #0A6B77;
+    /* Action box: the gold from Joe's diagram (his call, 8 Nov), navy text at 7:1 */
+    --vl-gold: #E7B008;
     --vl-bg: #E8F4F5;
     --vl-line: #8FA9AD;
     --vl-card-line: #CFE3E6;
@@ -110,7 +112,7 @@ const css = `
   .vl-out strong { font-size: 1rem; line-height: 1.3; }
   .vl-out span { display: block; margin-top: 0.25rem; font-size: 0.85rem; line-height: 1.4; color: var(--vl-muted); }
   .vl-action {
-    margin: 0; background: var(--vl-teal); color: #fff; border-radius: 12px;
+    margin: 0; background: var(--vl-gold); color: var(--vl-dark); border-radius: 12px;
     padding: 0.85rem 0.9rem; text-align: center; font-size: 1rem; line-height: 1.35;
     align-self: flex-end; width: calc(50% - 0.3rem);
   }

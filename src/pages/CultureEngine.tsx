@@ -184,13 +184,13 @@ const css = `
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 18px 44px -22px rgba(30,43,58,0.35);
-    aspect-ratio: 3 / 2;
+    min-width: 0;
   }
   .approach-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 85% 50%;
+    object-position: 70% 50%;
     display: block;
   }
   .approach-step {
@@ -442,6 +442,7 @@ const css = `
     .results-grid { grid-template-columns: repeat(2, 1fr); }
     .problem-grid { grid-template-columns: 1fr; }
     .approach-grid { grid-template-columns: 1fr; }
+    .approach-media { aspect-ratio: 3 / 2; }
     .deliverables-grid { grid-template-columns: 1fr; }
     .phases { grid-template-columns: 1fr; }
   }

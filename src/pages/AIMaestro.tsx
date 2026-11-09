@@ -597,8 +597,7 @@ const AIMaestro = () => {
             </li>
           </ul>
           <p className="aim-pullout">
-            The right hand helps you make the call. It does not make the call for
-            you.
+            The AI gets everything ready. You still make the call.
           </p>
         </div>
       </section>

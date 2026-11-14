@@ -25,7 +25,7 @@ const css = `
     -webkit-font-smoothing: antialiased;
   }
   .ops-page * { box-sizing: border-box; }
-  .ops-page a { color: inherit; }
+  :where(.ops-page) a { color: inherit; }
   .ops-in { max-width: 980px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
   .ops-page h2 { font: 600 clamp(30px, 4.4vw, 42px)/1.1 var(--ops-serif); color: var(--ops-dark); margin: 0 0 14px; text-wrap: balance; letter-spacing: -0.005em; }
   .ops-page h3 { font: 600 24px/1.2 var(--ops-serif); color: var(--ops-dark); margin: 0; }

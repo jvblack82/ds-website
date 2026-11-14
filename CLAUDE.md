@@ -20,6 +20,6 @@ Marketing site for Dreamscope Consulting. Deployed to **www.dreamscope.win** via
 - No em-dashes. Percentages, not decimals.
 - Verify every proof point and number against the CV (`Personal\Joe_Black_CV_May_2026.docx`) and the AI Maestro sales brief. Never fabricate or misattribute.
 - Do not name the Culture Engine client (Marou) publicly as the case-study source; say "a 450-person company". (Marou's logo alone in the credibility strip is fine, same rule as Lixibox.)
-- AI Maestro family pages (`/operations`, `/ai-maestro`, `/coaching`, `/workshops`, `/website`) avoid: consultant, consulting, consultancy, solution, platform. The one allowed exception: Joe's area name "Custom Software Solutions".
+- AI Maestro family pages (`/operations`, `/ai-maestro`, `/coaching`, `/workshops`, `/website`) avoid: consultant, consulting, consultancy, solution, platform. Allowed exceptions: Joe's area name "Custom Software Solutions" and the fixed "Dreamscope Consulting" brand name (footers, home-page title prefix).
 - Optimize images before committing (`npx sharp-cli`; bands ~2400px q78 under 400KB, inline ~1600px under 250KB, logos under 12KB).
 - Commit messages end with the Co-Authored-By line. In PowerShell, no double quotes inside the here-string message.

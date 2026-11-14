@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logoDreamscope from "@/assets/logo-dreamscope.png";
 import { motionSafeScrollBehavior } from "@/lib/utils";
@@ -259,7 +260,9 @@ const Navbar = () => {
     "ds-nav-drop-link" + (isActive ? " active" : "");
 
   const hashItemClick = (to: string, after: () => void) => () => {
-    after();
+    // Commit the closed menu before measuring: the open phone menu sits in
+    // the page flow and would push the scroll target down by its height.
+    flushSync(after);
     const alreadyOnTargetSoLayoutWontScroll = pathname + hash === to;
     if (alreadyOnTargetSoLayoutWontScroll) {
       document

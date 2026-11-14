@@ -10,6 +10,7 @@ import Landing from "./pages/Landing";
 const CulturePractice = lazy(() => import("./pages/CulturePractice"));
 const CultureEngine = lazy(() => import("./pages/CultureEngine"));
 const AIMaestro = lazy(() => import("./pages/AIMaestro"));
+const Operations = lazy(() => import("./pages/Operations"));
 const AICoaching = lazy(() => import("./pages/AICoaching"));
 const Workshops = lazy(() => import("./pages/Workshops"));
 // WorkshopPrep (/workshops/prep) is taken down between engagements, not deleted.
@@ -49,6 +50,7 @@ const App = () => (
               <Route path="/culture" element={<CulturePractice />} />
               <Route path="/culture-engine" element={<CultureEngine />} />
               <Route path="/ai-maestro" element={<AIMaestro />} />
+              <Route path="/operations" element={<Operations />} />
               <Route path="/coaching" element={<AICoaching />} />
               <Route path="/workshops" element={<Workshops />} />
               <Route path="/check/culture" element={<CultureCheck />} />

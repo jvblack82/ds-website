@@ -12,7 +12,6 @@ const css = `
     --ops-cream: #FBF8F1;
     --ops-white: #FFFFFF;
     --ops-body: #4A4036;
-    --ops-muted: #6E6355;
     --ops-line: #E7DECF;
     --ops-serif: 'Cormorant Garamond', Georgia, serif;
     --ops-sans: 'Inter', system-ui, sans-serif;

@@ -4,6 +4,7 @@ import logoDreamscope from "@/assets/logo-dreamscope.png";
 import { motionSafeScrollBehavior } from "@/lib/utils";
 
 type NavChild = { label: string; to?: string; href?: string };
+const isHashTo = (it: NavChild) => !!it.to?.includes("#");
 type NavGroupDef = {
   id: string;
   label: string;
@@ -257,11 +258,10 @@ const Navbar = () => {
   const dropLinkClass = ({ isActive }: { isActive: boolean }) =>
     "ds-nav-drop-link" + (isActive ? " active" : "");
 
-  // A same-URL click on a hash item changes nothing, and Layout scrolls only on
-  // a pathname/hash change, so scroll to the target here in that case.
   const hashItemClick = (to: string, after: () => void) => () => {
     after();
-    if (pathname + hash === to) {
+    const alreadyOnTargetSoLayoutWontScroll = pathname + hash === to;
+    if (alreadyOnTargetSoLayoutWontScroll) {
       document
         .getElementById(to.split("#")[1])
         ?.scrollIntoView({ behavior: motionSafeScrollBehavior() });
@@ -341,7 +341,7 @@ const Navbar = () => {
                             {it.label}
                             <span className="ds-nav-ext" aria-hidden="true">↗</span>
                           </a>
-                        ) : it.to!.includes("#") ? (
+                        ) : isHashTo(it) ? (
                           <Link
                             key={it.label}
                             to={it.to!}
@@ -419,7 +419,7 @@ const Navbar = () => {
                           {it.label}
                           <span className="ds-nav-ext" aria-hidden="true">↗</span>
                         </a>
-                      ) : it.to!.includes("#") ? (
+                      ) : isHashTo(it) ? (
                         <Link
                           key={it.label}
                           to={it.to!}

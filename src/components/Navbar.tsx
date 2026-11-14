@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logoDreamscope from "@/assets/logo-dreamscope.png";
+import { motionSafeScrollBehavior } from "@/lib/utils";
 
 type NavChild = { label: string; to?: string; href?: string };
 type NavGroupDef = {
@@ -28,11 +29,13 @@ const groups: NavGroupDef[] = [
     ],
   },
   {
-    id: "maestro",
-    label: "AI Maestro",
-    to: "/ai-maestro",
-    overviewLabel: "AI Maestro overview",
+    id: "operations",
+    label: "Operations",
+    to: "/operations",
+    overviewLabel: "Operations overview",
     items: [
+      { label: "The Practice", to: "/operations" },
+      { label: "The Ops Audit", to: "/operations#audit" },
       { label: "AI Maestro", to: "/ai-maestro" },
       { label: "AI Coaching", to: "/coaching" },
       { label: "The Self-Updating Website", to: "/website" },
@@ -254,6 +257,17 @@ const Navbar = () => {
   const dropLinkClass = ({ isActive }: { isActive: boolean }) =>
     "ds-nav-drop-link" + (isActive ? " active" : "");
 
+  // A same-URL click on a hash item changes nothing, and Layout scrolls only on
+  // a pathname/hash change, so scroll to the target here in that case.
+  const hashItemClick = (to: string, after: () => void) => () => {
+    after();
+    if (pathname + hash === to) {
+      document
+        .getElementById(to.split("#")[1])
+        ?.scrollIntoView({ behavior: motionSafeScrollBehavior() });
+    }
+  };
+
   const groupIsActive = (g: NavGroupDef) =>
     g.items.some(
       (it) => it.to && (pathname === it.to || pathname.startsWith(it.to + "/"))
@@ -327,6 +341,15 @@ const Navbar = () => {
                             {it.label}
                             <span className="ds-nav-ext" aria-hidden="true">↗</span>
                           </a>
+                        ) : it.to!.includes("#") ? (
+                          <Link
+                            key={it.label}
+                            to={it.to!}
+                            className="ds-nav-drop-link"
+                            onClick={hashItemClick(it.to!, () => setOpenGroup(null))}
+                          >
+                            {it.label}
+                          </Link>
                         ) : (
                           <NavLink
                             key={it.label}
@@ -396,6 +419,15 @@ const Navbar = () => {
                           {it.label}
                           <span className="ds-nav-ext" aria-hidden="true">↗</span>
                         </a>
+                      ) : it.to!.includes("#") ? (
+                        <Link
+                          key={it.label}
+                          to={it.to!}
+                          className="ds-nav-link"
+                          onClick={hashItemClick(it.to!, close)}
+                        >
+                          {it.label}
+                        </Link>
                       ) : (
                         <NavLink
                           key={it.label}

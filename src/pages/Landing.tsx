@@ -208,9 +208,9 @@ const css = `
 
 const Landing = () => {
   usePageMeta({
-    title: "Dreamscope Consulting · Culture and AI, Run by an Operator",
+    title: "Dreamscope Consulting · Culture and Operations, Run by an Operator",
     description:
-      "An end-to-end culture practice and AI Maestro, where expert work gets trained into AI. 20 years operating, based in Ho Chi Minh City, working anywhere.",
+      "An end-to-end culture practice, and an operations practice that finds what's slowing a company down, fixes it and keeps it improving. 20 years operating, based in Ho Chi Minh City, working anywhere.",
   });
 
   useEffect(() => {
@@ -232,15 +232,15 @@ const Landing = () => {
             <h1>Two practices. One operator mindset.</h1>
             <p className="land-sub">
               Two parent practices. One operator who's spent 20 years building the
-              systems that let companies scale. Culture, end to end. AI Maestro,
-              for any process bottlenecked on one person's expert judgment.
+              systems that let companies scale. Culture, end to end. Operations:
+              find what's slowing a company down, fix it, and keep it improving.
             </p>
             <div className="land-hero-btns">
               <Link className="land-btn teal" to="/culture">
                 Explore the Culture Practice →
               </Link>
-              <Link className="land-btn caramel" to="/ai-maestro">
-                Explore AI Maestro →
+              <Link className="land-btn caramel" to="/operations">
+                Explore Operations →
               </Link>
             </div>
           </div>
@@ -329,18 +329,17 @@ const Landing = () => {
               </p>
               <span className="lp-more">See the practice →</span>
             </Link>
-            <Link to="/ai-maestro" className="land-practice aim">
-              <div className="lp-eyebrow">Operator + AI</div>
-              <h2>AI Maestro</h2>
+            <Link to="/operations" className="land-practice aim">
+              <div className="lp-eyebrow">Operator-led</div>
+              <h2>Operations</h2>
               <p>
-                I take expert work, break it down, and train AI to do it. Months
-                of work becomes days.
+                It starts with the Ops Audit: we find out how the work really
+                runs, then fix it with People Systems, AI and custom software.
               </p>
               <p className="lp-detail">
-                Process compression, reporting and insight, the company brain,
-                knowledge consolidation, customer-facing intelligence. Five
-                categories. One operator who knows where AI gets it right and
-                where it gets it wrong.
+                Three common areas: People Systems, Process Enhancement with AI,
+                and Custom Software Solutions. AI Maestro is how the AI work gets
+                done.
               </p>
               <span className="lp-more">Read more →</span>
             </Link>

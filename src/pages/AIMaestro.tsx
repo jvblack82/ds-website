@@ -78,6 +78,7 @@ const css = `
   }
   .aim-hero .aim-link { color: rgba(255,255,255,0.85); }
   .aim-cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+  .aim-hero .aim-part-of { margin-top: 1.6rem; font-size: 0.95rem; color: rgba(255,255,255,0.78); }
   .aim-btn {
     display: inline-block;
     background: var(--aim-caramel);
@@ -374,7 +375,7 @@ const AIMaestro = () => {
       {/* HERO */}
       <header className="aim-hero">
         <div className="aim-wrap">
-          <span className="aim-kicker">Dreamscope · AI Maestro</span>
+          <span className="aim-kicker">Dreamscope · Operations · AI Maestro</span>
           <h1>The operations mind that understands AI.</h1>
           <p className="aim-dek">
             I'm an operator, not a developer, who takes expert work and trains
@@ -388,6 +389,12 @@ const AIMaestro = () => {
               See where it plays ↓
             </a>
           </div>
+          <p className="aim-part-of">
+            Part of Operations.{" "}
+            <Link className="aim-link" to="/operations">
+              See how it starts →
+            </Link>
+          </p>
         </div>
       </header>
 
